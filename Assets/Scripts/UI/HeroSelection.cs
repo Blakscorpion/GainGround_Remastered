@@ -39,7 +39,7 @@ public class HeroSelection : MonoBehaviour
                 
                 Debug.Log("Nombre de héros vivants : " + lengthHeroList);
                 Debug.Log(currentHeroIndexselected%lengthHeroList);
-                HeroSelectionUI.text = "Select Hero : " + availableHeroList[currentHeroIndexselected%lengthHeroList];     
+                HeroSelectionUI.text = "Select Your Hero : " + availableHeroList[currentHeroIndexselected%lengthHeroList];     
             }
             // Récupérer le précédent héros dispo et l'afficher
             else if((Input.GetKeyDown(KeyCode.LeftArrow)) && (lengthHeroList > 0))
@@ -51,7 +51,7 @@ public class HeroSelection : MonoBehaviour
                 }       
                 Debug.Log("Nombre de héros vivants : " + lengthHeroList);
                 Debug.Log(currentHeroIndexselected%lengthHeroList);
-                HeroSelectionUI.text = "Select Hero : " + availableHeroList[currentHeroIndexselected%lengthHeroList];     
+                HeroSelectionUI.text = "Select Your Hero : " + availableHeroList[currentHeroIndexselected%lengthHeroList];     
 
             }
 
@@ -87,8 +87,8 @@ public class HeroSelection : MonoBehaviour
     }
     IEnumerator WaitABit()
     {
-        yield return new WaitForSecondsRealtime(1.5f);
-        Debug.Log("DeadEvent bien écouté !");
+        yield return new WaitForSecondsRealtime(0.7f);
+        Debug.Log("DeadEvent or new level bien écouté !");
         availableHeroList = HeroesManager.Instance.ListOfHeroesAlive;
         lengthHeroList = availableHeroList.Count;
         
@@ -96,7 +96,7 @@ public class HeroSelection : MonoBehaviour
             Image image = transform.GetComponent<Image>();
             image.enabled=true;
             transform.GetChild(0).gameObject.SetActive(true);
-            HeroSelectionUI.text = "Select Hero : " + availableHeroList[0];
+            HeroSelectionUI.text = "Select Your Hero : " + availableHeroList[0];
             CurrentPlayer = FindInActiveObjectByName(availableHeroList[currentHeroIndexselected%lengthHeroList]);
         }
 

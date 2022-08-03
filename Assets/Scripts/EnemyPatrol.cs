@@ -27,7 +27,7 @@ public class EnemyPatrol : MonoBehaviour
     void Update()
     {
 
-       if (EnnemyTarget)
+       if (EnnemyTarget )
        {
             if (isInRange())
             {

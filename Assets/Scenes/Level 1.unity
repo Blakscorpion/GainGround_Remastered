@@ -1631,7 +1631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &217716730
 Transform:
   m_ObjectHideFlags: 0
@@ -2257,7 +2257,7 @@ MonoBehaviour:
   - {fileID: 407327081}
   - {fileID: 719555648}
   DetectionArea: 3
-  EnnemyTarget: {fileID: 217716730}
+  EnnemyTarget: {fileID: 0}
   isPatroling: 1
 --- !u!212 &635954397
 SpriteRenderer:
@@ -6903,8 +6903,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.1682, y: 0.0000028162}
-  m_SizeDelta: {x: 8.3363, y: 1.3951}
+  m_AnchoredPosition: {x: -1.1791, y: 0.0000028162}
+  m_SizeDelta: {x: 14.3145, y: 1.3951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114402393
 MonoBehaviour:
@@ -7813,7 +7813,7 @@ MonoBehaviour:
   - {fileID: 1941718097}
   - {fileID: 484323570}
   DetectionArea: 3
-  EnnemyTarget: {fileID: 217716730}
+  EnnemyTarget: {fileID: 0}
   isPatroling: 1
 --- !u!212 &1294893263
 SpriteRenderer:

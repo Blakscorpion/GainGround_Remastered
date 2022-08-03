@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Start() {
-        UpdateGameState(GameState.PlayMode);
+        UpdateGameState(GameState.PlayerSelection);
     }
 
     public void UpdateGameState(GameState newState)

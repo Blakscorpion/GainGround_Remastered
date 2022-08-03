@@ -18,21 +18,43 @@ public class HeroesManager : MonoBehaviour
         Instance = this;
         GameManager.OnGameStateChanged += RemoveHeroFromList;
         GameManager.OnGameStateChanged += AddSuccessHero;
-    }
 
+    }
+    private void OnDisable() { 
+        //When the scene is closing (onDisable) : Register the Heroes that succeded in the PlayerPref, to load them in next scene
+        int i = 0;
+        foreach (string hero in PassedHeros)
+            {
+                PlayerPrefs.SetString("SuccessfullHeroNumber"+i, hero);
+                i++;
+            }
+    }
+    
     private void OnDestroy() {
         GameManager.OnGameStateChanged -= RemoveHeroFromList;
         GameManager.OnGameStateChanged -= AddSuccessHero;
     }
     
-    // Start is called before the first frame update TESTForGIT
+    // Start is called before the first frame update
     void Start()
     {
-        ListOfHeroesAlive.Add("Player");
-        ListOfHeroesAlive.Add("Poilux2");
-        ListOfHeroesAlive.Add("Poilux3");
+        // Check if there are already heroes in the PassedHeroes list.
+        if (PlayerPrefs.HasKey("SuccessfullHeroNumber0"))
+        {
+            // load the survivors and remove the PlayerPref data
+            for(int i = 0; PlayerPrefs.GetString("SuccessfullHeroNumber"+i).Length > 0; i++) {
+                ListOfHeroesAlive.Add(PlayerPrefs.GetString("SuccessfullHeroNumber"+i));
+                PlayerPrefs.DeleteKey("SuccessfullHeroNumber"+i);
+            }     
+        }
+        else {
+            // Otherwise it's level one and we load the default heroes
+            ListOfHeroesAlive.Add("Player");
+            ListOfHeroesAlive.Add("Poilux2");
+            ListOfHeroesAlive.Add("Poilux3");
+        }
+        
     }
-
 
     private void RemoveHeroFromList(GameState state) {
         if(state == GameState.Dead)

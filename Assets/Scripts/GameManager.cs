@@ -78,6 +78,8 @@ public class GameManager : MonoBehaviour
 
     void PauseGame ()
     {
+        // Clean the PlayerPref to avoid starting with the heroes of the previous session
+        PlayerPrefs.DeleteAll();
         Time.timeScale = 0;
     }
 

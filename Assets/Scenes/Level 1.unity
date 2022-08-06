@@ -1625,7 +1625,7 @@ GameObject:
   - component: {fileID: 217716733}
   - component: {fileID: 217716732}
   - component: {fileID: 217716731}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1679,7 +1679,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1018237710}
   bulletPrefab: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
-  bulletForce: 20
+  current_animation: 
+  bulletForce: 12
 --- !u!114 &217716733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1863,7 +1864,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 414641477}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1878,7 +1879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414641476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42, y: 1.08, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1609959807}
@@ -2826,7 +2827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 874809134}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2841,7 +2842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874809133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42, y: 1.08, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1937987237}
@@ -6784,7 +6785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1018237710}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6799,7 +6800,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018237709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42, y: 1.08, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 217716730}
@@ -8236,7 +8237,7 @@ GameObject:
   - component: {fileID: 1609959810}
   - component: {fileID: 1609959809}
   - component: {fileID: 1609959808}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Poilux3
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8290,7 +8291,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 414641477}
   bulletPrefab: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
-  bulletForce: 20
+  current_animation: 
+  bulletForce: 29
 --- !u!114 &1609959810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8908,7 +8910,7 @@ GameObject:
   - component: {fileID: 1937987240}
   - component: {fileID: 1937987239}
   - component: {fileID: 1937987238}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Poilux2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8962,6 +8964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 874809134}
   bulletPrefab: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
+  current_animation: 
   bulletForce: 20
 --- !u!114 &1937987240
 MonoBehaviour:

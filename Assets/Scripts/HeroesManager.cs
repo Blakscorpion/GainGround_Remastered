@@ -28,6 +28,11 @@ public class HeroesManager : MonoBehaviour
                 PlayerPrefs.SetString("SuccessfullHeroNumber"+i, hero);
                 i++;
             }
+        foreach (string hero in ListOfHeroesAlive)
+            {
+                PlayerPrefs.SetString("SuccessfullHeroNumber"+i, hero);
+                i++;
+            }
     }
     
     private void OnDestroy() {

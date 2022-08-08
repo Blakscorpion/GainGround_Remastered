@@ -19,6 +19,22 @@ public class HeroesManager : MonoBehaviour
         GameManager.OnGameStateChanged += RemoveHeroFromList;
         GameManager.OnGameStateChanged += AddSuccessHero;
 
+        // Check if there are already heroes in the PassedHeroes list.
+        if (PlayerPrefs.HasKey("SuccessfullHeroNumber0"))
+        {
+            // load the survivors and remove the PlayerPref data
+            for(int i = 0; PlayerPrefs.GetString("SuccessfullHeroNumber"+i).Length > 0; i++) {
+                ListOfHeroesAlive.Add(PlayerPrefs.GetString("SuccessfullHeroNumber"+i));
+                PlayerPrefs.DeleteKey("SuccessfullHeroNumber"+i);
+            }     
+        }
+        else {
+            // Otherwise it's level one and we load the default heroes
+            ListOfHeroesAlive.Add("Player");
+            ListOfHeroesAlive.Add("Poilux2");
+            ListOfHeroesAlive.Add("Poilux3");
+        }
+
     }
     private void OnDisable() { 
         //When the scene is closing (onDisable) : Register the Heroes that succeded in the PlayerPref, to load them in next scene
@@ -40,36 +56,19 @@ public class HeroesManager : MonoBehaviour
         GameManager.OnGameStateChanged -= AddSuccessHero;
     }
     
-    // Start is called before the first frame update
     void Start()
     {
-        // Check if there are already heroes in the PassedHeroes list.
-        if (PlayerPrefs.HasKey("SuccessfullHeroNumber0"))
-        {
-            // load the survivors and remove the PlayerPref data
-            for(int i = 0; PlayerPrefs.GetString("SuccessfullHeroNumber"+i).Length > 0; i++) {
-                ListOfHeroesAlive.Add(PlayerPrefs.GetString("SuccessfullHeroNumber"+i));
-                PlayerPrefs.DeleteKey("SuccessfullHeroNumber"+i);
-            }     
-        }
-        else {
-            // Otherwise it's level one and we load the default heroes
-            ListOfHeroesAlive.Add("Player");
-            ListOfHeroesAlive.Add("Poilux2");
-            ListOfHeroesAlive.Add("Poilux3");
-        }
+        
         
     }
 
     private void RemoveHeroFromList(GameState state) {
         if(state == GameState.Dead)
         {
-            ListOfHeroesAlive.Remove(CurrentHero);
-            DeadHeros.Add(CurrentHero);
-            if (ListOfHeroesAlive.Count == 0)
+            if (ListOfHeroesAlive.Count > 0)
             {
-                CurrentHero="No more Heroes";
-                Debug.Log("Current Hero After death : " + CurrentHero);
+                ListOfHeroesAlive.Remove(CurrentHero);
+                DeadHeros.Add(CurrentHero);
             }
         }
     }
@@ -82,14 +81,31 @@ public class HeroesManager : MonoBehaviour
             PassedHeros.Add(CurrentHero);
             if (ListOfHeroesAlive.Count == 0)
             {
-                EndLevelSummary.transform.parent.gameObject.SetActive(true);
-                EndLevelSummary.text = "Level COMPLETED\nSummary\n- "+ HeroesManager.Instance.DeadHeros.Count +" hero Dead";
-                GameManager.Instance.UpdateGameState(GameState.NextLevel);
+                Debug.Log("Plus de héro donc state : EndStage");
+                GameManager.Instance.UpdateGameState(GameState.EndStageSummary);
             }
             else
             {
                 GameManager.Instance.UpdateGameState(GameState.PlayerSelection);
             }
         }
+    }
+
+    // Time out - Kill all remaining heroes alive
+    public void TimerEnded()
+    {
+        // Need to create a temporary copy of my list, because I can't delete on the fly inside my list within a foreach
+        List<string> tmp_ListOfHeroesAlive = new List<string>();
+        
+        foreach (var hero in ListOfHeroesAlive)
+        {
+            tmp_ListOfHeroesAlive.Add(hero);
+        }   
+        
+        foreach (var hero in tmp_ListOfHeroesAlive)
+        {
+            ListOfHeroesAlive.Remove(hero);
+            DeadHeros.Add(hero);
+        }        
     }
 }

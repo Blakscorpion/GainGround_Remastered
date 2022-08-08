@@ -8,11 +8,11 @@ using UnityEngine.UI;
 public class HeroSelection : MonoBehaviour
 {
     private int currentHeroIndexselected=0;
-    private int lengthHeroList=0;
+    public int lengthHeroList=0;
     public GameObject CurrentPlayer;
     private List<string> availableHeroList = new List<string>();
     [SerializeField] TextMeshProUGUI HeroSelectionUI;
-    [SerializeField] TextMeshProUGUI EndLevelSummary;
+
 
     private void Awake() {
         GameManager.OnGameStateChanged += DisplayUIHeroSelection;
@@ -26,7 +26,6 @@ public class HeroSelection : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.GetChild(0).gameObject.activeSelf)
@@ -80,18 +79,24 @@ public class HeroSelection : MonoBehaviour
     private void DisplayUIHeroSelection(GameState state) {
         if((state == GameState.Dead) || (state == GameState.PlayerSelection))
         {   
-            //wait for 1.5s
             StartCoroutine(WaitABit());
+            //display remaining heroes selection, or gameover if no more available.
+            DisplayHeroSelectionUIorGAMEOVER();
         }
         
     }
     IEnumerator WaitABit()
     {
         yield return new WaitForSecondsRealtime(0.7f);
-        Debug.Log("DeadEvent or new level bien écouté !");
+    }
+
+    private void DisplayHeroSelectionUIorGAMEOVER()
+    {
+        //Retrieve the number of heros alive
         availableHeroList = HeroesManager.Instance.ListOfHeroesAlive;
         lengthHeroList = availableHeroList.Count;
-        
+
+        // If some heros are still alive, we display the player selection list to continue the game
         if (lengthHeroList>0){
             Image image = transform.GetComponent<Image>();
             image.enabled=true;
@@ -100,16 +105,14 @@ public class HeroSelection : MonoBehaviour
             CurrentPlayer = FindInActiveObjectByName(availableHeroList[currentHeroIndexselected%lengthHeroList]);
         }
 
+        // IF no more heroes available, either it's game over, either we go to level summary if some of them went through exit gate
         else{
-            EndLevelSummary.transform.parent.gameObject.SetActive(true);
             if (HeroesManager.Instance.PassedHeros.Count == 0)
             {
-                EndLevelSummary.text = "GAME OVER";
                 GameManager.Instance.UpdateGameState(GameState.GameOver);     
             }
             else{
-                EndLevelSummary.text = "Level COMPLETED\nSummary\n- "+ HeroesManager.Instance.DeadHeros.Count +" hero Dead";
-                GameManager.Instance.UpdateGameState(GameState.NextLevel);
+                GameManager.Instance.UpdateGameState(GameState.EndStageSummary);
             }
         }
     }

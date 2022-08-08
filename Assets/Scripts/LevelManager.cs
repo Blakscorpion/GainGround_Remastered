@@ -18,9 +18,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI EndLevelSummary;
     public TextMeshProUGUI WinPannel;
 
-    
-    
-
 
     void Awake()
     {
@@ -35,6 +32,7 @@ public class LevelManager : MonoBehaviour
     }
 
     private void Update() {
+        // Level Timer management
         if (timerIsRunning)
         {
             if (timeRemaining > 0)
@@ -47,17 +45,17 @@ public class LevelManager : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+
+                //We kill all remaining heros alive
+                HeroesManager.Instance.TimerEnded();
+
+                // If some heroes went through exit, we go to next level, otherwise it's game over.
                 if (HeroesManager.Instance.PassedHeros.Count>0)
                 {
-                    EndLevelSummary.transform.parent.gameObject.SetActive(true);
-                    EndLevelSummary.text = "TIME OUT !\nLevel COMPLETED\nSummary\n- "+ HeroesManager.Instance.PassedHeros.Count +" hero passed the gate !";
-                    GameManager.Instance.UpdateGameState(GameState.NextLevel);
+                    GameManager.Instance.UpdateGameState(GameState.EndStageSummary);
                 }
                 else{
-                    EndLevelSummary.transform.parent.gameObject.SetActive(true);
-                    EndLevelSummary.text = "TIME OUT !\nSummary\n- NO hero passed the gate !\nGAMES OVER !! (noob)";
                     GameManager.Instance.UpdateGameState(GameState.GameOver);
-
                 }
                 
             }
@@ -69,10 +67,7 @@ public class LevelManager : MonoBehaviour
         UIEnnemiyRemaining.text=EnnemyNumber.ToString() + " Ennemies";
         if (EnnemyNumber<=0)
         {
-            EndLevelSummary.transform.parent.gameObject.SetActive(true);
-
-            EndLevelSummary.text = "Level COMPLETED\nSummary\n- All ennemies Killed\n- "+ HeroesManager.Instance.DeadHeros.Count +" hero Dead";
-            GameManager.Instance.UpdateGameState(GameState.NextLevel);
+            GameManager.Instance.UpdateGameState(GameState.EndStageSummary);
         }
     }
 }

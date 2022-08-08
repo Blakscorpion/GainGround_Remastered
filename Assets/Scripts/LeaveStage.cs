@@ -21,7 +21,8 @@ public class LeaveStage : MonoBehaviour
             GameManager.Instance.UpdateGameState(GameState.ExitSuccess);
 
             // Destroy the player
-            Destroy(PlayerWhoExits, 0.5f);  
+            Destroy(PlayerWhoExits, 0.5f); 
+            // TODO Play song of plyaer success 
         }
     }
 }

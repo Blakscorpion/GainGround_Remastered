@@ -13,6 +13,7 @@ public class NextLevel : MonoBehaviour
 
     private void OnDestroy() {
         GameManager.OnGameStateChanged -= GoToNextLevel;
+        readyToGoToNextLevel = false;
     }
 
     private void GoToNextLevel(GameState state) {
@@ -35,9 +36,7 @@ public class NextLevel : MonoBehaviour
                     SceneManager.LoadScene(NextSceneIndex);
                 }
                 else{
-                    LevelManager.Instance.WinPannel.transform.parent.gameObject.SetActive(true);
-                    LevelManager.Instance.WinPannel.text = "You WON !\nGame FINISHED !"+ HeroesManager.Instance.PassedHeros.Count +" hero passed the gate !";
-                    Time.timeScale = 0;
+                    GameManager.Instance.UpdateGameState(GameState.WinGame);
                 }
             }
         }

@@ -233,7 +233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &72201073
 RectTransform:
   m_ObjectHideFlags: 0
@@ -367,7 +367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &74381295
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e45a94ac3b8c34c990057bcbce2d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 120
+  timeRemaining: 12
   timerIsRunning: 0
   EnnemyNumber: 1
   UIEnnemiyRemaining: {fileID: 722963959}
@@ -2633,13 +2633,14 @@ GameObject:
   - component: {fileID: 758302417}
   - component: {fileID: 758302419}
   - component: {fileID: 758302418}
+  - component: {fileID: 758302420}
   m_Layer: 5
-  m_Name: EndLevel
+  m_Name: LevelSuccessPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &758302417
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2667,7 +2668,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758302416}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2698,6 +2699,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758302416}
   m_CullTransparentMesh: 1
+--- !u!114 &758302420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758302416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3e1d6f84cacd042bb98fb9bba22b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndLevelSummary: {fileID: 72201074}
 --- !u!1 &808227635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,13 +2723,14 @@ GameObject:
   - component: {fileID: 808227636}
   - component: {fileID: 808227638}
   - component: {fileID: 808227637}
+  - component: {fileID: 808227639}
   m_Layer: 5
   m_Name: WinPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &808227636
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2743,7 +2758,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808227635}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2774,6 +2789,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808227635}
   m_CullTransparentMesh: 1
+--- !u!114 &808227639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808227635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af33d6ee22eef444ab31de27d2d161d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinGameUI: {fileID: 1301223205}
 --- !u!1 &846645248
 GameObject:
   m_ObjectHideFlags: 0
@@ -6882,7 +6910,7 @@ GameObject:
   - component: {fileID: 1114402394}
   - component: {fileID: 1114402393}
   m_Layer: 5
-  m_Name: Hero Selection
+  m_Name: Hero SelectionUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7950,7 +7978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1301223204
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8078,13 +8106,14 @@ GameObject:
   - component: {fileID: 1578251443}
   - component: {fileID: 1578251445}
   - component: {fileID: 1578251444}
+  - component: {fileID: 1578251446}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1578251443
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8112,7 +8141,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578251442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -8143,6 +8172,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578251442}
   m_CullTransparentMesh: 1
+--- !u!114 &1578251446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578251442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81abd73a29a01b34d9df2cb5f25ee4b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1604532056
 GameObject:
   m_ObjectHideFlags: 0
@@ -8155,7 +8196,7 @@ GameObject:
   - component: {fileID: 1604532059}
   - component: {fileID: 1604532058}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: LevelInfoPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9153,7 +9194,7 @@ GameObject:
   - component: {fileID: 2133629085}
   - component: {fileID: 2133629087}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: HeroSelectPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9229,6 +9270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36623c68475a9a24c91051e0812c7737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lengthHeroList: 0
   CurrentPlayer: {fileID: 0}
   HeroSelectionUI: {fileID: 1114402393}
-  EndLevelSummary: {fileID: 72201074}

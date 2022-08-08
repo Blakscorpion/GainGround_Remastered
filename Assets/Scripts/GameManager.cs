@@ -46,30 +46,44 @@ public class GameManager : MonoBehaviour
             case GameState.NextLevel:
                 NextLevel();
                 break;
+            case GameState.WinGame:
+                WinGame();
+                break;
         }
         // Si aucun suscriber à cet event, ça renvoi un null, donc on check si y'a bien un suscriber
         OnGameStateChanged?.Invoke(newState);
     }
 
     private void ShowPlayerSelectionUI() {    
+        Debug.Log("PlayerSelection state from GameManager");
         return;
     }
     private void DeadHero() {
-
+        Debug.Log("DeadHero state from GameManager");
+        return;
     }
     private void GameOver() { 
+        Debug.Log("GameOver state from GameManager"); 
         PauseGame();   
         return;
     }
     private void ExitSuccess() {  
-        Debug.Log("ExistSuccess from GameManager");  
+        Debug.Log("ExistSuccess state from GameManager");
         return;
     }
     private void EndStageSummary() {  
+        Debug.Log("EndStageSummary state from GameManager");
         return;
     }
     private void NextLevel() {   
-        Debug.Log("NEXT LEVEL !"); 
+        Debug.Log("NextLevel state from GameManager"); 
+        //PauseGame();   
+        //Go next seen
+        //Time.timeScale = 1;
+        return;
+    }
+    private void WinGame() {   
+        Debug.Log("WinGame state from GameManager"); 
         //PauseGame();   
         //Go next seen
         //Time.timeScale = 1;
@@ -80,14 +94,13 @@ public class GameManager : MonoBehaviour
     {
         // Clean the PlayerPref to avoid starting with the heroes of the previous session
         PlayerPrefs.DeleteAll();
-        Time.timeScale = 0;
     }
 
     
 }
 
 public enum GameState {
-    
+
     PlayerSelection,
     PlayMode,
     Dead,
@@ -95,5 +108,6 @@ public enum GameState {
     GameOver,
     ExitSuccess,
     EndStageSummary,
-    NextLevel
+    NextLevel,
+    WinGame
 }

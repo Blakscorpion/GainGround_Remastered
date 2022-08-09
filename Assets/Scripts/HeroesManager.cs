@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -8,7 +7,6 @@ public class HeroesManager : MonoBehaviour
 {
     public static HeroesManager Instance;
     public String CurrentHero = "Player";
-    [SerializeField] TextMeshProUGUI EndLevelSummary;
 
     public List<string> ListOfHeroesAlive = new List<string>();
     public List<string> DeadHeros = new List<string>();

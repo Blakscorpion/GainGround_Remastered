@@ -8836,6 +8836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36623c68475a9a24c91051e0812c7737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lengthHeroList: 0
   CurrentPlayer: {fileID: 0}
   HeroSelectionUI: {fileID: 660589476}
 --- !u!114 &1963699147
@@ -8999,11 +9000,8 @@ MonoBehaviour:
   timeRemaining: 120
   timerIsRunning: 0
   EnnemyNumber: 1
-  UIEnnemiyRemaining: {fileID: 1580233606}
+  UIEnnemyRemaining: {fileID: 1580233606}
   UITimeRemaining: {fileID: 775613346}
-  GameOverPanel: {fileID: 959923568}
-  EndLevelSummary: {fileID: 536730896}
-  WinPannel: {fileID: 0}
 --- !u!4 &2024021213
 Transform:
   m_ObjectHideFlags: 0

@@ -1,22 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager Instance;
-    
-    public float timeRemaining = 10;
+    public static LevelManager Instance;    
+    public float timeRemaining = 120;
     public bool timerIsRunning = false;
     public int EnnemyNumber;
     
-    [SerializeField] TextMeshProUGUI UIEnnemiyRemaining;
+    [SerializeField] TextMeshProUGUI UIEnnemyRemaining;
     [SerializeField] TextMeshProUGUI UITimeRemaining;
-    [SerializeField] TextMeshProUGUI GameOverPanel;
-    [SerializeField] TextMeshProUGUI EndLevelSummary;
-    public TextMeshProUGUI WinPannel;
 
 
     void Awake()
@@ -27,7 +21,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         EnnemyNumber = GameObject.FindGameObjectsWithTag("Ennemy").Length;
-        UIEnnemiyRemaining.text="Ennemies : "+EnnemyNumber.ToString();        
+        UIEnnemyRemaining.text="Ennemies : "+EnnemyNumber.ToString();        
         timerIsRunning = true;
     }
 
@@ -35,13 +29,11 @@ public class LevelManager : MonoBehaviour
         // Level Timer management
         if (timerIsRunning)
         {
-            if (timeRemaining > 0)
-            {
+            if (timeRemaining > 0){
                 timeRemaining -= Time.deltaTime;
-                UITimeRemaining.text = "Time : " + Mathf.FloorToInt(timeRemaining).ToString();
             }
-            else
-            {
+            
+            else{
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
@@ -59,12 +51,14 @@ public class LevelManager : MonoBehaviour
                 }
                 
             }
+            // We update the UI with the timer each frame
+            UITimeRemaining.text = "Time : " + Mathf.FloorToInt(timeRemaining).ToString();
         }
     }
 
     public void RemoveEnnemy() {
         EnnemyNumber--;
-        UIEnnemiyRemaining.text=EnnemyNumber.ToString() + " Ennemies";
+        UIEnnemyRemaining.text=EnnemyNumber.ToString() + " Ennemies";
         if (EnnemyNumber<=0)
         {
             GameManager.Instance.UpdateGameState(GameState.EndStageSummary);

@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
@@ -9,6 +8,7 @@ public class EnemyPatrol : MonoBehaviour
     public Transform[] waypoints;
     private Transform WaypointTarget;
     private int destPoint =0;
+    private float distanceBetweenObjects;
 
     [SerializeField]
     private int DetectionArea = 5;
@@ -18,7 +18,7 @@ public class EnemyPatrol : MonoBehaviour
     public bool isPatroling= true;
 
     // Start is called before the first frame update
-        void Start()
+    void Start()
     {
         WaypointTarget = waypoints[0];
     }
@@ -27,8 +27,10 @@ public class EnemyPatrol : MonoBehaviour
     void Update()
     {
 
-       if (EnnemyTarget )
+       if (EnnemyTarget)
        {
+            distanceBetweenObjects = Vector3.Distance(transform.position, EnnemyTarget.position);
+
             if (isInRange())
             {
                 Attacking();
@@ -38,21 +40,19 @@ public class EnemyPatrol : MonoBehaviour
                 Patroling();
             }
        }
+       
        else
-        {
-            if (GameObject.FindWithTag("Player"))
-            {
+       {
+            if (GameObject.FindWithTag("Player")){
                 EnnemyTarget=GameObject.FindWithTag("Player").transform;
             }
             Patroling();
         }
-      
     }
 
     void Patroling()
     {
          Vector3 dir = WaypointTarget.position - transform.position;
-       // transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
         float step = speed * Time.deltaTime;
 
         // move sprite towards the target location
@@ -72,12 +72,10 @@ public class EnemyPatrol : MonoBehaviour
 
     private bool isInRange()
     {
-        if ((this.transform.position.x-EnnemyTarget.transform.position.x <= DetectionArea) & (this.transform.position.y-EnnemyTarget.transform.position.y <= DetectionArea))
+        if (distanceBetweenObjects <= DetectionArea)
         {
             return true;
-        }
-        
+        }  
         return false;
-        
     }
 }

@@ -3,10 +3,11 @@ using UnityEngine;
 public class shooting : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject bulletPrefab;
+    public GameObject primaryAmmo;
+    public GameObject secondaryAmmo;
     Animator m_Animator=null;
     AnimatorClipInfo[] animatorinfo=null;
-    public string current_animation="";
+    private string current_animation="";
     SpriteRenderer sprite;
     public float bulletForce = 20f;
 
@@ -19,13 +20,18 @@ public class shooting : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-         Shoot();
+         Shoot(false);
+        }
+        if(Input.GetButtonDown("Fire2"))
+        {
+         Shoot(true);
         }
     }
 
-    void Shoot()
+    void Shoot(bool isSpecialAttack)
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        // Si isSpecialAttack == true, on utilise l'attaque spéciale, sinon l'attaque principale
+        GameObject bullet = Instantiate(isSpecialAttack?secondaryAmmo:primaryAmmo, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         
         animatorinfo = this.m_Animator.GetCurrentAnimatorClipInfo(0);

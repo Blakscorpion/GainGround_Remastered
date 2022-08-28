@@ -1959,9 +1959,7 @@ MonoBehaviour:
   heroName: Poilux
   FragNumber: 0
   heroDescription: "Un type \xE0 poil. Chances de survie faible."
-  isplayerOne: 0
-  isCurrentlyPlaying: 0
-  hasReachedNextLevel: 0
+  isUnlocked: 0
 --- !u!114 &217716732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1975,8 +1973,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1018237710}
-  bulletPrefab: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
-  current_animation: 
+  primaryAmmo: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
+  secondaryAmmo: {fileID: 3395145008458581305, guid: 13c64d949ff546b4d945f289a4e72807, type: 3}
   bulletForce: 12
 --- !u!114 &217716733
 MonoBehaviour:
@@ -8159,9 +8157,7 @@ MonoBehaviour:
   heroName: Poilux
   FragNumber: 0
   heroDescription: "Un type \xE0 poil. Chances de survie faible."
-  isplayerOne: 0
-  isCurrentlyPlaying: 0
-  hasReachedNextLevel: 0
+  isUnlocked: 0
 --- !u!114 &1609959809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8175,8 +8171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 414641477}
-  bulletPrefab: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
-  current_animation: 
+  primaryAmmo: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
+  secondaryAmmo: {fileID: 3395145008458581305, guid: 13c64d949ff546b4d945f289a4e72807, type: 3}
   bulletForce: 29
 --- !u!114 &1609959810
 MonoBehaviour:
@@ -8838,9 +8834,7 @@ MonoBehaviour:
   heroName: Poilux
   FragNumber: 0
   heroDescription: "Un type \xE0 poil. Chances de survie faible."
-  isplayerOne: 0
-  isCurrentlyPlaying: 0
-  hasReachedNextLevel: 0
+  isUnlocked: 0
 --- !u!114 &1937987239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8854,8 +8848,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 874809134}
-  bulletPrefab: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
-  current_animation: 
+  primaryAmmo: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
+  secondaryAmmo: {fileID: 3395145008458581305, guid: 13c64d949ff546b4d945f289a4e72807, type: 3}
   bulletForce: 20
 --- !u!114 &1937987240
 MonoBehaviour:

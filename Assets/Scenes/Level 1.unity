@@ -10692,6 +10692,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6896434668776888225, guid: d0304be1a0647564e84687fd65d88753, type: 3}
+      propertyPath: m_Size.x
+      value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896434668776888225, guid: d0304be1a0647564e84687fd65d88753, type: 3}
+      propertyPath: m_Size.y
+      value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896434668776888225, guid: d0304be1a0647564e84687fd65d88753, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8482445711494784995, guid: ae3db493c7987f547a6036c90b621458, type: 3}
+    - target: {fileID: 6896434668776888225, guid: d0304be1a0647564e84687fd65d88753, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0304be1a0647564e84687fd65d88753, type: 3}
 --- !u!1001 &7231908502129777683
@@ -10748,6 +10764,26 @@ PrefabInstance:
     - target: {fileID: 7231908500795935415, guid: 89fb37854ef438e4c9b838f0cd68680b, type: 3}
       propertyPath: m_Name
       value: Poilux2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231908500795935415, guid: 89fb37854ef438e4c9b838f0cd68680b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231908500795935422, guid: 89fb37854ef438e4c9b838f0cd68680b, type: 3}
+      propertyPath: m_Size.x
+      value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231908500795935422, guid: 89fb37854ef438e4c9b838f0cd68680b, type: 3}
+      propertyPath: m_Size.y
+      value: 2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231908500795935422, guid: 89fb37854ef438e4c9b838f0cd68680b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8482445711494784995, guid: ae3db493c7987f547a6036c90b621458, type: 3}
+    - target: {fileID: 7231908500795935422, guid: 89fb37854ef438e4c9b838f0cd68680b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89fb37854ef438e4c9b838f0cd68680b, type: 3}

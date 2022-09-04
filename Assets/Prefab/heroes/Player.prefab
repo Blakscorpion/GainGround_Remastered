@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec2b3129a8a56b408b0080e309fc2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 4
+  movespeed: 2
   rigidBody: {fileID: 8491435536899377380}
   animator: {fileID: 8491435536899377381}
 --- !u!61 &8491435536899376923
@@ -199,6 +199,8 @@ MonoBehaviour:
   primaryAmmo: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
   secondaryAmmo: {fileID: 3395145008458581305, guid: 13c64d949ff546b4d945f289a4e72807, type: 3}
   bulletForce: 12
+  shootingInterval: 1
+  shootingIntervalSpecial: 2
 --- !u!114 &8491435536899377376
 MonoBehaviour:
   m_ObjectHideFlags: 0

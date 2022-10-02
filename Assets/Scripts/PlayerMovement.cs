@@ -113,4 +113,9 @@ public class PlayerMovement : MonoBehaviour
         }
     Debug.Log(current_animation);
     }
+
+    public string GetCurrentMovement()
+    {
+        return current_animation;
+    }
 }

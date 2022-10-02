@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ennemy
   - damagingAmmo
+  - Baby
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - UI
   - PlayerAmmo
   - Player
-  - 
+  - Baby
   - 
   - 
   - 

@@ -1582,7 +1582,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6896434668776888152, guid: d0304be1a0647564e84687fd65d88753, type: 3}
       propertyPath: m_Name
-      value: Poilux3
+      value: Cyber
       objectReference: {fileID: 0}
     - target: {fileID: 6896434668776888152, guid: d0304be1a0647564e84687fd65d88753, type: 3}
       propertyPath: m_IsActive
@@ -8297,7 +8297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7231908500795935415, guid: 89fb37854ef438e4c9b838f0cd68680b, type: 3}
       propertyPath: m_Name
-      value: Poilux2
+      value: Betty
       objectReference: {fileID: 0}
     - target: {fileID: 7231908500795935415, guid: 89fb37854ef438e4c9b838f0cd68680b, type: 3}
       propertyPath: m_IsActive
@@ -9938,7 +9938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8491435536899377378, guid: d67f9a206177f0440a6cf8792d386e4e, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Athra
       objectReference: {fileID: 0}
     - target: {fileID: 8491435536899377378, guid: d67f9a206177f0440a6cf8792d386e4e, type: 3}
       propertyPath: m_IsActive
@@ -10508,10 +10508,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7f3c1b5f3857e4a9ff885e6272af78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHero: Player
-  ListOfHeroesAlive: []
-  DeadHeros: []
-  PassedHeros: []
+  CurrentHero: 0
+  ListOfHeroesAlive: 
+  DeadHeros: 
+  PassedHeros: 
 --- !u!1 &2133629083
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,8 +23,6 @@ public class babyController : MonoBehaviour
         {
             if (player)
             {
-                Debug.Log("PlayerExists");
-                Debug.Log("OMG : c'est " + player.GetComponent<PlayerMovement>().GetCurrentMovement());
                 string currMov = player.GetComponent<PlayerMovement>().GetCurrentMovement();
                 BabyPlacement(currMov); 
             

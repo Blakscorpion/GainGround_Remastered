@@ -9,7 +9,7 @@ public class HeroSelection : MonoBehaviour
     private int currentHeroIndexselected=0;
     public int lengthHeroList=0;
     public GameObject CurrentPlayer;
-    private List<string> availableHeroList = new List<string>();
+    private List<HeroesManager.Hero> availableHeroList = new List<HeroesManager.Hero>();
     [SerializeField] TextMeshProUGUI HeroSelectionUI;
 
 
@@ -67,10 +67,9 @@ public class HeroSelection : MonoBehaviour
 
                 //Activate the Player selected
                 Debug.Log("I want to activate : " + availableHeroList[currentHeroIndexselected%lengthHeroList]);
-                CurrentPlayer = FindInActiveObjectByName(availableHeroList[currentHeroIndexselected%lengthHeroList]);
+                CurrentPlayer = FindInActiveObjectByName(availableHeroList[currentHeroIndexselected%lengthHeroList].ToString());
                 CurrentPlayer.SetActive(true);
                 GameManager.Instance.UpdateGameState(GameState.PlayMode);
-
             }
         }
     }
@@ -101,7 +100,7 @@ public class HeroSelection : MonoBehaviour
             image.enabled=true;
             transform.GetChild(0).gameObject.SetActive(true);
             HeroSelectionUI.text = "Select Your Hero : " + availableHeroList[0];
-            CurrentPlayer = FindInActiveObjectByName(availableHeroList[currentHeroIndexselected%lengthHeroList]);
+            CurrentPlayer = FindInActiveObjectByName(availableHeroList[currentHeroIndexselected%lengthHeroList].ToString());
         }
 
         // IF no more heroes available, either it's game over, either we go to level summary if some of them went through exit gate

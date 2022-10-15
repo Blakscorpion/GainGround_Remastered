@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         EnnemyNumber = GameObject.FindGameObjectsWithTag("Ennemy").Length;
-        UIEnnemyRemaining.text="Ennemies : "+EnnemyNumber.ToString();        
+        UIEnnemyRemaining.text= EnnemyNumber.ToString();        
         timerIsRunning = true;
     }
 
@@ -52,13 +52,13 @@ public class LevelManager : MonoBehaviour
                 
             }
             // We update the UI with the timer each frame
-            UITimeRemaining.text = "Time : " + Mathf.FloorToInt(timeRemaining).ToString();
+            UITimeRemaining.text = Mathf.FloorToInt(timeRemaining).ToString();
         }
     }
 
     public void RemoveEnnemy() {
         EnnemyNumber--;
-        UIEnnemyRemaining.text=EnnemyNumber.ToString() + " Ennemies";
+        UIEnnemyRemaining.text=EnnemyNumber.ToString();
         if (EnnemyNumber<=0)
         {
             GameManager.Instance.UpdateGameState(GameState.EndStageSummary);

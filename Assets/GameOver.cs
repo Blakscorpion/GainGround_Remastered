@@ -11,7 +11,6 @@ public class GameOver : MonoBehaviour
         GameManager.OnGameStateChanged -= DisplayGameOverUI;
     }
 
-
     
     private void DisplayGameOverUI(GameState state) {
         if(state == GameState.GameOver)

@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     public float timeRemaining = 120;
     public bool timerIsRunning = false;
     public int EnnemyNumber;
+    public int NumberOfBabiesAllowed = 1;
     
     [SerializeField] TextMeshProUGUI UIEnnemyRemaining;
     [SerializeField] TextMeshProUGUI UITimeRemaining;

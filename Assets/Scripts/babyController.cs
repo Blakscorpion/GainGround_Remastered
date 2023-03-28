@@ -9,7 +9,30 @@ public class babyController : MonoBehaviour
     bool isBabyCollected = false;
     SpriteRenderer RendererComponent;
     private Vector2 movement;
+    private int currentBabyIteration =0;
 
+     private void Awake() {
+        GameManager.OnGameStateChanged += CheckBabyNumberAndDestroy;
+    }
+
+    private void OnDestroy() {
+        GameManager.OnGameStateChanged -= CheckBabyNumberAndDestroy;
+    }
+
+    // Check if not exceeding the maximum number of babies allowed. If yes, kill (only the baby from dead heroes, not the level baby --> tag == baby and not BabyFromLevel)
+    private void CheckBabyNumberAndDestroy(GameState state) {
+        if(state == GameState.Dead && this.tag=="Baby")
+        {   
+            currentBabyIteration++;
+            Debug.Log("There are currently " + GameObject.FindGameObjectsWithTag("Baby").Length + " baby.");
+            if (currentBabyIteration > LevelManager.Instance.NumberOfBabiesAllowed)
+            {   
+                // TODO : Destroy only the last one
+                GameObject.Destroy(this.gameObject);
+            }
+        }
+    }
+    
     // Start is called before the first frame update
     void Start()
     {

@@ -7,6 +7,7 @@ TagManager:
   - Ennemy
   - damagingAmmo
   - Baby
+  - BabyFromLevel
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,8 @@ using UnityEngine;
 public class babyController : MonoBehaviour
 {
     GameObject player;
+    babyInfo babyInfo;
+    PlayerStats playerStats;
     public Animator animator;
     bool isBabyCollected = false;
     SpriteRenderer RendererComponent;
@@ -37,6 +39,7 @@ public class babyController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        babyInfo = GetComponent<babyInfo>();
     }
 
     // Update is called once per frame
@@ -76,14 +79,22 @@ public class babyController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player") && isBabyCollected==false)
         {
-            Debug.Log("Baby gathered");
-            isBabyCollected=true;
             player = other.gameObject;
-            this.transform.position = player.transform.position;
+            playerStats = player.GetComponent<PlayerStats>();
+            
+            if (playerStats.hasABaby == false)
+            {
+                Debug.Log("Baby gathered");
+                isBabyCollected=true;
+                playerStats.hasABaby=true;
+                playerStats.babyFollowing =  babyInfo.babyHeroName;
+                
+                this.transform.position = player.transform.position;
 
-            // On récup le spriterender du player pour savoir s'il est flipX ou pas, car le nom de l'animation est dans les 2 cas == MoveRight.
-            //Donc faut savoir si elle est à droite + flipX ou à droite pas flipX
-            RendererComponent = player.GetComponent<SpriteRenderer>();
+                // On récup le spriterender du player pour savoir s'il est flipX ou pas, car le nom de l'animation est dans les 2 cas == MoveRight.
+                //Donc faut savoir si elle est à droite + flipX ou à droite pas flipX
+                RendererComponent = player.GetComponent<SpriteRenderer>();
+            }
         }
     }
 

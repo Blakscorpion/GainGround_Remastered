@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class babyInfo : MonoBehaviour
 {
-
-    [SerializeField] HeroesManager.Hero HeroFollowing;
-
+    public HeroesManager.Hero babyHeroName;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +17,5 @@ public class babyInfo : MonoBehaviour
         
     }
 
-    void SetName(HeroesManager.Hero hero)
-    {
-        HeroFollowing = hero;
-    }
+
 }

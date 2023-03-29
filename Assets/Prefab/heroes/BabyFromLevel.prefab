@@ -156,4 +156,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1decd974be7a34144b27c7465f7d9391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeroFollowing: 3
+  babyHeroName: 3

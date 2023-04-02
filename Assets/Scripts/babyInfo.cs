@@ -17,5 +17,8 @@ public class babyInfo : MonoBehaviour
         
     }
 
-
+    void SetName(HeroesManager.Hero babyName)
+    {
+        babyHeroName = babyName;
+    }
 }

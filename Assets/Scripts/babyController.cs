@@ -15,10 +15,12 @@ public class babyController : MonoBehaviour
 
      private void Awake() {
         GameManager.OnGameStateChanged += CheckBabyNumberAndDestroy;
+        GameManager.OnGameStateChanged += RemoveBabyFromStageWhenExit;
     }
 
     private void OnDestroy() {
         GameManager.OnGameStateChanged -= CheckBabyNumberAndDestroy;
+        GameManager.OnGameStateChanged += RemoveBabyFromStageWhenExit;
     }
 
     // Check if not exceeding the maximum number of babies allowed. If yes, kill (only the baby from dead heroes, not the level baby --> tag == baby and not BabyFromLevel)
@@ -31,6 +33,19 @@ public class babyController : MonoBehaviour
             if (currentBabyIteration > LevelManager.Instance.NumberOfBabiesAllowed && GameObject.FindGameObjectsWithTag("Baby").Length > LevelManager.Instance.NumberOfBabiesAllowed)
             {   
                 // TODO : Destroy only the last one
+                GameObject.Destroy(this.gameObject);
+            }
+        }
+    }
+
+    // If Hero went to exit with a baby, remove the baby from the scene, as it's considered as passed also
+    private void RemoveBabyFromStageWhenExit(GameState state) {
+        if(state == GameState.ExitSuccess && isBabyCollected)
+        {   
+            isBabyCollected=false;
+            Debug.Log("Baby " + babyInfo.babyHeroName + " has also passed with the hero");
+            {   
+                // TODO : Destroy the baby gameobject
                 GameObject.Destroy(this.gameObject);
             }
         }

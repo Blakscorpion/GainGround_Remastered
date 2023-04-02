@@ -27,7 +27,8 @@ public class babyController : MonoBehaviour
         {   
             currentBabyIteration++;
             Debug.Log("There are currently " + GameObject.FindGameObjectsWithTag("Baby").Length + " baby.");
-            if (currentBabyIteration > LevelManager.Instance.NumberOfBabiesAllowed)
+            // If there are more babies on the level than the number allowed, and if the idNumber of this one is higher than expected, we destroy it
+            if (currentBabyIteration > LevelManager.Instance.NumberOfBabiesAllowed && GameObject.FindGameObjectsWithTag("Baby").Length > LevelManager.Instance.NumberOfBabiesAllowed)
             {   
                 // TODO : Destroy only the last one
                 GameObject.Destroy(this.gameObject);

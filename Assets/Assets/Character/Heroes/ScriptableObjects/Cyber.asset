@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237caec40c3856b4083e4ae0799b5399, type: 3}
+  m_Name: Cyber
+  m_EditorClassIdentifier: 
+  HeroAnimator: {fileID: 0}
+  HeroAnimation: {fileID: 0}
+  HeroName: 2
+  HeroDescription: 
+  HeroSprite: {fileID: 0}
+  health: 0
+  speed: 0
+  PrimaryAmmo: {fileID: 0}
+  PrimaryAmmoDamage: 0
+  PrimaryAmmoTimeInterval: 0
+  SecondaryAmmo: {fileID: 0}
+  SecondaryAmmoDamage: 0
+  SecondaryAmmoTimeInterval: 0

@@ -13,12 +13,13 @@ public class LeaveStage : MonoBehaviour
             PlayerWhoExits.GetComponent<Animator>().enabled = false;
             PlayerWhoExits.GetComponent<PlayerMovement>().enabled = false;
             Debug.Log(collider.name + " PASSED !");
-            
+
             // Change state to Exist Success
             GameManager.Instance.UpdateGameState(GameState.ExitSuccess);
-
+            
             // Destroy the player
             Destroy(PlayerWhoExits, 0.5f); 
+            
             // TODO Play song of plyaer success 
         }
     }

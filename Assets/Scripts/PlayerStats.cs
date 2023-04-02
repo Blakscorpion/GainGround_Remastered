@@ -24,6 +24,11 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void SetHeroName(HeroesManager.Hero heroToName)
+    {
+        heroName = heroToName;
+    }
+
     public void setBabyFollowingName(HeroesManager.Hero baby)
     {
         babyFollowing = baby;

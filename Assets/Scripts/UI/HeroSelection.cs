@@ -8,9 +8,11 @@ public class HeroSelection : MonoBehaviour
 {
     private int currentHeroIndexselected=0;
     public int lengthHeroList=0;
-    public GameObject CurrentPlayer;
+    public HeroesManager.Hero CurrentPlayer;
     private List<HeroesManager.Hero> availableHeroList = new List<HeroesManager.Hero>();
     [SerializeField] TextMeshProUGUI HeroSelectionUI;
+    public GameObject PlayerToInstantiate;
+    public Transform InitialPlayerLocation;
 
 
     private void Awake() {
@@ -65,10 +67,10 @@ public class HeroSelection : MonoBehaviour
                 image.enabled=false;
                 transform.GetChild(0).gameObject.SetActive(false);
 
-                //Activate the Player selected
+                //Instantiate the Player selected
                 Debug.Log("I want to activate : " + availableHeroList[currentHeroIndexselected%lengthHeroList]);
-                CurrentPlayer = FindInActiveObjectByName(availableHeroList[currentHeroIndexselected%lengthHeroList].ToString());
-                CurrentPlayer.SetActive(true);
+                GameObject HeroGenerated = Instantiate(PlayerToInstantiate, InitialPlayerLocation.position, InitialPlayerLocation.rotation);
+                HeroGenerated.SendMessage("InitHero", HeroesManager.Instance.CurrentHero);
                 GameManager.Instance.UpdateGameState(GameState.PlayMode);
             }
         }
@@ -93,6 +95,7 @@ public class HeroSelection : MonoBehaviour
         //Retrieve the number of heros alive
         availableHeroList = HeroesManager.Instance.ListOfHeroesAlive;
         lengthHeroList = availableHeroList.Count;
+        currentHeroIndexselected=0;
 
         // If some heros are still alive, we display the player selection list to continue the game
         if (lengthHeroList>0){
@@ -100,7 +103,7 @@ public class HeroSelection : MonoBehaviour
             image.enabled=true;
             transform.GetChild(0).gameObject.SetActive(true);
             HeroSelectionUI.text = "Select Your Hero : " + availableHeroList[0];
-            CurrentPlayer = FindInActiveObjectByName(availableHeroList[currentHeroIndexselected%lengthHeroList].ToString());
+            CurrentPlayer = availableHeroList[currentHeroIndexselected%lengthHeroList];
         }
 
         // IF no more heroes available, either it's game over, either we go to level summary if some of them went through exit gate
@@ -113,21 +116,5 @@ public class HeroSelection : MonoBehaviour
                 GameManager.Instance.UpdateGameState(GameState.EndStageSummary);
             }
         }
-    }
-
-    GameObject FindInActiveObjectByName(string name)
-    {
-        Transform[] objs = Resources.FindObjectsOfTypeAll<Transform>() as Transform[];
-        for (int i = 0; i < objs.Length; i++)
-        {
-            if (objs[i].hideFlags == HideFlags.None)
-            {
-                if (objs[i].name == name)
-                {
-                    return objs[i].gameObject;
-                }
-            }
-        }
-        return null;
     }
 }

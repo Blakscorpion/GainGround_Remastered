@@ -20,7 +20,7 @@ public class babyController : MonoBehaviour
 
     private void OnDestroy() {
         GameManager.OnGameStateChanged -= CheckBabyNumberAndDestroy;
-        GameManager.OnGameStateChanged += RemoveBabyFromStageWhenExit;
+        GameManager.OnGameStateChanged -= RemoveBabyFromStageWhenExit;
     }
 
     // Check if not exceeding the maximum number of babies allowed. If yes, kill (only the baby from dead heroes, not the level baby --> tag == baby and not BabyFromLevel)

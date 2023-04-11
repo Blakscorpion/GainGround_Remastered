@@ -21,6 +21,8 @@ public class PlayerStats : MonoBehaviour
         {
             HeroesManager.Instance.PassedHeros.Add(babyFollowing);
             Debug.Log("Baby " + babyFollowing.ToString() +" has passed the exit");
+            // Remove the baby from the deadList if there is one (because when you die, you transform as a totem but you enter the deadList)
+            HeroesManager.Instance.DeadHeros.Remove(babyFollowing);
         }
     }
 

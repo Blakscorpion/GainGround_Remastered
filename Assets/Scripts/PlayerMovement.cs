@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
         
     
-        rigidBody.MovePosition(rigidBody.position + movement * movespeed *Time.deltaTime);
+        rigidBody.MovePosition(rigidBody.position + movement * movespeed * Time.deltaTime);
         //Vector3 targetVelocityH = new Vector2(_horizontalMovement, rigidBody.velocity.y);
         //Vector3 targetVelocityV = new Vector2(_verticalMovement, rigidBody.velocity.x);
         //rigidBody.velocity = Vector3.SmoothDamp(rigidBody.velocity, targetVelocityH + targetVelocityV, ref velocity, .05f);

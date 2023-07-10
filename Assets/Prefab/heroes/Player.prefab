@@ -290,9 +290,9 @@ GameObject:
   - component: {fileID: 8491435536899377380}
   - component: {fileID: 8491435536899377381}
   - component: {fileID: 8491435536899377382}
-  - component: {fileID: 8491435536899377383}
   - component: {fileID: 8491435536899377376}
   - component: {fileID: -1241576447285336014}
+  - component: {fileID: -489189962859765641}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -461,24 +461,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   babyPrefab: {fileID: 445242299752372692, guid: 3f7769657968cfb4eac5cb5b21045420, type: 3}
---- !u!114 &8491435536899377383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8491435536899377378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54fb7dcdc5988f541a68f30317c0d445, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 8491435537172728853}
-  primaryAmmo: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
-  secondaryAmmo: {fileID: 3395145008458581305, guid: 13c64d949ff546b4d945f289a4e72807, type: 3}
-  bulletForce: 12
-  shootingInterval: 1
-  shootingIntervalSpecial: 2
 --- !u!114 &8491435536899377376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +491,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HeroName: 0
+--- !u!114 &-489189962859765641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8491435536899377378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4250c1fa768094fbf21c42a8902bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 8491435537172728853}
+  primaryAmmo: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
+  secondaryAmmo: {fileID: 3395145008458581305, guid: 13c64d949ff546b4d945f289a4e72807, type: 3}
+  bulletForce: 10
+  shootingInterval: 1
+  shootingIntervalSpecial: 1
 --- !u!1 &8491435537172728854
 GameObject:
   m_ObjectHideFlags: 0

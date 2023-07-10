@@ -8,6 +8,7 @@ TagManager:
   - damagingAmmo
   - Baby
   - BabyFromLevel
+  - Particle
   layers:
   - Default
   - TransparentFX

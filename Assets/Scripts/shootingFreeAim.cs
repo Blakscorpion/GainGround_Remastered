@@ -9,8 +9,8 @@ public class shootingFreeAim : MonoBehaviour
     private int lastDirection;
     SpriteRenderer sprite;
     public float bulletForce = 20f;
-    public int shootingInterval=1;
-    public int shootingIntervalSpecial=2;
+    public float shootingInterval=0.2f;
+    public float shootingIntervalSpecial=2f;
 
     private bool isAbleToShoot=true;
     private bool isAbleToShootSpecial=true;
@@ -56,14 +56,14 @@ public class shootingFreeAim : MonoBehaviour
     }
 
     // wait X seconds to be able to attack again
-    private IEnumerator WaitAndShootAgain(int waitTime)
+    private IEnumerator WaitAndShootAgain(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
         isAbleToShoot=true;
     }
 
     // wait X seconds to be able to use special attack again
-    private IEnumerator WaitAndShootSpecialAgain(int waitTime)
+    private IEnumerator WaitAndShootSpecialAgain(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
         isAbleToShootSpecial=true;

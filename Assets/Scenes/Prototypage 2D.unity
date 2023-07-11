@@ -20641,7 +20641,7 @@ MonoBehaviour:
   primaryAmmo: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
   secondaryAmmo: {fileID: 3395145008458581305, guid: 13c64d949ff546b4d945f289a4e72807, type: 3}
   bulletForce: 15
-  shootingInterval: 1
+  shootingInterval: 0.5
   shootingIntervalSpecial: 1
 --- !u!4 &1367945552 stripped
 Transform:
@@ -25040,6 +25040,10 @@ PrefabInstance:
     - target: {fileID: 445242299752372692, guid: 3f7769657968cfb4eac5cb5b21045420, type: 3}
       propertyPath: m_Name
       value: Baby
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331269370391882621, guid: 3f7769657968cfb4eac5cb5b21045420, type: 3}
+      propertyPath: babyHeroName
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f7769657968cfb4eac5cb5b21045420, type: 3}

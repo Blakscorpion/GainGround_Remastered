@@ -20,4 +20,5 @@ public class Play : MonoBehaviour
     {
         Application.Quit();
     }
+
 }

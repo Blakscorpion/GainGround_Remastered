@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Play : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
         // Load the next scene in the hierarchy order of the Scene Manager (File --> Build Settings)
-        Invoke("LoadNextScene", 2f);
+        Invoke("LoadNextScene", 1.7f);
     }
 
     private void LoadNextScene()

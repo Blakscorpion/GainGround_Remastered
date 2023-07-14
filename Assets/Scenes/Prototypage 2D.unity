@@ -25205,6 +25205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireImpact
       objectReference: {fileID: 0}
+    - target: {fileID: 4050373618030738427, guid: a29eb66d13465a24280be86e0f6c6377, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6176754106272894044, guid: a29eb66d13465a24280be86e0f6c6377, type: 3}
       propertyPath: m_RootOrder
       value: 6

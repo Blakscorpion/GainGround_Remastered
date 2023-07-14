@@ -56,7 +56,7 @@ public class SettingsMenu : MonoBehaviour
             if (resolutions[i].refreshRate == Screen.currentResolution.refreshRate)
             {
                 options.Add(option);
-                if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+                if (resolutions[i].width == Screen.width && resolutions[i].height == Screen.height)
                 {
                     currentResolutionIndex = lastAddedOptionIndex;
                 }

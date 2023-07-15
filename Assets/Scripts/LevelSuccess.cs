@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 
 public class LevelSuccess : MonoBehaviour
-{
+{/* 
     [SerializeField] TextMeshProUGUI EndLevelSummary;
 
     private void Awake() {
@@ -23,5 +23,5 @@ public class LevelSuccess : MonoBehaviour
             EndLevelSummary.text = "Level COMPLETED\nSummary\n- "+ HeroesManager.Instance.DeadHeros.Count +" hero Dead";
             GameManager.Instance.UpdateGameState(GameState.NextLevel);
         }
-    }
+    } */
 }

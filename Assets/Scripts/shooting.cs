@@ -54,7 +54,6 @@ public class shooting : MonoBehaviour
         // Shooting down
         if(lastDirection == 5)
         {
-            Debug.Log("Shoot Down");
             rb.transform.Rotate(0.0f, 0.0f, 180.0f, Space.Self);
             rb.AddForce(-firePoint.up * bulletForce , ForceMode2D.Impulse);
         }
@@ -62,45 +61,38 @@ public class shooting : MonoBehaviour
         else if (lastDirection == 3)
         {   
             rb.transform.Rotate(0.0f, 0.0f, -90.0f, Space.Self);
-            Debug.Log("Shoot right");                
             rb.AddForce(firePoint.right * bulletForce , ForceMode2D.Impulse);
         }
         else if (lastDirection == 7)
         {   
             rb.transform.Rotate(0.0f, 0.0f, 90.0f, Space.Self);
-            Debug.Log("Shoot left");
             rb.AddForce(-firePoint.right * bulletForce , ForceMode2D.Impulse);
         }
         // Shooting up
         else if (lastDirection == 1)
         {  
-            Debug.Log("Shoot up");
             rb.AddForce(firePoint.up * bulletForce , ForceMode2D.Impulse);
         }
         else if (lastDirection == 2)
         {   
             rb.transform.Rotate(0.0f, 0.0f, -45.0f, Space.Self);
-            Debug.Log("Shoot Top right"); 
 
             rb.AddForce(new Vector2(1,1) * bulletForce, ForceMode2D.Impulse);
         }
         else if (lastDirection == 4)
         {   
             rb.transform.Rotate(0.0f, 0.0f, -135.0f, Space.Self);
-            Debug.Log("Shoot bottom right");                
             rb.AddForce(new Vector2(1,-1) * bulletForce , ForceMode2D.Impulse);
         }
         else if (lastDirection == 8)
         {   
             rb.transform.Rotate(0.0f, 0.0f, 45.0f, Space.Self);
-            Debug.Log("Shoot Top left"); 
 
             rb.AddForce(new Vector2(-1,1) * bulletForce, ForceMode2D.Impulse);
         }
         else if (lastDirection == 6)
         {   
             rb.transform.Rotate(0.0f, 0.0f, 135.0f, Space.Self);
-            Debug.Log("Shoot bottom left");                
             rb.AddForce(new Vector2(-1,-1) * bulletForce , ForceMode2D.Impulse);
         }
 

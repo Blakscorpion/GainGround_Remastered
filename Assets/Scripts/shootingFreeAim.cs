@@ -45,7 +45,6 @@ public class shootingFreeAim : MonoBehaviour
         // Rotate the amo sprite, to be in the direction of the shooting 
         Vector3 dir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
         float angle = (Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg) - 90;
-        Debug.Log(angle);
         rb.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         
         //Shoot in the direction of the aim

@@ -147,7 +147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePerHit: 1
   hitEffect: {fileID: 7411622765213947068, guid: a29eb66d13465a24280be86e0f6c6377, type: 3}
-  GunShot: {fileID: 8006337226855808077, guid: 9a9af165a3f45a44e83677a42f800d5a, type: 3}
 --- !u!82 &6500469762210657136
 AudioSource:
   m_ObjectHideFlags: 0
@@ -157,7 +156,7 @@ AudioSource:
   m_GameObject: {fileID: 3395145008458581305}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4823474997590340449, guid: 4de154293053ba6449c2ec5699ba5910, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2b0603c189222c0439b405dd36bdb502, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2

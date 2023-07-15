@@ -33,14 +33,11 @@ public class HeroesManager : MonoBehaviour
     public Hero CurrentHero;
 
     public List<Hero> ListOfHeroesAlive = new List<Hero>();
-    public List<Hero> DeadHeros = new List<Hero>();
-    public List<Hero> PassedHeros = new List<Hero>();
+    public List<Hero> ListOfDeadHeros = new List<Hero>();
+    public List<Hero> ListOfEscapedHeros = new List<Hero>();
 
     private void Awake() {
         Instance = this;
-        GameManager.OnGameStateChanged += RemoveHeroFromList;
-        GameManager.OnGameStateChanged += AddSuccessHero;
-
         // Check if there are already heroes in the PassedHeroes list.
         if (PlayerPrefs.HasKey("SuccessfullHeroNumber0"))
         {
@@ -62,7 +59,7 @@ public class HeroesManager : MonoBehaviour
     private void OnDisable() { 
         //When the scene is closing (onDisable) : Register the Heroes that succeded in the PlayerPref, to load them in next scene
         int i = 0;
-        foreach (Hero hero in PassedHeros)
+        foreach (Hero hero in ListOfEscapedHeros)
             {
                 PlayerPrefs.SetString("SuccessfullHeroNumber"+i, hero.ToString());
                 i++;
@@ -73,45 +70,16 @@ public class HeroesManager : MonoBehaviour
                 i++;
             }
     }
-    
-    private void OnDestroy() {
-        GameManager.OnGameStateChanged -= RemoveHeroFromList;
-        GameManager.OnGameStateChanged -= AddSuccessHero;
-    }
-    
-    void Start()
-    {
-        
-        
-    }
 
-    private void RemoveHeroFromList(GameState state) {
-        if(state == GameState.Dead)
-        {
-            if (ListOfHeroesAlive.Count > 0)
-            {
-                ListOfHeroesAlive.Remove(CurrentHero);
-                DeadHeros.Add(CurrentHero);
-            }
-        }
-    }
-
-    private void AddSuccessHero(GameState state) {
-        if(state == GameState.ExitSuccess)
-        {
-            Debug.Log("Exit Success From Listener AddSuccessHero");
+    public void HeroDead() {
             ListOfHeroesAlive.Remove(CurrentHero);
-            PassedHeros.Add(CurrentHero);
-            if (ListOfHeroesAlive.Count == 0)
-            {
-                Debug.Log("Plus de héro donc state : EndStage");
-                GameManager.Instance.UpdateGameState(GameState.EndStageSummary);
-            }
-            else
-            {
-                GameManager.Instance.UpdateGameState(GameState.PlayerSelection);
-            }
-        }
+            ListOfDeadHeros.Add(CurrentHero);
+    }
+
+    public void HeroEscaped() {
+            //Debug.Log("Exit Success From Listener AddSuccessHero");
+            ListOfHeroesAlive.Remove(CurrentHero);
+            ListOfEscapedHeros.Add(CurrentHero);
     }
 
     // Time out - Kill all remaining heroes alive
@@ -128,7 +96,7 @@ public class HeroesManager : MonoBehaviour
         foreach (Hero hero in tmp_ListOfHeroesAlive)
         {
             ListOfHeroesAlive.Remove(hero);
-            DeadHeros.Add(hero);
+            ListOfDeadHeros.Add(hero);
         }        
     }
 }

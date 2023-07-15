@@ -111,7 +111,6 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetInteger("LastDirection", 4);
             }
         }
-    Debug.Log(current_animation);
     }
 
     public string GetCurrentMovement()

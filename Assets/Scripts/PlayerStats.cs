@@ -19,10 +19,10 @@ public class PlayerStats : MonoBehaviour
     private void AddSuccessBaby(GameState state) {
         if(state == GameState.ExitSuccess && hasABaby==true)
         {
-            HeroesManager.Instance.PassedHeros.Add(babyFollowing);
+            HeroesManager.Instance.ListOfEscapedHeros.Add(babyFollowing);
             Debug.Log("Baby " + babyFollowing.ToString() +" has passed the exit");
             // Remove the baby from the deadList if there is one (because when you die, you transform as a totem but you enter the deadList)
-            HeroesManager.Instance.DeadHeros.Remove(babyFollowing);
+            HeroesManager.Instance.ListOfDeadHeros.Remove(babyFollowing);
         }
     }
 

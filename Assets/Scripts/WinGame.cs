@@ -19,7 +19,7 @@ public class WinGame : MonoBehaviour
             Image image = transform.GetComponent<Image>();
             image.enabled=true;
             transform.GetChild(0).gameObject.SetActive(true);
-            WinGameUI.text = "You WON !\nGame FINISHED !"+ HeroesManager.Instance.PassedHeros.Count + HeroesManager.Instance.ListOfHeroesAlive.Count +" hero passed the gate !";
+            WinGameUI.text = "You WON !\nGame FINISHED !"+ HeroesManager.Instance.ListOfEscapedHeros.Count + HeroesManager.Instance.ListOfHeroesAlive.Count +" hero passed the gate !";
             Time.timeScale = 0;
         }
     }

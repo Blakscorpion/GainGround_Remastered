@@ -63,8 +63,7 @@ public class babyController : MonoBehaviour
     {
         if (isBabyCollected)
         {
-            if (player)
-            {
+            if (player){
                 string currMov = player.GetComponent<PlayerMovement>().GetCurrentMovement();
                 BabyPlacement(currMov); 
             
@@ -84,11 +83,10 @@ public class babyController : MonoBehaviour
                 }
             }
 
-            else
-            {
+            else{
+                animator.SetBool("isMoving", false);
                 isBabyCollected=false;
             }
-
         }
     }
 
@@ -166,7 +164,5 @@ public class babyController : MonoBehaviour
             default: //  séquence d’instructions par défaut
                 break;
         }
-    }
-
-    
+    }  
 }

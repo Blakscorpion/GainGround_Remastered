@@ -28,6 +28,19 @@ class UI_HeroSelection : MonoBehaviour
         currentHeroIndexselected=0;
     }
 
+    void Start()
+    {   
+        //Find the HeroSpawnLocation transform if not assigned yet
+        if (InitialPlayerLocation == null){
+            GameObject location = GameObject.Find("HeroSpawnLocation");
+            if (location == null){
+                Debug.LogError("Please assign the HeroSpawnLocation of the Map, to the UI_HeroSelection script available in the HeroSelectPanel");
+            }
+            else {
+                InitialPlayerLocation = location.transform;
+            } 
+        }
+    }
 
     void Update()
     {

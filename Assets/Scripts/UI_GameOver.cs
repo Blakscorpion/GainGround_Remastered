@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class GameOver : MonoBehaviour
+public class UI_GameOver : MonoBehaviour
 {
     private void Awake() {
         GameManager.OnGameStateChanged += DisplayGameOverUI;
@@ -15,9 +16,11 @@ public class GameOver : MonoBehaviour
     private void DisplayGameOverUI(GameState state) {
         if(state == GameState.GameOver)
         {   
-            Image image = transform.GetComponent<Image>();
-            image.enabled=true;
             transform.GetChild(0).gameObject.SetActive(true);
         }
+    }
+
+    public void BackToMainMenu(){
+        SceneManager.LoadScene(0);
     }
 }

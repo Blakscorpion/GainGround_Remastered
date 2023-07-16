@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 
-class HeroSelection : MonoBehaviour
+class UI_HeroSelection : MonoBehaviour
 {
     private int currentHeroIndexselected=0;
     private int lengthHeroList=0;

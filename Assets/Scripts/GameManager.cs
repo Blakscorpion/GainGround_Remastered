@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,6 +46,9 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.NextLevel:
                 NextLevel();
+                break;
+            case GameState.GameSummary:
+                GameSummary();
                 break;
             case GameState.WinGame:
                 WinGame();
@@ -121,11 +125,25 @@ public class GameManager : MonoBehaviour
         return;
     }
 
+    private void GameSummary() {   
+        Debug.Log("=== GAMESTATE : 'GAMESUMMARY' ===");
+        return;
+    }
+
     private void NextLevel() {   
         Debug.Log("=== GAMESTATE : 'NEXT_LEVEL' ===");
-        //PauseGame();   
-        //Go next seen
-        //Time.timeScale = 1;
+        
+        //We check if it was the last level
+        int NextSceneIndex;
+        NextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        //If it's not, we display the game summary before the next level
+        if (NextSceneIndex < SceneManager.sceneCountInBuildSettings){
+            GameManager.Instance.UpdateGameState(GameState.GameSummary);
+        }
+        //If it was the last Level, we display the Win game UI
+        else{    
+            GameManager.Instance.UpdateGameState(GameState.WinGame);
+        }
         return;
     }
 
@@ -142,11 +160,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("===== GAMESTATE : 'PLAYMODE' =====");
     }
 
-    void PauseGame ()
+    void PauseGame()
     {
         Debug.Log("===== GAMESTATE : 'PAUSE' =====");
-        // Clean the PlayerPref to avoid starting with the heroes of the previous session
-        //PlayerPrefs.DeleteAll();
+        Time.timeScale = 0;
     }    
 }
 
@@ -160,5 +177,6 @@ public enum GameState {
     ExitSuccess,
     StageEnd,
     NextLevel,
+    GameSummary,
     WinGame
 }

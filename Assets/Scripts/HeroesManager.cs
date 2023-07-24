@@ -83,20 +83,12 @@ public class HeroesManager : MonoBehaviour
     }
 
     // Time out - Kill all remaining heroes alive
-    public void TimerEnded()
-    {
-        // Need to create a temporary copy of my list, because I can't delete on the fly inside my list within a foreach
-        List<Hero> tmp_ListOfHeroesAlive = new List<Hero>();
-        
-        foreach (Hero hero in ListOfHeroesAlive)
-        {
-            tmp_ListOfHeroesAlive.Add(hero);
-        }   
-        
-        foreach (Hero hero in tmp_ListOfHeroesAlive)
-        {
-            ListOfHeroesAlive.Remove(hero);
+    public void TimerEnded(){
+        // Remove all living heroes that didn't have time to escape, for next level
+        foreach (Hero hero in ListOfHeroesAlive){
             ListOfDeadHeros.Add(hero);
-        }        
+        }   
+
+        ListOfHeroesAlive.Clear();    
     }
 }

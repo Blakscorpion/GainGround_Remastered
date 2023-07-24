@@ -98,30 +98,31 @@ public class GameManager : MonoBehaviour
             UpdateGameState(GameState.NextLevel);
             Debug.Log("No more ennemies --> NextLevel (by cleaning)");
         }
-
-        //No more heroes available so we check if
+        //No more heroes available
         else if (HeroesManager.Instance.ListOfHeroesAlive.Count == 0){
             Debug.Log("No more Heroes available");
-            // some heroes escaped --> Next Level
-            if (HeroesManager.Instance.ListOfEscapedHeros.Count > 0)
-            {
+            if (HeroesManager.Instance.ListOfEscapedHeros.Count > 0){
                 Debug.Log("But some of them escaped --> NextLevel (by escaping)" );
                 UpdateGameState(GameState.NextLevel);
-
             }
-            // else --> GameOver
             else{
                 Debug.Log("But nobody escaped --> GAMEOVER" );
                 UpdateGameState(GameState.GameOver);
             }
         }
-        
-        // Timer Ended and nobody escaped --> GameOver
+        // Timer Ended
         else{
-            Debug.Log("Timer Ended and nobody escaped --> GAMEOVER" );
-            UpdateGameState(GameState.GameOver);
+            Debug.Log("Timer Ended" );
+            if (HeroesManager.Instance.ListOfEscapedHeros.Count > 0){
+                Debug.Log("But some Heroes escaped --> NextLevel (by escaping)" );
+                HeroesManager.Instance.TimerEnded();
+                UpdateGameState(GameState.NextLevel);
+            }
+            else{
+                Debug.Log("But nobody escaped --> GAMEOVER" );
+                UpdateGameState(GameState.GameOver);
+            }
         }
-
         return;
     }
 

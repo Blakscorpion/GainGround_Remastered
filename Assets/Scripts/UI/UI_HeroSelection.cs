@@ -10,6 +10,7 @@ class UI_HeroSelection : MonoBehaviour
     private int currentHeroIndexselected=0;
     private int lengthHeroList=0;
     private List<HeroesManager.Hero> availableHeroList = new List<HeroesManager.Hero>();
+    private List<HeroScriptableObject> availableScriptableObjectsHeroes = new List<HeroScriptableObject>();
     [SerializeField] private TextMeshProUGUI HeroSelectionUI;
     [SerializeField] private GameObject PlayerToInstantiate;
     [SerializeField] private Transform InitialPlayerLocation;
@@ -40,6 +41,8 @@ class UI_HeroSelection : MonoBehaviour
                 InitialPlayerLocation = location.transform;
             } 
         }
+
+
     }
 
     void Update()

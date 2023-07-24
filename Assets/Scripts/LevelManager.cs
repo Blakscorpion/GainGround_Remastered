@@ -21,7 +21,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         currentEnnemyNumber = GameObject.FindGameObjectsWithTag("Ennemy").Length;
-        UIEnnemyRemaining.text= currentEnnemyNumber.ToString();        
+        UIEnnemyRemaining.text= currentEnnemyNumber.ToString();   
     }
 
     public void RemoveEnnemy() {

@@ -42,6 +42,9 @@ class UI_HeroSelection : MonoBehaviour
             } 
         }
 
+        //Load in memory all Heroes ScriptableObject (to have all avatars/protraits...)
+        
+
 
     }
 

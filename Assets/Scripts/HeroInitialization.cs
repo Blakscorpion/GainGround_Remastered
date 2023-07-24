@@ -9,7 +9,7 @@ public class HeroInitialization : MonoBehaviour
     void InitHero(HeroesManager.Hero HeroToCreate)
     {
         //Search into all scriptable objects
-        HeroScriptableObject = Resources.Load<HeroScriptableObject>(HeroToCreate.ToString());
+        HeroScriptableObject = Resources.Load<HeroScriptableObject>("Heroes/" + HeroToCreate.ToString());
         HeroName = HeroScriptableObject.HeroName;
     }
 }

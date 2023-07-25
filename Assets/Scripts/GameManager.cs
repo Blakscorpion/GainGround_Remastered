@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Start() {
-        UpdateGameState(GameState.PlayerSelection);
+        UpdateGameState(GameState.Dialogue);
     }
 
     public void UpdateGameState(GameState newState)
@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.PlayMode:
                 PlayMode();
+                break;
+            case GameState.Dialogue:
+                Dialogue();
                 break;
             case GameState.Dead:
                 CheckRemainingHeroes();
@@ -60,6 +63,11 @@ public class GameManager : MonoBehaviour
 
     private void PlayerSelection() {    
         Debug.Log("== GAMESTATE : 'PLAYERSELECTION' ==");
+        return;
+    }
+
+    private void Dialogue() {    
+        Debug.Log("== GAMESTATE : 'DIALOGUE' ==");
         return;
     }
 
@@ -172,6 +180,7 @@ public enum GameState {
 
     PlayerSelection,
     PlayMode,
+    Dialogue,
     Dead,
     Pause,
     GameOver,

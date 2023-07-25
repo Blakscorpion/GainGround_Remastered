@@ -12,6 +12,6 @@ public class DialogueScriptableObject : ScriptableObject
 public struct Dialogues
 {
     public HeroesManager.Hero HeroName;
-    public Image HeroPortrait;
+    public Sprite HeroPortrait;
     public string Dialogue;
 }

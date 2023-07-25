@@ -17,6 +17,15 @@ MonoBehaviour:
   HeroName: 0
   HeroDescription: 
   HeroSprite: {fileID: 0}
-  attackDamage1: 0
-  attackDamage2: 0
   health: 0
+  speed: 0
+  PrimaryAmmo: {fileID: 0}
+  PrimaryAmmoDamage: 0
+  PrimaryAmmoTimeInterval: 0
+  SecondaryAmmo: {fileID: 0}
+  SecondaryAmmoDamage: 0
+  SecondaryAmmoTimeInterval: 0
+  ui_PortraitHeroForDialogue: {fileID: 21300000, guid: aba33a97d5e6c5b46b03bcc53f9e7ac1, type: 3}
+  ui_AvatarPortraitForDialogue: {fileID: 0}
+  ui_ImageHeroForSelectionScreen: {fileID: 0}
+  ui_AvatarImageForNextSelection: {fileID: 0}

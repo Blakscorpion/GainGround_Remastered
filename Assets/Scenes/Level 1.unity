@@ -8534,6 +8534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 308551006}
   - component: {fileID: 308551007}
+  - component: {fileID: 308551008}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -8569,53 +8570,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308551005}
   m_CullTransparentMesh: 1
---- !u!1 &309154784
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 309154785}
-  - component: {fileID: 309154786}
-  m_Layer: 0
-  m_Name: Dialogues
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &309154785
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309154784}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 960, y: 168.02937, z: -0.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1618858181}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &309154786
+--- !u!114 &308551008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309154784}
+  m_GameObject: {fileID: 308551005}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edafac1cb73bc8e4d9192a96e3b2ec87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listOfDialogues:
-  - {fileID: 11400000, guid: 2268d99947a4d1d4ca5c1b802a4d1ddc, type: 2}
-  - {fileID: 11400000, guid: a3b9ae0b0e1d9dd43882c7529c591a7f, type: 2}
-  - {fileID: 11400000, guid: 2268d99947a4d1d4ca5c1b802a4d1ddc, type: 2}
+  textComponent: {fileID: 1108196171}
+  HeroNameDialogue: {fileID: 1732373388}
+  HeroPortraitDialogue: {fileID: 714896720}
+  listOfDialogues: []
+  lines: []
+  textSpeed: 0.05
+  index: 0
 --- !u!1 &375756117
 GameObject:
   m_ObjectHideFlags: 0
@@ -25521,7 +25494,7 @@ RectTransform:
   m_GameObject: {fileID: 714896720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2085770535}
   m_RootOrder: 2
@@ -25551,7 +25524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 32835875d5c37814e98437601a65adf8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49b517f7d7946f745b1897ce867f41b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -49351,7 +49324,6 @@ Transform:
   - {fileID: 1094196624}
   - {fileID: 1736484590}
   - {fileID: 1367099544}
-  - {fileID: 309154785}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50653,6 +50625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHero: 0
   ListOfHeroesAlive: 
+  availableScriptableObjectsHeroes: []
   ListOfDeadHeros: 
   ListOfEscapedHeros: 
 --- !u!1 &1941718096
@@ -51155,7 +51128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2085770535
 RectTransform:
   m_ObjectHideFlags: 0

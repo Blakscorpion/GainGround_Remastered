@@ -25,3 +25,7 @@ MonoBehaviour:
   SecondaryAmmo: {fileID: 0}
   SecondaryAmmoDamage: 0
   SecondaryAmmoTimeInterval: 0
+  ui_PortraitHero: {fileID: 21300000, guid: 8116666cb85b35b409c6470dcbd60de9, type: 3}
+  ui_AvatarPortraitForDialogue: {fileID: 0}
+  ui_ImageHeroForSelectionScreen: {fileID: 0}
+  ui_AvatarImageForNextSelection: {fileID: 21300000, guid: e9ff1b4f5b2de8c48a664609cf655860, type: 3}

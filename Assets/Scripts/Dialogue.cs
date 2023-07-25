@@ -73,7 +73,7 @@ public class Dialogue : MonoBehaviour
             HeroPortraitDialogue.GetComponent<Image>().sprite=listOfDialogues[0].dialogues[index].HeroPortrait;
         }
         else{
-            HeroPortraitDialogue.GetComponent<Image>().sprite = Resources.Load<HeroScriptableObject>("Heroes/" + HeroNameDialogue.text).ui_PortraitHeroForDialogue;
+            HeroPortraitDialogue.GetComponent<Image>().sprite = Resources.Load<HeroScriptableObject>("Heroes/" + HeroNameDialogue.text).ui_PortraitHero;
         }
         foreach (char c in listOfDialogues[0].dialogues[index].Dialogue.ToCharArray())
         {

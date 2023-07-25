@@ -12,7 +12,7 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI HeroNameDialogue;
     public GameObject HeroPortraitDialogue;
 
-    public DialogueScriptableObject[] listOfDialogues;
+    public DialogueScriptableObject[] listOfDialogues = null;
     public String[] lines;
     Scene scene;
     public float textSpeed=0.3f;
@@ -98,10 +98,15 @@ public class Dialogue : MonoBehaviour
 
     private void PlayDialogue(GameState state)
     {
-        if(state == GameState.Dialogue){   
-            DialogueEnabled=true;
-            transform.GetChild(0).gameObject.SetActive(true);
-            StartDialogue();
-        } 
+        if(state == GameState.Dialogue){
+            if (listOfDialogues!=null && listOfDialogues.Length!=0){   
+                DialogueEnabled=true;
+                transform.GetChild(0).gameObject.SetActive(true);
+                StartDialogue();
+            } 
+            else{
+            GameManager.Instance.UpdateGameState(GameState.PlayerSelection);
+            }
+        }
     }
 }

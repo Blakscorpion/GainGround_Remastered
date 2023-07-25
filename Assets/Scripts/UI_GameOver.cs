@@ -17,10 +17,12 @@ public class UI_GameOver : MonoBehaviour
         if(state == GameState.GameOver)
         {   
             transform.GetChild(0).gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
     public void BackToMainMenu(){
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 }

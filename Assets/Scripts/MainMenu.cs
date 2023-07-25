@@ -11,9 +11,8 @@ public class MainMenu : MonoBehaviour
 
     private void LoadNextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    // Clean the PlayerPref to avoid starting with the heroes of the previous session
         PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);        
     }
     
     public void QuitGame()

@@ -20,6 +20,7 @@ public class UI_WinGame : MonoBehaviour
     }
 
     public void BackToMainMenu(){
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 }

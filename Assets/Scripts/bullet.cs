@@ -4,6 +4,7 @@ public class bullet : MonoBehaviour
 {
     public int damagePerHit = 1;
     public GameObject hitEffect;
+    public int recoilStrenght=0;
 
 
     private void OnCollisionEnter2D(Collision2D collision) 

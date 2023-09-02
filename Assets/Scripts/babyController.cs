@@ -12,6 +12,7 @@ public class babyController : MonoBehaviour
     SpriteRenderer RendererComponent;
     private Vector2 movement;
     private int currentBabyIteration =0;
+    private AudioSource audioSource;
 
      private void Awake() {
         GameManager.OnGameStateChanged += CheckBabyNumberAndDestroy;
@@ -56,6 +57,7 @@ public class babyController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         babyInfo = GetComponent<babyInfo>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -102,12 +104,15 @@ public class babyController : MonoBehaviour
                 isBabyCollected=true;
                 playerStats.hasABaby=true;
                 playerStats.babyFollowing =  babyInfo.babyHeroName;
-                
                 this.transform.position = player.transform.position;
 
                 // On récup le spriterender du player pour savoir s'il est flipX ou pas, car le nom de l'animation est dans les 2 cas == MoveRight.
                 //Donc faut savoir si elle est à droite + flipX ou à droite pas flipX
                 RendererComponent = player.GetComponent<SpriteRenderer>();
+                if (audioSource)
+                {
+                    audioSource.Play();
+                }
             }
         }
     }

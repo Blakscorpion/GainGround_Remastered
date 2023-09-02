@@ -5,19 +5,29 @@ public class shootingFreeAim : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject primaryAmmo;
+    public float recoilTimeSlow=0.2f;
+    private int recoilForcePrimary;
+    private bool recPrim=false;
+    private bool recSec=false;
     public GameObject secondaryAmmo;
+    private int recoilForceSecundary;
     private int lastDirection;
     SpriteRenderer sprite;
+    Rigidbody2D rigidbdy;
     public float bulletForce = 20f;
     public float shootingInterval=0.2f;
     public float shootingIntervalSpecial=2f;
-
     private bool isAbleToShoot=true;
     private bool isAbleToShootSpecial=true;
+    private PlayerMovement playerMovement;
 
 
     private void Start() {
         sprite = this.GetComponent<SpriteRenderer>();
+        rigidbdy = this.GetComponent<Rigidbody2D>();
+        playerMovement = this.GetComponent<PlayerMovement>();
+        recoilForcePrimary = primaryAmmo.GetComponent<bullet>().recoilStrenght;
+        recoilForceSecundary = secondaryAmmo.GetComponent<bullet>().recoilStrenght;
     }
 
     private void Update() 
@@ -26,14 +36,23 @@ public class shootingFreeAim : MonoBehaviour
         {
             isAbleToShoot=false;
             Shoot(false);
+            recPrim=true;
             StartCoroutine(WaitAndShootAgain(shootingInterval));
         }
         if(Input.GetButtonDown("Fire2") && isAbleToShootSpecial)
         {
             isAbleToShootSpecial=false;
             Shoot(true);
+            recSec=true;
             StartCoroutine(WaitAndShootSpecialAgain(shootingIntervalSpecial));
+            StartCoroutine(SlowingPlayerCoroutine());
         }
+    }
+
+    void FixedUpdate()
+    {
+        if (recPrim==true){applyRecoilForce(1);recPrim=false;}
+        if (recSec==true){applyRecoilForce(2);recSec=false;}
     }
 
     void Shoot(bool isSpecialAttack)
@@ -68,4 +87,27 @@ public class shootingFreeAim : MonoBehaviour
         isAbleToShootSpecial=true;
     }
 
+    private void applyRecoilForce(int primaryOrSecondaryAmmo)
+    {
+        Vector2 mouseVectorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+	    Vector2 playerVectorPosition = transform.position;
+	    Vector2 ForceVector = (mouseVectorPosition - playerVectorPosition).normalized;
+	    if (primaryOrSecondaryAmmo==1)
+        {
+            rigidbdy.AddForce(ForceVector * -1 * recoilForcePrimary*100);
+            Debug.Log("Recoil de force : " + recoilForcePrimary);
+        }
+        else{
+            rigidbdy.AddForce(ForceVector * -1 * recoilForceSecundary*100);
+            Debug.Log("Recoil de force : " + recoilForceSecundary);
+        }
+    }
+
+    IEnumerator SlowingPlayerCoroutine()
+    {
+        float oldMovSpeed = playerMovement.movespeed;
+        playerMovement.movespeed = oldMovSpeed /3;
+        yield return new WaitForSeconds(recoilTimeSlow);
+        playerMovement.movespeed = oldMovSpeed;
+    }
 }

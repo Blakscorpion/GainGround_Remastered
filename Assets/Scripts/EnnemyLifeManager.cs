@@ -4,10 +4,12 @@ public class EnnemyLifeManager : MonoBehaviour
 {   
     public int startingHP = 1;
     private int remainingHP;
+    private AudioSource audiosource;
     
 
     private void Start() {
        remainingHP = startingHP;
+       audiosource = GetComponent<AudioSource>();
    }
    
    private void OnCollisionEnter2D(Collision2D collision) {
@@ -20,8 +22,11 @@ public class EnnemyLifeManager : MonoBehaviour
 
            if (remainingHP <= 0)
            {
-               LevelManager.Instance.RemoveEnnemy();
-               Destroy(this.gameObject);
+                audiosource.Play();
+                LevelManager.Instance.RemoveEnnemy();
+                GetComponent<SpriteRenderer>().enabled=false;
+                GetComponent<BoxCollider2D>().enabled=false;
+                Destroy(this.gameObject, 2.0f);
            }
        }
    }

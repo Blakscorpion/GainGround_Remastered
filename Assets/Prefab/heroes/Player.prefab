@@ -507,7 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8491435537172728853}
   primaryAmmo: {fileID: 3395145008458581305, guid: 6a328d441e159054b84aa06ccc0ff58e, type: 3}
-  recoilTimeSlow: 0.7
+  recoilTimeSlow: 0.3
   secondaryAmmo: {fileID: 3395145008458581305, guid: 13c64d949ff546b4d945f289a4e72807, type: 3}
   bulletForce: 13
   shootingInterval: 0.4

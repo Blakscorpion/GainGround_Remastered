@@ -32,7 +32,7 @@ public class EnemyPatrol : MonoBehaviour
        // If there is a target to identify, the ennemy attacks the player or patrol if it's too far away 
        if (EnnemyTarget)
        {
-            distanceBetweenObjects = Vector3.Distance(transform.position, EnnemyTarget.position);
+            distanceBetweenObjects = Vector2.Distance(transform.position, EnnemyTarget.position);
 
             if (isInRange())
             {
@@ -66,13 +66,13 @@ public class EnemyPatrol : MonoBehaviour
 
     void Patroling()
     {
-        Vector3 dir = WaypointTarget.position - transform.position;
+        Vector2 dir = WaypointTarget.position - transform.position;
         float step = speed * Time.deltaTime;
 
         // move sprite towards the target location
-        transform.position = Vector3.MoveTowards(transform.position, WaypointTarget.position, step);
+        transform.position = Vector2.MoveTowards(transform.position, WaypointTarget.position, step);
         
-        if(Vector3.Distance(transform.position, WaypointTarget.position) < 0.3f)
+        if(Vector2.Distance(transform.position, WaypointTarget.position) < 0.3f)
         {
             destPoint = (destPoint +1) % waypoints.Length;
             WaypointTarget = waypoints[destPoint];
@@ -81,17 +81,17 @@ public class EnemyPatrol : MonoBehaviour
 
     void Attacking()
     { 
-        transform.position = Vector3.MoveTowards(transform.position, EnnemyTarget.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, EnnemyTarget.position, speed * Time.deltaTime);
         isBackToBase=false;
         animator.SetBool("backToBase", false);
     }
 
     void BackToBase(Transform initialLocation)
     {
-        Vector3 dir = initialLocation.position - transform.position;
+        Vector2 dir = initialLocation.position - transform.position;
         float step = speed * Time.deltaTime;
 
-        if(Vector3.Distance(transform.position, initialLocation.position) < 0.2f)
+        if(Vector2.Distance(transform.position, initialLocation.position) < 0.2f)
         {
             isBackToBase = true;
             animator.SetBool("backToBase", true);
@@ -99,7 +99,7 @@ public class EnemyPatrol : MonoBehaviour
         else
         {
             // move sprite towards the base location
-            transform.position = Vector3.MoveTowards(transform.position, initialLocation.position, step);
+            transform.position = Vector2.MoveTowards(transform.position, initialLocation.position, step);
         }
     }
 

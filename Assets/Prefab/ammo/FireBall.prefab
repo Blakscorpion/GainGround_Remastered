@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePerHit: 5
   hitEffect: {fileID: 2522928805958297130, guid: 39db2799fefe07b4198c343de2e05df9, type: 3}
-  recoilStrenght: 20
+  recoilStrenght: 7
 --- !u!95 &49915719882350929
 Animator:
   serializedVersion: 3

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BettyIdle
+  m_Name: toprleft run
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,33 +21,33 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 6de51a4396499904f938455f0c1c3ec7, type: 3}
-    - time: 0.16666667
+    - time: 0.04
       value: {fileID: 21300000, guid: c72f0f1a42ef2d34aad5a0e9b32985ce, type: 3}
-    - time: 0.33333334
+    - time: 0.08
       value: {fileID: 21300000, guid: 898348e7fdb7ba54292332331e3d4311, type: 3}
-    - time: 0.5
+    - time: 0.12
       value: {fileID: 21300000, guid: 5205116363f038c47a395a79872dfddb, type: 3}
-    - time: 0.6666667
+    - time: 0.16
       value: {fileID: 21300000, guid: d695a953efb35034c83b88c9b5681eba, type: 3}
-    - time: 0.8333333
+    - time: 0.2
       value: {fileID: 21300000, guid: 768f95286a34833459dff687359a7be4, type: 3}
-    - time: 1
+    - time: 0.24
       value: {fileID: 21300000, guid: 01edf35ecd2f658408f000dfd79cc01f, type: 3}
-    - time: 1.1666666
+    - time: 0.28
       value: {fileID: 21300000, guid: 7b2dd806424f5ce4cb0f0e973adfbc61, type: 3}
-    - time: 1.3333334
+    - time: 0.32
       value: {fileID: 21300000, guid: 52dc22ac4861ae84a95760cb6a9e4b0b, type: 3}
-    - time: 1.5
+    - time: 0.36
       value: {fileID: 21300000, guid: 1317f67456f1591458e3cc2b5907eed3, type: 3}
-    - time: 1.6666666
+    - time: 0.4
       value: {fileID: 21300000, guid: ea7b66ed711059d4ebb260190d8f1e87, type: 3}
-    - time: 1.8333334
+    - time: 0.44
       value: {fileID: 21300000, guid: c5aa521ba6f0ce542bc6d0f9b1c816dd, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 6
+  m_SampleRate: 25
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -79,7 +79,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2
+    m_StopTime: 0.48
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

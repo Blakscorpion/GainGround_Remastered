@@ -1,0 +1,141 @@
+{
+	"identifier": "World_Level_1",
+	"uniqueIdentifer": "5b1771e0-c640-11ed-8430-9b64f8cc95ad",
+	"x": 0,
+	"y": 0,
+	"width": 256,
+	"height": 256,
+	"bgColor": "#404255",
+	"neighbourLevels": [
+		{
+			"levelIid": "d53f9950-c640-11ed-8430-4942c04951ff",
+			"dir": "e"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"Default_floor.png",
+		"Custom_floor.png",
+		"Collisions.png",
+		"Wall_tops.png"
+	],
+	"entities": {
+		"Door": [
+			{
+				"id": "Door",
+				"iid": "9b204460-c640-11ed-8430-dbaaf87f9ec4",
+				"layer": "Entities",
+				"x": 160,
+				"y": 96,
+				"width": 16,
+				"height": 16,
+				"color": 12087120,
+				"customFields": {
+					"lockedWith": null
+				}
+			}
+		],
+		"Item": [
+			{
+				"id": "Item",
+				"iid": "d60070f0-c640-11ed-8430-1fbe3e7e0e50",
+				"layer": "Entities",
+				"x": 88,
+				"y": 88,
+				"width": 20,
+				"height": 20,
+				"color": 16711748,
+				"customFields": {
+					"type": "Wood"
+				}
+			},
+			{
+				"id": "Item",
+				"iid": "d83181c0-c640-11ed-8430-8ff8bb36b114",
+				"layer": "Entities",
+				"x": 136,
+				"y": 104,
+				"width": 20,
+				"height": 20,
+				"color": 16711748,
+				"customFields": {
+					"type": "Wood"
+				}
+			},
+			{
+				"id": "Item",
+				"iid": "da07c860-c640-11ed-8430-4d5c0daa8a2b",
+				"layer": "Entities",
+				"x": 72,
+				"y": 136,
+				"width": 20,
+				"height": 20,
+				"color": 16711748,
+				"customFields": {
+					"type": "Wood"
+				}
+			},
+			{
+				"id": "Item",
+				"iid": "5cbf6010-c640-11ed-8430-bdf779e74a2c",
+				"layer": "Entities",
+				"x": 184,
+				"y": 216,
+				"width": 20,
+				"height": 20,
+				"color": 16711748,
+				"customFields": {
+					"type": "Gold"
+				}
+			},
+			{
+				"id": "Item",
+				"iid": "32ec4110-c640-11ed-8430-09dce52db41d",
+				"layer": "Entities",
+				"x": 104,
+				"y": 40,
+				"width": 20,
+				"height": 20,
+				"color": 16711748,
+				"customFields": {
+					"type": "KeyB"
+				}
+			}
+		],
+		"SecretWall": [
+			{
+				"id": "SecretWall",
+				"iid": "778bba10-c640-11ed-8430-45e05816c898",
+				"layer": "Entities",
+				"x": 128,
+				"y": 192,
+				"width": 16,
+				"height": 16,
+				"color": 11882632,
+				"customFields" : {}
+			}
+		],
+		"Button": [
+			{
+				"id": "Button",
+				"iid": "8da3dad0-c640-11ed-8430-b5ffeb3fb035",
+				"layer": "Entities",
+				"x": 88,
+				"y": 168,
+				"width": 10,
+				"height": 10,
+				"color": 16711680,
+				"customFields": {
+					"targets": [
+						{
+							"entityIid": "778bba10-c640-11ed-8430-45e05816c898",
+							"layerIid": "5b1771e1-c640-11ed-8430-c567ed490639",
+							"levelIid": "5b1771e0-c640-11ed-8430-9b64f8cc95ad",
+							"worldIid": "c9ef2d10-c640-11ed-ad34-f553e1d803f9"
+						}
+					]
+				}
+			}
+		]
+	}
+}

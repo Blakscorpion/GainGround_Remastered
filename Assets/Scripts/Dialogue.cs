@@ -13,10 +13,13 @@ public class Dialogue : MonoBehaviour
     public GameObject HeroPortraitDialogue;
 
     public DialogueScriptableObject[] listOfDialogues = null;
-    public String[] lines;
+    private String[] lines;
     Scene scene;
-    public float textSpeed=0.3f;
-    public int index;
+    [SerializeField]
+    [Range(1.0f, 10.0f)]
+    [Tooltip("The bigger the value is, the longer it takes to display the text.")]
+    private float textIntervalTime;
+    private int index;
     private bool DialogueEnabled=false;
 
     private void Awake() {
@@ -81,7 +84,7 @@ public class Dialogue : MonoBehaviour
         foreach (char c in listOfDialogues[0].dialogues[index].Dialogue.ToCharArray())
         {
             textComponent.text += c;
-            yield return new WaitForSecondsRealtime(textSpeed);
+            yield return new WaitForSecondsRealtime(textIntervalTime/100);
         }
     }
 

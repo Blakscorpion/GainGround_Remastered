@@ -15,10 +15,12 @@ public class Dialogue : MonoBehaviour
     public DialogueScriptableObject[] listOfDialogues = null;
     private String[] lines;
     Scene scene;
+
     [SerializeField]
-    [Range(1.0f, 10.0f)]
     [Tooltip("The bigger the value is, the longer it takes to display the text.")]
+    [Range(1.0f, 10.0f)]
     private float textIntervalTime;
+
     private int index;
     private bool DialogueEnabled=false;
 

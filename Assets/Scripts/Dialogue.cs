@@ -57,12 +57,15 @@ public class Dialogue : MonoBehaviour
     {
         index = 0;
         StartCoroutine(TypeLine());
+        Time.timeScale = 0;
     }
 
     void CloseDialogue()
     {
         transform.GetChild(0).gameObject.SetActive(false);
         DialogueEnabled=false;
+        Time.timeScale = 1;
+
     }
 
     IEnumerator TypeLine()
@@ -78,7 +81,7 @@ public class Dialogue : MonoBehaviour
         foreach (char c in listOfDialogues[0].dialogues[index].Dialogue.ToCharArray())
         {
             textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSecondsRealtime(textSpeed);
         }
     }
 

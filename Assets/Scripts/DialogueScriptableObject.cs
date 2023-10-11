@@ -5,13 +5,13 @@ using UnityEngine.UI;
 public class DialogueScriptableObject : ScriptableObject
 {
     public HeroesManager.Hero[] requiredHeroesForDialogue;
-    public Dialogues[] dialogues;
+    public DialoguesStruct[] dialogues;
 }
 
 [System.Serializable]
-public struct Dialogues
+public struct DialoguesStruct
 {
     public HeroesManager.Hero HeroName;
     public Sprite HeroPortrait;
-    public string Dialogue;
+    public string dialogueLine;
 }

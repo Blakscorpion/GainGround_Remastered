@@ -30,6 +30,8 @@ public class babyController : MonoBehaviour
         {   
             currentBabyIteration++;
             Debug.Log("There are currently " + GameObject.FindGameObjectsWithTag("Baby").Length + " baby.");
+            Debug.Log("CurrentBabyIteration is : " + currentBabyIteration);
+            Debug.Log("Max Allowed Babies : " + LevelManager.Instance.NumberOfBabiesAllowed);
             // If there are more babies on the level than the number allowed, and if the idNumber of this one is higher than expected, we destroy it
             if (currentBabyIteration > LevelManager.Instance.NumberOfBabiesAllowed && GameObject.FindGameObjectsWithTag("Baby").Length > LevelManager.Instance.NumberOfBabiesAllowed)
             {   
@@ -39,7 +41,7 @@ public class babyController : MonoBehaviour
         }
     }
 
-    // If Hero went to exit with a baby, remove the baby from the scene, as it's considered as passed also
+    // If Hero went to exit with this baby, remove this baby from the scene, as it's considered as passed also
     private void RemoveBabyFromStageWhenExit(GameState state) {
         if(state == GameState.ExitSuccess && isBabyCollected)
         {   

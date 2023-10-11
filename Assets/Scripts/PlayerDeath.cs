@@ -19,8 +19,8 @@ public class PlayerDeath : MonoBehaviour
             playSoundDead();
             HeroesManager.Instance.HeroDead();
             
-            GameManager.Instance.UpdateGameState(GameState.Dead);
             GameObject newBabyTotem = Instantiate(babyPrefab, transform.position,transform.rotation);
+            GameManager.Instance.UpdateGameState(GameState.Dead);
             Destroy(gameObject);
             newBabyTotem.SendMessage("SetName", HeroesManager.Instance.CurrentHero);
         }

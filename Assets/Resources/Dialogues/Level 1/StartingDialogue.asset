@@ -10,23 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1e7c0a03fa310a42a8b63138f4f2206, type: 3}
-  m_Name: Level1
+  m_Name: StartingDialogue
   m_EditorClassIdentifier: 
   requiredHeroesForDialogue: 0000000001000000
   dialogues:
   - HeroName: 0
     HeroPortrait: {fileID: 0}
-    Dialogue: Salut
+    dialogueLine: test
   - HeroName: 1
     HeroPortrait: {fileID: 0}
-    Dialogue: Cava ?
+    dialogueLine: 
   - HeroName: 0
     HeroPortrait: {fileID: 21300000, guid: 55c4ddf77b391ad479e9afa716ab1511, type: 3}
-    Dialogue: TMTC
+    dialogueLine: 
   - HeroName: 1
     HeroPortrait: {fileID: 0}
-    Dialogue: "La famille !! Allez, on arr\xEAte les conneries l\xE0 !! C'est termin\xE9
-      d\xE9sormais on peut fermer..."
+    dialogueLine: 
   - HeroName: 0
     HeroPortrait: {fileID: 21300000, guid: 85282583f1882e54dac5f0be5b71b8b9, type: 3}
-    Dialogue: "Ouai, allez on se bouge le cul l\xE0 ! Y'a du p\xE9on \xE0 buter !"
+    dialogueLine: 

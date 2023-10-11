@@ -10,22 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1e7c0a03fa310a42a8b63138f4f2206, type: 3}
-  m_Name: Level0
+  m_Name: StartingDialogue
   m_EditorClassIdentifier: 
   requiredHeroesForDialogue: 000000000100000002000000
   dialogues:
   - HeroName: 2
     HeroPortrait: {fileID: 0}
-    Dialogue: "C'est probablement le tutoriel, il n'y a pas grand monde dans cette
-      for\xEAt..."
+    dialogueLine: test
   - HeroName: 1
     HeroPortrait: {fileID: 0}
-    Dialogue: "Cet homme \xE9trange a probablement des infos \xE0 nous donner sur
-      le fonctionnement du syst\xE8me..."
+    dialogueLine: 
   - HeroName: 0
     HeroPortrait: {fileID: 0}
-    Dialogue: "Vous \xEAtes si na\xEEfs ! C'est une simulation de combat, il faut
-      le \"neutraliser\"..."
+    dialogueLine: 
   - HeroName: 2
     HeroPortrait: {fileID: 0}
-    Dialogue: "Il n'y a qu'une mani\xE8re de le savoir de toute fa\xE7on."
+    dialogueLine: 

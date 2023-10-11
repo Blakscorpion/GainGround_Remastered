@@ -12,8 +12,7 @@ public class Dialogue : MonoBehaviour
     public TextMeshProUGUI HeroNameDialogue;
     public GameObject HeroPortraitDialogue;
 
-    public DialogueScriptableObject[] listOfDialogues = null;
-    private String[] lines;
+    public DialogueScriptableObject DialoguesScriptableObject = null;
     Scene scene;
 
     [SerializeField]
@@ -36,7 +35,10 @@ public class Dialogue : MonoBehaviour
     {
         //Retrieve the dialogues in the folder that has the same name than the current scene ("Level 1" for example)
         scene = SceneManager.GetActiveScene();
-        listOfDialogues = Resources.LoadAll<DialogueScriptableObject>("Dialogues/" + scene.name);
+        if (DialoguesScriptableObject==null)
+        {
+            DialoguesScriptableObject = Resources.Load<DialogueScriptableObject>("Dialogues/" + scene.name + "/StartingDialogue");
+        } 
         textComponent.text=string.Empty;
     }
 
@@ -46,13 +48,13 @@ public class Dialogue : MonoBehaviour
         {
             if(Input.anyKeyDown)
             {
-                if (textComponent.text == listOfDialogues[0].dialogues[index].Dialogue)
+                if (textComponent.text == DialoguesScriptableObject.dialogues[index].dialogueLine)
                 {
                     NextLine();
                 }
                 else{
                     StopAllCoroutines();
-                    textComponent.text = listOfDialogues[0].dialogues[index].Dialogue;
+                    textComponent.text = DialoguesScriptableObject.dialogues[index].dialogueLine;
                 }
             }
         }
@@ -75,15 +77,15 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        HeroNameDialogue.text = listOfDialogues[0].dialogues[index].HeroName.ToString();
-        if (listOfDialogues[0].dialogues[index].HeroPortrait)
+        HeroNameDialogue.text = DialoguesScriptableObject.dialogues[index].HeroName.ToString();
+        if (DialoguesScriptableObject.dialogues[index].HeroPortrait)
         {
-            HeroPortraitDialogue.GetComponent<Image>().sprite=listOfDialogues[0].dialogues[index].HeroPortrait;
+            HeroPortraitDialogue.GetComponent<Image>().sprite=DialoguesScriptableObject.dialogues[index].HeroPortrait;
         }
         else{
             HeroPortraitDialogue.GetComponent<Image>().sprite = Resources.Load<HeroScriptableObject>("Heroes/" + HeroNameDialogue.text).ui_PortraitHero;
         }
-        foreach (char c in listOfDialogues[0].dialogues[index].Dialogue.ToCharArray())
+        foreach (char c in DialoguesScriptableObject.dialogues[index].dialogueLine.ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSecondsRealtime(textIntervalTime/100);
@@ -92,7 +94,7 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if (index < listOfDialogues[0].dialogues.Length - 1)
+        if (index < DialoguesScriptableObject.dialogues.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
@@ -107,7 +109,7 @@ public class Dialogue : MonoBehaviour
     private void PlayDialogue(GameState state)
     {
         if(state == GameState.Dialogue){
-            if (listOfDialogues!=null && listOfDialogues.Length!=0){   
+            if (DialoguesScriptableObject!=null && DialoguesScriptableObject.dialogues.Length!=0){   
                 DialogueEnabled=true;
                 transform.GetChild(0).gameObject.SetActive(true);
                 StartDialogue();

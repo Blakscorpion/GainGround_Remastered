@@ -8643,6 +8643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 299180268}
+  - component: {fileID: 299180269}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -8664,6 +8665,23 @@ Transform:
   m_Father: {fileID: 90509050}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &299180269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299180267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244bd3d642c8ba444a05ff73c3859d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1108196171}
+  HeroNameDialogue: {fileID: 1732373388}
+  HeroPortraitDialogue: {fileID: 714896720}
+  DialoguePanel: {fileID: 308551005}
+  textIntervalTime: 1
 --- !u!1 &308551005
 GameObject:
   m_ObjectHideFlags: 0
@@ -8674,7 +8692,6 @@ GameObject:
   m_Component:
   - component: {fileID: 308551006}
   - component: {fileID: 308551007}
-  - component: {fileID: 308551008}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -8710,23 +8727,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308551005}
   m_CullTransparentMesh: 1
---- !u!114 &308551008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308551005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edafac1cb73bc8e4d9192a96e3b2ec87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 1108196171}
-  HeroNameDialogue: {fileID: 1732373388}
-  HeroPortraitDialogue: {fileID: 714896720}
-  listOfDialogues: []
-  textIntervalTime: 1
 --- !u!1 &375756117
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,8 +19,10 @@ public class DialogueManager : MonoBehaviour
     [Tooltip("The bigger the value is, the longer it takes to display the text.")]
     [Range(1.0f, 10.0f)]
     private float textIntervalTime;
-    private int index;
-    private bool DialogueEnabled=false;
+    private int index=0;
+    private int dialogueIndex=0;
+    private bool dialogueChosen;
+    private bool DialogueEnabled;
     private GameState stateToSendAfter;
 
     DialogueScriptableObject[] ListOfStartingLevelDialogues;
@@ -60,11 +62,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void PlayDialogue(DialogueScriptableObject[] dialogueScriptObj){
-        DialoguesScriptableObject = dialogueScriptObj[0];
+    void PlayDialogue(DialogueScriptableObject dialogueScriptObj){
+        DialoguesScriptableObject = dialogueScriptObj;
         DialogueEnabled=true;
-        DialoguePanel.transform.GetChild(0).gameObject.SetActive(true);
         index = 0;
+        DialoguePanel.transform.GetChild(0).gameObject.SetActive(true);
         StartCoroutine(TypeLine());
         Time.timeScale = 0;
     }
@@ -100,6 +102,7 @@ public class DialogueManager : MonoBehaviour
 
     void CloseDialogue(){
         DialoguePanel.transform.GetChild(0).gameObject.SetActive(false);
+        textComponent.text = string.Empty;
         DialogueEnabled=false;
         Time.timeScale = 1;
     }
@@ -107,7 +110,7 @@ public class DialogueManager : MonoBehaviour
     public void CheckStartingLevelDialogue(){
         stateToSendAfter = GameState.PlayerSelection;
         if (isValidDialogueScriptObj(ListOfStartingLevelDialogues)){
-            PlayDialogue(ListOfStartingLevelDialogues);
+            PlayDialogue(ListOfStartingLevelDialogues[0]);
         }
         else{
             Debug.Log(isValidDialogueScriptObj(ListOfStartingLevelDialogues));
@@ -115,19 +118,36 @@ public class DialogueManager : MonoBehaviour
         }
     }
     
-    public void CheckEvacuationDialogue(){
+    public void PlayEvacuationDialogue(){
 
     }
 
-    public void CheckDeathDialogue(){
+    public void CheckDeathDialogue(HeroesManager.Hero DeadHero){
+        int dialogueIndex=0;
+        dialogueChosen=false;
+        foreach (DialogueScriptableObject dialogue in ListOfOnDeathDialogues)
+        {
+            if (dialogue != null){
+                {
+                    foreach (var dialogueEntry in dialogue.dialogues)
+                    {
+                        if (dialogueEntry.HeroName != DeadHero)
+                        {}
+                    }
+                }
+            }
+            dialogueIndex++;
+        }
+        PlayDialogue(ListOfOnDeathDialogues[dialogueIndex]);
+        
+        dialogueIndex=0;
+    }
+
+    public void PlayEndingLevelDialogue(){
 
     }
 
-    public void CheckEndingLevelDialogue(){
-
-    }
-
-    public void PlayInstantDialogue(DialogueScriptableObject[] dialogue){
+    public void PlayInstantDialogue(DialogueScriptableObject dialogue){
         stateToSendAfter = GameState.PlayMode;
         if (isValidDialogueScriptObj(dialogue)){
             PlayDialogue(dialogue);
@@ -139,6 +159,13 @@ public class DialogueManager : MonoBehaviour
 
     private bool isValidDialogueScriptObj(DialogueScriptableObject[] dialogueToAnalyse){
         if (dialogueToAnalyse!= null && dialogueToAnalyse.Length!=0 && dialogueToAnalyse[0].dialogues.Length!=0){
+        return true;
+        }
+        return false;
+    }
+
+    private bool isValidDialogueScriptObj(DialogueScriptableObject dialogueToAnalyse){
+        if (dialogueToAnalyse!= null && dialogueToAnalyse.dialogues.Length!=0){
         return true;
         }
         return false;

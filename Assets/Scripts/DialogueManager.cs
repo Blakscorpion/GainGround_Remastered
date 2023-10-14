@@ -127,8 +127,14 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void PlayInstantDialogue(DialogueScriptableObject dialogue){
-
+    public void PlayInstantDialogue(DialogueScriptableObject[] dialogue){
+        stateToSendAfter = GameState.PlayMode;
+        if (isValidDialogueScriptObj(dialogue)){
+            PlayDialogue(dialogue);
+        }
+        else{
+            GameManager.Instance.UpdateGameState(stateToSendAfter);
+        }
     }
 
     private bool isValidDialogueScriptObj(DialogueScriptableObject[] dialogueToAnalyse){

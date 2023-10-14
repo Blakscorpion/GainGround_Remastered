@@ -12,21 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e7c0a03fa310a42a8b63138f4f2206, type: 3}
   m_Name: NotEvacuated
   m_EditorClassIdentifier: 
-  requiredHeroesForDialogue: 
+  requiredHeroesForDialogue: 0000000001000000
   dialogues:
   - HeroName: 1
     HeroPortrait: {fileID: 0}
-    Dialogue: Oh my god ! You killed all the ennemies !
+    dialogueLine: Fail to evacuate !
   - HeroName: 0
     HeroPortrait: {fileID: 0}
-    Dialogue: Calm down, there was only one...
+    dialogueLine: Hly shit !
   - HeroName: 1
     HeroPortrait: {fileID: 0}
-    Dialogue: Yes but the level is cleared now...
+    dialogueLine: He is dead...
   - HeroName: 0
     HeroPortrait: {fileID: 0}
-    Dialogue: Perfect !
-  - HeroName: 1
-    HeroPortrait: {fileID: 0}
-    Dialogue: Not perfect ! We didn't evacuate Cyber ! He is lost in the simulation
-      now... Should we restart the simulation ?
+    dialogueLine: We should restart... shouldn't we ?

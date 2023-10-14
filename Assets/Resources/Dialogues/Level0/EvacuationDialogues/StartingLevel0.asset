@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogues:
   - HeroName: 0
     HeroPortrait: {fileID: 0}
-    dialogueLine: test
+    dialogueLine: Evacuation !!
   - HeroName: 1
     HeroPortrait: {fileID: 0}
-    dialogueLine: nice
+    dialogueLine: "Bien jou\xE9 !"

@@ -62,6 +62,12 @@ public class PlayerMovement : MonoBehaviour
         //rigidBody.velocity = Vector3.SmoothDamp(rigidBody.velocity, targetVelocityH + targetVelocityV, ref velocity, .05f);
     }
 
+    void OnDisable()
+    {
+        animator.SetFloat("speed", 0);
+        Debug.Log("DISABLED");
+    }
+
     private void SetLastDirection()
     {
         current_animation = animatorClipinfo[0].clip.name;

@@ -21,9 +21,9 @@ public class DialogueManager : MonoBehaviour
     private float textIntervalTime;
     private int index=0;
     private int dialogueIndex=0;
-    private bool dialogueChosen;
-    private bool DialogueEnabled;
-    private GameState stateToSendAfter;
+    private bool dialogueChosen=false;
+    private bool DialogueEnabled=false;
+    private GameState stateToSendAfter = GameState.PlayMode;
 
     DialogueScriptableObject[] ListOfStartingLevelDialogues;
     DialogueScriptableObject[] ListOfOnDeathDialogues;
@@ -123,7 +123,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void CheckDeathDialogue(HeroesManager.Hero DeadHero){
-        int dialogueIndex=0;
+        dialogueIndex=0;
         dialogueChosen=false;
         foreach (DialogueScriptableObject dialogue in ListOfOnDeathDialogues)
         {

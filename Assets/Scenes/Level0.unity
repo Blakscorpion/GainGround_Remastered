@@ -50851,7 +50851,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.75869465, y: -0.6651571}
+  m_Offset: {x: -0.75869465, y: 0.19328013}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -50862,7 +50862,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.076757, y: 2.3303137}
+  m_Size: {x: 13.076757, y: 2.1283276}
   m_EdgeRadius: 0
 --- !u!1 &1814015996
 GameObject:
@@ -51498,6 +51498,10 @@ PrefabInstance:
       value: PrehistoricEnnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4807369330113502905, guid: 4549e38d31fb28340b12dd47f043538f, type: 3}
+      propertyPath: speed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4807369330113502905, guid: 4549e38d31fb28340b12dd47f043538f, type: 3}
       propertyPath: isPatroling
       value: 0
       objectReference: {fileID: 0}
@@ -51507,7 +51511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4807369330113502905, guid: 4549e38d31fb28340b12dd47f043538f, type: 3}
       propertyPath: DetectionArea
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7023231825625821543, guid: 4549e38d31fb28340b12dd47f043538f, type: 3}
       propertyPath: m_LocalPosition.x

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e7c0a03fa310a42a8b63138f4f2206, type: 3}
   m_Name: SayHi
   m_EditorClassIdentifier: 
-  requiredHeroesForDialogue: 00000000
+  requiredHeroesForDialogue: 01000000
   dialogues:
-  - HeroName: 0
+  - HeroName: 1
     HeroPortrait: {fileID: 0}
     dialogueLine: Bonjour !!
+  deleteAfterPlayed: 0

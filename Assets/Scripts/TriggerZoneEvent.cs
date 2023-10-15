@@ -14,7 +14,7 @@ public class TriggerZoneEvent : MonoBehaviour
     private bool alreadyTriggered=false;
     private bool playerNotFound=true;
 
-
+    
     // Start is called before the first frame update
     void Update()
     {
@@ -53,5 +53,10 @@ public class TriggerZoneEvent : MonoBehaviour
                 }
             }
         }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        ennemyGameObject.GetComponent<EnemyPatrol>().isPatroling=false;
     }
 }

@@ -6,6 +6,7 @@ public class DialogueScriptableObject : ScriptableObject
 {
     public HeroesManager.Hero[] requiredHeroesForDialogue;
     public DialoguesStruct[] dialogues;
+    public bool deleteAfterPlayed;
 }
 
 [System.Serializable]

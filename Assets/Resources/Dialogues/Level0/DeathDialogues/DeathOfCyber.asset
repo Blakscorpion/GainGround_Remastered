@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e7c0a03fa310a42a8b63138f4f2206, type: 3}
   m_Name: DeathOfCyber
   m_EditorClassIdentifier: 
-  requiredHeroesForDialogue: 0200000001000000
+  requiredHeroesForDialogue: 0400000005000000
   dialogues:
-  - HeroName: 1
+  - HeroName: 4
     HeroPortrait: {fileID: 0}
     dialogueLine: 'Oh mon dieu... Est-ce qu''il est... '
-  - HeroName: 2
+  - HeroName: 5
     HeroPortrait: {fileID: 0}
     dialogueLine: "Non, pas totallement ! Il faut \xE9vacuer son corps vers la sortie
       plus au nord..."
-  - HeroName: 1
+  - HeroName: 4
     HeroPortrait: {fileID: 0}
     dialogueLine: "Ou sinon on r\xE8gle son compte \xE0 cette brute ?"
-  - HeroName: 2
+  - HeroName: 5
     HeroPortrait: {fileID: 0}
     dialogueLine: "Surtout pas ! Le syst\xE8me affiche qu'il n'y a qu'un ennemi sur
       ce niveau... Si on le neutralise, le niveau se termine, et on passe au niveau

@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e7c0a03fa310a42a8b63138f4f2206, type: 3}
   m_Name: StartingLevel0
   m_EditorClassIdentifier: 
-  requiredHeroesForDialogue: 010000000200000003000000
+  requiredHeroesForDialogue: 040000000500000006000000
   dialogues:
-  - HeroName: 1
+  - HeroName: 4
     HeroPortrait: {fileID: 0}
     dialogueLine: Il y a quelqu'un ici... Probablement un PNJ ?
-  - HeroName: 2
+  - HeroName: 5
     HeroPortrait: {fileID: 0}
     dialogueLine: "Peut-\xEAtre qu'il va nous donner une qu\xEAte ?"
-  - HeroName: 3
+  - HeroName: 6
     HeroPortrait: {fileID: 0}
     dialogueLine: "Vous \xEAtes tellement na\xEFfs... On est dans une simulation
       de combat, il est l\xE0 pour nous p\xE9ter la gueule !"
-  - HeroName: 2
+  - HeroName: 4
     HeroPortrait: {fileID: 0}
     dialogueLine: "Ce serait dommage de rater notre premi\xE8re mission..."
   deleteAfterPlayed: 0

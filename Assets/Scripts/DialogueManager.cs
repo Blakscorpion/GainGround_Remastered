@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     private bool dialogueChosen=false;
     private bool DialogueEnabled=false;
     private GameState stateToSendAfter = GameState.PlayMode;
+    private int numberOfProtagonists;
 
     DialogueScriptableObject[] ListOfStartingLevelDialogues;
     DialogueScriptableObject[] ListOfOnDeathDialogues;
@@ -63,7 +64,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     void PlayDialogue(DialogueScriptableObject dialogueScriptObj){
-        DialoguesScriptableObject = dialogueScriptObj;
+        DialoguesScriptableObject = dialogueScriptObj; 
         DialogueEnabled=true;
         index = 0;
         DialoguePanel.transform.GetChild(0).gameObject.SetActive(true);
@@ -72,7 +73,13 @@ public class DialogueManager : MonoBehaviour
     }
 
     IEnumerator TypeLine(){
-        HeroNameDialogue.text = DialoguesScriptableObject.dialogues[index].HeroName.ToString();
+        if (DialoguesScriptableObject.dialogues[index].HeroName.ToString()==HeroesManager.Hero.CURRENT.ToString())
+        {
+            HeroNameDialogue.text = HeroesManager.Instance.CurrentHero.ToString();
+        }
+        else{
+            HeroNameDialogue.text = DialoguesScriptableObject.dialogues[index].HeroName.ToString();
+        }
         if (DialoguesScriptableObject.dialogues[index].HeroPortrait)
         {
             HeroPortraitDialogue.GetComponent<Image>().sprite=DialoguesScriptableObject.dialogues[index].HeroPortrait;
@@ -125,22 +132,26 @@ public class DialogueManager : MonoBehaviour
     public void CheckDeathDialogue(HeroesManager.Hero DeadHero){
         dialogueIndex=0;
         dialogueChosen=false;
+        bool checkMatchDeadHeroe = false;
         foreach (DialogueScriptableObject dialogue in ListOfOnDeathDialogues)
         {
+            checkMatchDeadHeroe=false;
             if (dialogue != null){
+                dialogueChosen=true;
+                for(int i = 0; i<dialogue.dialogues.Length; i+=1)
                 {
-                    foreach (var dialogueEntry in dialogue.dialogues)
+                    if (dialogue.dialogues[i].HeroName == DeadHero)
                     {
-                        if (dialogueEntry.HeroName != DeadHero)
-                        {}
+                        checkMatchDeadHeroe=true;
                     }
+                } 
+                if (checkMatchDeadHeroe == false && dialogueChosen==true){
+                        PlayDialogue(ListOfOnDeathDialogues[dialogueIndex]);
+                        return;
                 }
             }
             dialogueIndex++;
         }
-        PlayDialogue(ListOfOnDeathDialogues[dialogueIndex]);
-        
-        dialogueIndex=0;
     }
 
     public void PlayEndingLevelDialogue(){

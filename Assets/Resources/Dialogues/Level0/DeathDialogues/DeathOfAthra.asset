@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e7c0a03fa310a42a8b63138f4f2206, type: 3}
   m_Name: DeathOfAthra
   m_EditorClassIdentifier: 
-  requiredHeroesForDialogue: 0200000003000000
+  requiredHeroesForDialogue: 0600000005000000
   dialogues:
-  - HeroName: 2
+  - HeroName: 6
     HeroPortrait: {fileID: 0}
     dialogueLine: "J'en \xE9tais sur... Je vous l'avais dit !! Il faut buter ce chacal
       !"
-  - HeroName: 3
+  - HeroName: 5
     HeroPortrait: {fileID: 0}
     dialogueLine: "Non ! Il faut \xE9vacuer le corps de Athra vers la sortie plus
       au nord..."
-  - HeroName: 2
+  - HeroName: 6
     HeroPortrait: {fileID: 0}
     dialogueLine: Ou buter ce batard...
-  - HeroName: 3
+  - HeroName: 5
     HeroPortrait: {fileID: 0}
     dialogueLine: "Surtout pas ! Le syst\xE8me affiche qu'il n'y a qu'un ennemi sur
       ce niveau... Si on le neutralise, le niveau se termine, et on passe au niveau
-      suivant... Sans Cyber ! Il resterai coinc\xE9 dans la simulation..."
+      suivant... Sans Athra ! Il resterai coinc\xE9 dans la simulation..."
   deleteAfterPlayed: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeroAnimator: {fileID: 0}
   HeroAnimation: {fileID: 0}
-  HeroName: 4
+  HeroName: 8
   HeroDescription: 
   HeroSprite: {fileID: 0}
   health: 0
@@ -25,3 +25,7 @@ MonoBehaviour:
   SecondaryAmmo: {fileID: 0}
   SecondaryAmmoDamage: 0
   SecondaryAmmoTimeInterval: 0
+  ui_PortraitHero: {fileID: 0}
+  ui_AvatarPortraitForDialogue: {fileID: 0}
+  ui_ImageHeroForSelectionScreen: {fileID: 0}
+  ui_AvatarImageForNextSelection: {fileID: 0}

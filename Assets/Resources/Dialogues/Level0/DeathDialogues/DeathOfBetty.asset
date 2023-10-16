@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e7c0a03fa310a42a8b63138f4f2206, type: 3}
   m_Name: DeathOfBetty
   m_EditorClassIdentifier: 
-  requiredHeroesForDialogue: 0100000003000000
+  requiredHeroesForDialogue: 0400000006000000
   dialogues:
-  - HeroName: 3
+  - HeroName: 6
     HeroPortrait: {fileID: 0}
     dialogueLine: "J'en \xE9tais sur... On vient d\xE9j\xE0 de perdre un membre !"
-  - HeroName: 1
+  - HeroName: 4
     HeroPortrait: {fileID: 0}
     dialogueLine: "Pas tout \xE0 fait... On a encore une chance de la sauver ! Il
       faut \xE9vacuer son corps vers la sortie !"
-  - HeroName: 3
+  - HeroName: 6
     HeroPortrait: {fileID: 0}
     dialogueLine: Ou on bute ce batard !
-  - HeroName: 1
+  - HeroName: 4
     HeroPortrait: {fileID: 0}
     dialogueLine: "Surtout pas ! Le syst\xE8me affiche qu'il n'y a qu'un ennemi sur
       ce niveau... Si on le neutralise, le niveau se termine, et on passe au niveau
-      suivant... Sans Cyber ! Il resterai coinc\xE9 dans la simulation..."
+      suivant... Sans Betty ! Elle resterai coinc\xE9e dans la simulation..."
   deleteAfterPlayed: 0

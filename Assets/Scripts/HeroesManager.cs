@@ -7,7 +7,10 @@ public class HeroesManager : MonoBehaviour
 {
     public enum Hero
     {
-    ANY,
+    ANY1,
+    ANY2,
+    ANY3,
+    ANY4,
     Athra,
     Betty,
     Cyber,
@@ -27,7 +30,9 @@ public class HeroesManager : MonoBehaviour
     Valkyrie,
     Verbal,
     WaterKnight,
-    Zaemon    
+    Zaemon,
+    CURRENT,
+    REMAINING    
     }
 
     public static HeroesManager Instance;

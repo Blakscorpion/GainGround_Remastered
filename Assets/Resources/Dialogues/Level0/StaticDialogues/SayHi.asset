@@ -17,4 +17,5 @@ MonoBehaviour:
   - HeroName: 24
     HeroPortrait: {fileID: 0}
     dialogueLine: "Bonjour !! Qui \xEAtes-vous ?"
-  deleteAfterPlayed: 0
+  triggerDialogueOnDeath: 0
+  deadHero: 26

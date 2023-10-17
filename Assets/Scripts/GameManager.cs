@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Start() {
-        DialogueManager.Instance.CheckStartingLevelDialogue();
+        DialogueManager.Instance.PlayDialogueOnStartingLevel();
     }
 
     public void UpdateGameState(GameState newState)

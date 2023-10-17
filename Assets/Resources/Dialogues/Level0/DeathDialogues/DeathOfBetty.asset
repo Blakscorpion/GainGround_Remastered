@@ -29,4 +29,5 @@ MonoBehaviour:
     dialogueLine: "Surtout pas ! Le syst\xE8me affiche qu'il n'y a qu'un ennemi sur
       ce niveau... Si on le neutralise, le niveau se termine, et on passe au niveau
       suivant... Sans Betty ! Elle resterai coinc\xE9e dans la simulation..."
-  deleteAfterPlayed: 0
+  triggerDialogueOnDeath: 1
+  deadHero: 5

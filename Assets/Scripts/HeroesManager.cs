@@ -32,7 +32,7 @@ public class HeroesManager : MonoBehaviour
     WaterKnight,
     Zaemon,
     CURRENT,
-    REMAINING    
+    NONE    
     }
 
     public static HeroesManager Instance;

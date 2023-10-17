@@ -21,8 +21,9 @@ public class PlayerDeath : MonoBehaviour
             GameObject newBabyTotem = Instantiate(babyPrefab, transform.position,transform.rotation);
             Destroy(gameObject);
             newBabyTotem.SendMessage("SetName", HeroesManager.Instance.CurrentHero);
-            DialogueManager.Instance.CheckDeathDialogue(HeroesManager.Instance.CurrentHero);
+            DialogueManager.Instance.PlayDialogueOnDeath(HeroesManager.Instance.CurrentHero);
             GameManager.Instance.UpdateGameState(GameState.Dead);
+            HeroesManager.Instance.CurrentHero=HeroesManager.Hero.NONE;
         }
     }
 

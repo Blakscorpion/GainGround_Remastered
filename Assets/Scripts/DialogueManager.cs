@@ -20,11 +20,8 @@ public class DialogueManager : MonoBehaviour
     [Range(1.0f, 10.0f)]
     private float textIntervalTime;
     private int index=0;
-    private int dialogueIndex=0;
-    private bool dialogueChosen=false;
     private bool DialogueEnabled=false;
     private GameState stateToSendAfter = GameState.PlayMode;
-    private int numberOfProtagonists;
 
     DialogueScriptableObject[] ListOfStartingLevelDialogues;
     DialogueScriptableObject[] ListOfOnDeathDialogues;
@@ -36,31 +33,29 @@ public class DialogueManager : MonoBehaviour
     void Awake()
     {
         Instance=this;
+        textComponent.text=string.Empty;
         scene = SceneManager.GetActiveScene();
+        
         ListOfStartingLevelDialogues = Resources.LoadAll<DialogueScriptableObject>("Dialogues/" + scene.name + "/StartingLevelDialogues");
         ListOfOnDeathDialogues = Resources.LoadAll<DialogueScriptableObject>("Dialogues/" + scene.name + "/DeathDialogues");
         ListOfOnEvacuationDialogues = Resources.LoadAll<DialogueScriptableObject>("Dialogues/" + scene.name + "/EvacuationDialogues");
-        ListOfInstantDialogues = Resources.LoadAll<DialogueScriptableObject>("Dialogues/" + scene.name + "/StaticDialogues");
         ListOfEndingLevelDialogues = Resources.LoadAll<DialogueScriptableObject>("Dialogues/" + scene.name + "/EndingLevelDialogues");
-        textComponent.text=string.Empty;
+        DialogueChecker.checkListOfDialoguesStructure(ListOfStartingLevelDialogues);
+        DialogueChecker.checkListOfDialoguesStructure(ListOfOnDeathDialogues);
+        DialogueChecker.checkListOfDialoguesStructure(ListOfOnEvacuationDialogues);
+        DialogueChecker.checkListOfDialoguesStructure(ListOfEndingLevelDialogues);
     }
 
-    void Update()
-    {
-        if(DialogueEnabled)
-        {
-            if(Input.anyKeyDown)
-            {
-                if (textComponent.text == DialoguesScriptableObject.dialogues[index].dialogueLine)
-                {
+    void Update(){
+        if(DialogueEnabled){
+            if(Input.anyKeyDown){
+                if (textComponent.text == DialoguesScriptableObject.dialogues[index].dialogueLine){
                     NextLine();
                 }
                 else{
                     StopAllCoroutines();
                     textComponent.text = DialoguesScriptableObject.dialogues[index].dialogueLine;
-                }
-            }
-        }
+                }}}
     }
 
     void PlayDialogue(DialogueScriptableObject dialogueScriptObj){
@@ -70,33 +65,25 @@ public class DialogueManager : MonoBehaviour
         DialoguePanel.transform.GetChild(0).gameObject.SetActive(true);
         StartCoroutine(TypeLine());
         Time.timeScale = 0;
+        dialogueScriptObj.alreadyPlayed=true;
     }
 
     IEnumerator TypeLine(){
-        if (DialoguesScriptableObject.dialogues[index].HeroName.ToString()==HeroesManager.Hero.CURRENT.ToString())
-        {
-            HeroNameDialogue.text = HeroesManager.Instance.CurrentHero.ToString();
-        }
-        else{
-            HeroNameDialogue.text = DialoguesScriptableObject.dialogues[index].HeroName.ToString();
-        }
-        if (DialoguesScriptableObject.dialogues[index].HeroPortrait)
-        {
+        HeroNameDialogue.text = DialoguesScriptableObject.dialogues[index].HeroName.ToString();
+        if (DialoguesScriptableObject.dialogues[index].HeroPortrait){
             HeroPortraitDialogue.GetComponent<Image>().sprite=DialoguesScriptableObject.dialogues[index].HeroPortrait;
         }
         else{
             HeroPortraitDialogue.GetComponent<Image>().sprite = Resources.Load<HeroScriptableObject>("Heroes/" + HeroNameDialogue.text).ui_PortraitHero;
         }
-        foreach (char c in DialoguesScriptableObject.dialogues[index].dialogueLine.ToCharArray())
-        {
+        foreach (char c in DialoguesScriptableObject.dialogues[index].dialogueLine.ToCharArray()){
             textComponent.text += c;
             yield return new WaitForSecondsRealtime(textIntervalTime/100);
         }
     }
     
     void NextLine(){
-        if (index < DialoguesScriptableObject.dialogues.Length - 1)
-        {
+        if (index < DialoguesScriptableObject.dialogues.Length - 1){
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
@@ -104,6 +91,7 @@ public class DialogueManager : MonoBehaviour
         else{
             CloseDialogue();
             GameManager.Instance.UpdateGameState(stateToSendAfter);
+            stateToSendAfter = GameState.PlayMode;
         }
     }
 
@@ -114,53 +102,23 @@ public class DialogueManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void CheckStartingLevelDialogue(){
+    public void PlayDialogueOnStartingLevel(){
         stateToSendAfter = GameState.PlayerSelection;
-        if (isValidDialogueScriptObj(ListOfStartingLevelDialogues)){
-            PlayDialogue(ListOfStartingLevelDialogues[0]);
+        if (ListOfStartingLevelDialogues.Length!= 0 && ListOfStartingLevelDialogues!= null){
+            for (int i = 0; i < ListOfStartingLevelDialogues.Length; i++){
+                if (DialogueChecker.isHeroesMatchingForStartingDialogues(ListOfStartingLevelDialogues[i])){
+                    PlayDialogue(ListOfStartingLevelDialogues[i]);
+                    return;
+                }}
         }
-        else{
-            Debug.Log(isValidDialogueScriptObj(ListOfStartingLevelDialogues));
-            GameManager.Instance.UpdateGameState(stateToSendAfter);
-        }
-    }
-    
-    public void PlayEvacuationDialogue(){
-
-    }
-
-    public void CheckDeathDialogue(HeroesManager.Hero DeadHero){
-        dialogueIndex=0;
-        dialogueChosen=false;
-        bool checkMatchDeadHeroe = false;
-        foreach (DialogueScriptableObject dialogue in ListOfOnDeathDialogues)
-        {
-            checkMatchDeadHeroe=false;
-            if (dialogue != null){
-                dialogueChosen=true;
-                for(int i = 0; i<dialogue.dialogues.Length; i+=1)
-                {
-                    if (dialogue.dialogues[i].HeroName == DeadHero)
-                    {
-                        checkMatchDeadHeroe=true;
-                    }
-                } 
-                if (checkMatchDeadHeroe == false && dialogueChosen==true){
-                        PlayDialogue(ListOfOnDeathDialogues[dialogueIndex]);
-                        return;
-                }
-            }
-            dialogueIndex++;
-        }
-    }
-
-    public void PlayEndingLevelDialogue(){
-
+        GameManager.Instance.UpdateGameState(stateToSendAfter);
+        stateToSendAfter = GameState.PlayMode;
     }
 
     public void PlayInstantDialogue(DialogueScriptableObject dialogue){
         stateToSendAfter = GameState.PlayMode;
-        if (isValidDialogueScriptObj(dialogue)){
+        DialogueChecker.checkSingleDialogueStructure(dialogue);
+        if (DialogueChecker.isHeroesMatchingForStartingDialogues(dialogue)){
             PlayDialogue(dialogue);
         }
         else{
@@ -168,22 +126,20 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private bool isValidDialogueScriptObj(DialogueScriptableObject[] dialogueToAnalyse){
-        if (dialogueToAnalyse!= null && dialogueToAnalyse.Length!=0 && dialogueToAnalyse[0].dialogues.Length!=0){
-        return true;
+    public void PlayDialogueOnDeath(HeroesManager.Hero DeadHero){
+        if (ListOfOnDeathDialogues.Length!= 0 && ListOfStartingLevelDialogues!= null){
+            for (int i = 0; i < ListOfOnDeathDialogues.Length; i++){
+                if (DialogueChecker.isHeroesMatchingForOnDeathDialogues(ListOfOnDeathDialogues[i], DeadHero)){
+                    PlayDialogue(ListOfStartingLevelDialogues[i]);
+                    return;
+                }}
         }
-        return false;
     }
 
-    private bool isValidDialogueScriptObj(DialogueScriptableObject dialogueToAnalyse){
-        if (dialogueToAnalyse!= null && dialogueToAnalyse.dialogues.Length!=0){
-        return true;
-        }
-        return false;
+    public void PlayDialogueOnEscape(){
+
     }
+    public void PlayDialogueOnEndingLevel(){
 
-    
-
-
-
+    }
 }

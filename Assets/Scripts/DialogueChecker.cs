@@ -64,6 +64,10 @@ public class DialogueChecker{
                 return false;
             }
         }
+        if(!isHeroStateModifierOK(onDeathDialogues)){
+            Debug.Log("Dialogue can't be displayed because not enough heroes alive, or trying to make a dialogue with an unavailable hero");
+            return false;
+        }
         return true;
     }
 
@@ -96,7 +100,26 @@ public class DialogueChecker{
             currentFound=1;
             }
         }
-        
+        for (int i = 0; i < dialogue.dialogues.Length; i++)
+        {
+            if(dialogue.dialogues[i].HeroName == HeroesManager.Hero.CURRENT){
+                continue;}
+            if(dialogue.dialogues[i].HeroName == HeroesManager.Hero.ANY1){
+                continue;}
+            if(dialogue.dialogues[i].HeroName == HeroesManager.Hero.ANY2){
+                continue;}
+            if(dialogue.dialogues[i].HeroName == HeroesManager.Hero.ANY3){
+                continue;}
+            if(dialogue.dialogues[i].HeroName == HeroesManager.Hero.ANY4){
+                continue;}
+            if(dialogue.dialogues[i].HeroName == HeroesManager.Hero.NONE){
+                Debug.LogError("The dialogue '" + dialogue.name + "' has a hero name assigned to NONE, it should be forbiden!");
+                return false;}
+            if(!tmpHeroesAlive.Contains(dialogue.dialogues[i].HeroName)){
+                return false;
+            }
+            
+        }
         for (int i = 0; i < dialogue.dialogues.Length; i++)
         {
             if(dialogue.dialogues[i].HeroName == HeroesManager.Hero.CURRENT){
@@ -114,17 +137,22 @@ public class DialogueChecker{
             if(dialogue.dialogues[i].HeroName == HeroesManager.Hero.ANY4){
                 any4Found=1;
                 continue;}
-            if(dialogue.dialogues[i].HeroName == HeroesManager.Hero.NONE){
-                Debug.LogError("The dialogue '" + dialogue.name + "' has a hero name assigned to NONE, it should be forbiden!");
-                return false;}
             if(currentFound!=1){
-                tmpHeroesAlive.RemoveAt(tmpHeroesAlive.IndexOf(dialogue.dialogues[i].HeroName));}
+                Debug.Log("Liste heroe alive tmp " + tmpHeroesAlive);
+                Debug.Log("Hero en cours d'analyse : " + dialogue.dialogues[i].HeroName);
+                Debug.Log("Index du Heros en cours de delete du tmp " + tmpHeroesAlive.IndexOf(dialogue.dialogues[i].HeroName));
+                if (tmpHeroesAlive.IndexOf(dialogue.dialogues[i].HeroName) != -1){
+                    tmpHeroesAlive.RemoveAt(tmpHeroesAlive.IndexOf(dialogue.dialogues[i].HeroName));
+                }
+            }
             if(currentFound==1 && dialogue.dialogues[i].HeroName!=HeroesManager.Instance.CurrentHero){
-                tmpHeroesAlive.RemoveAt(tmpHeroesAlive.IndexOf(dialogue.dialogues[i].HeroName));
+                if (tmpHeroesAlive.IndexOf(dialogue.dialogues[i].HeroName) != -1){
+                    tmpHeroesAlive.RemoveAt(tmpHeroesAlive.IndexOf(dialogue.dialogues[i].HeroName));
+                }
             }
         }
         numberOfDifferentHeroesNeeded = any1Found + any2Found + any3Found + any4Found + currentFound;
-        if((numberOfDifferentHeroesNeeded!=0 && currentFound==0) || (numberOfDifferentHeroesNeeded>1 && currentFound==1)){
+        if(numberOfDifferentHeroesNeeded!=0){
             if (tmpHeroesAlive.Count>=numberOfDifferentHeroesNeeded){
                 
                 if (currentFound==1){

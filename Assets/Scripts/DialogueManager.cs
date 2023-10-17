@@ -104,7 +104,7 @@ public class DialogueManager : MonoBehaviour
 
     public void PlayDialogueOnStartingLevel(){
         stateToSendAfter = GameState.PlayerSelection;
-        if (ListOfStartingLevelDialogues.Length!= 0 && ListOfStartingLevelDialogues!= null){
+        if (ListOfStartingLevelDialogues!= null && ListOfStartingLevelDialogues.Length!= 0){
             for (int i = 0; i < ListOfStartingLevelDialogues.Length; i++){
                 if (DialogueChecker.isHeroesMatchingForStartingDialogues(ListOfStartingLevelDialogues[i])){
                     PlayDialogue(ListOfStartingLevelDialogues[i]);
@@ -127,10 +127,10 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void PlayDialogueOnDeath(HeroesManager.Hero DeadHero){
-        if (ListOfOnDeathDialogues.Length!= 0 && ListOfStartingLevelDialogues!= null){
+        if (ListOfOnDeathDialogues!= null && ListOfOnDeathDialogues.Length!= 0){
             for (int i = 0; i < ListOfOnDeathDialogues.Length; i++){
                 if (DialogueChecker.isHeroesMatchingForOnDeathDialogues(ListOfOnDeathDialogues[i], DeadHero)){
-                    PlayDialogue(ListOfStartingLevelDialogues[i]);
+                    PlayDialogue(ListOfOnDeathDialogues[i]);
                     return;
                 }}
         }

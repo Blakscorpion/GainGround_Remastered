@@ -16,6 +16,12 @@ public class PlayerAnimationToMouse : MonoBehaviour
     Animator m_Animator=null;
     private string current_animation;
 
+    void OnDisable()
+    {
+        animator.SetFloat("speed", 0);
+        Debug.Log("DISABLED");
+    }
+
     void Start()
     {
         _renderer = GetComponent<SpriteRenderer>();
@@ -33,10 +39,9 @@ public class PlayerAnimationToMouse : MonoBehaviour
 
         mouseVector = Camera.main.ScreenToWorldPoint(Input.mousePosition) - this.transform.position;
         mouseVector = mouseVector.normalized;
-        //mouseVector = mouseVector.normalized;
-        animator.SetFloat("horizontal", mouseVector.x);
-        Debug.Log("X : " + mouseVector.x + "|| Y : " + mouseVector.y);
-        animator.SetFloat("vertical", mouseVector.y);
+
+        animator.SetFloat("horizontal", movement.x);
+        animator.SetFloat("vertical", movement.y);
         animator.SetFloat("speed", movement.sqrMagnitude);
 
          // Fliping character if going left
@@ -53,6 +58,7 @@ public class PlayerAnimationToMouse : MonoBehaviour
         if (movement.x !=0 || movement.y !=0)
         {
             animatorClipinfo = this.m_Animator.GetCurrentAnimatorClipInfo(0);
+            Debug.Log(animatorClipinfo[0].clip.name);
             SetLastDirection();
         }        
     }

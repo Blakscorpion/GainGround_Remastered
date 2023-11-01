@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Runtime.ExceptionServices;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class DialogueManager : MonoBehaviour
     private int index=0;
     private bool DialogueEnabled=false;
     private GameState stateToSendAfter = GameState.PlayMode;
+    private bool firstDialogue=false;
 
     DialogueScriptableObject[] ListOfStartingLevelDialogues;
     DialogueScriptableObject[] ListOfOnDeathDialogues;
@@ -61,6 +63,7 @@ public class DialogueManager : MonoBehaviour
     void PlayDialogue(DialogueScriptableObject dialogueScriptObj){
         DialoguesScriptableObject = dialogueScriptObj; 
         DialogueEnabled=true;
+        firstDialogue=true;
         index = 0;
         DialoguePanel.transform.GetChild(0).gameObject.SetActive(true);
         StartCoroutine(TypeLine());
@@ -96,6 +99,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     void CloseDialogue(){
+        if (firstDialogue) {waitForSeconds(1f); firstDialogue=false;}
         DialoguePanel.transform.GetChild(0).gameObject.SetActive(false);
         textComponent.text = string.Empty;
         DialogueEnabled=false;
@@ -142,4 +146,8 @@ public class DialogueManager : MonoBehaviour
     public void PlayDialogueOnEndingLevel(){
 
     }
+
+    IEnumerator waitForSeconds(float timeToWait){
+    yield return new WaitForSeconds(timeToWait);
+}
 }

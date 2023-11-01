@@ -68,7 +68,7 @@ public class babyController : MonoBehaviour
         if (isBabyCollected)
         {
             if (player){
-                string currMov = player.GetComponent<PlayerMovement>().GetCurrentMovement();
+                string currMov = player.GetComponent<PlayerAnimationToMouse>().GetCurrentMovement();
                 BabyPlacement(currMov); 
             
                 // Animating the Baby when player is moving

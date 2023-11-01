@@ -39,7 +39,7 @@ public class TriggerZoneEvent : MonoBehaviour
                     alreadyTriggered=true;
                 }
                 ennemyGameObject.GetComponent<EnemyPatrol>().isPatroling=true;
-                playerGameObject.GetComponent<PlayerMovement>().enabled=false;
+                playerGameObject.GetComponent<PlayerAnimationToMouse>().enabled=false;
                 playerGameObject.GetComponent<Dash>().enabled=false;
                 DialogueManager.Instance.PlayInstantDialogue(dialogueToPlay);
             }

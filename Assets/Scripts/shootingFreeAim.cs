@@ -19,13 +19,13 @@ public class shootingFreeAim : MonoBehaviour
     public float shootingIntervalSpecial=2f;
     private bool isAbleToShoot=true;
     private bool isAbleToShootSpecial=true;
-    private PlayerMovement playerMovement;
+    private PlayerAnimationToMouse playerMovement;
 
 
     private void Start() {
         sprite = this.GetComponent<SpriteRenderer>();
         rigidbdy = this.GetComponent<Rigidbody2D>();
-        playerMovement = this.GetComponent<PlayerMovement>();
+        playerMovement = this.GetComponent<PlayerAnimationToMouse>();
         recoilForcePrimary = primaryAmmo.GetComponent<bullet>().recoilStrenght;
         recoilForceSecundary = secondaryAmmo.GetComponent<bullet>().recoilStrenght;
     }

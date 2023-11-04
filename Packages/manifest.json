@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.cammin.ldtkunity": "3.3.3",
+    "com.cammin.ldtkunity": "4.1.0",
     "com.unity.2d.animation": "5.0.10",
     "com.unity.2d.pixel-perfect": "4.0.1",
     "com.unity.2d.psdimporter": "4.1.3",

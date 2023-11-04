@@ -45,14 +45,20 @@ public class PlayerAnimationToMouse : MonoBehaviour
         animator.SetFloat("speed", movement.sqrMagnitude);
 
          // Fliping character if going left
-        if (mouseVector.x > 0)
-        {
+        if (mouseVector.x >= 0){
             _renderer.flipX = false;
         }
-        else if (mouseVector.x < 0)
-        {
+        else{
             _renderer.flipX = true;
-        } 
+        }
+
+        //Reversing animation if player is going opposite way of its looking direction
+        if(_renderer.flipX == movement.x>=0){
+            animator.SetFloat("Reverse", -1f);
+        }
+        else{
+            animator.SetFloat("Reverse", 1f);
+        }
         
         
         if (movement.x !=0 || movement.y !=0)
@@ -66,7 +72,7 @@ public class PlayerAnimationToMouse : MonoBehaviour
     void FixedUpdate() {
         
     
-        rigidBody.MovePosition(rigidBody.position + movement * movespeed * Time.deltaTime);
+        rigidBody.MovePosition(rigidBody.position + movement.normalized * movespeed * Time.deltaTime);
         //Vector3 targetVelocityH = new Vector2(_horizontalMovement, rigidBody.velocity.y);
         //Vector3 targetVelocityV = new Vector2(_verticalMovement, rigidBody.velocity.x);
         //rigidBody.velocity = Vector3.SmoothDamp(rigidBody.velocity, targetVelocityH + targetVelocityV, ref velocity, .05f);

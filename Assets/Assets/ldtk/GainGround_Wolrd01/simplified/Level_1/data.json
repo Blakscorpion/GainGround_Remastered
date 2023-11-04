@@ -1,0 +1,21 @@
+{
+	"identifier": "Level_1",
+	"uniqueIdentifer": "49bfb860-6280-11ee-9a41-b9d26f847fed",
+	"x": 0,
+	"y": -2688,
+	"width": 1920,
+	"height": 2688,
+	"bgColor": "#696A79",
+	"neighbourLevels": [
+		{
+			"levelIid": "a95f9e40-1460-11ee-8064-29d89e3b894f",
+			"dir": "s"
+		}
+	],
+	"customFields" : {},
+	"layers": [
+		"AutoLayer.png",
+		"Walls2.png"
+	],
+	"entities" : {}
+}

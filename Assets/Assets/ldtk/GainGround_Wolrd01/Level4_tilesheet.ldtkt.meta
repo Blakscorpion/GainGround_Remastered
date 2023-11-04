@@ -1,0 +1,3979 @@
+fileFormatVersion: 2
+guid: de54fe9249f69204b97abe8c6dd1df19
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 64
+  _sprites:
+  - name: Level4_tilesheet_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: a3e79998f57e36c4396ebc7fd05c8a3a
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: 60, y: 64}
+      - {x: 52, y: 28}
+      - {x: 35, y: -59}
+      - {x: 35, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 88ad5332c3fea4e4eaf70591ed23987c
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 40629c9a8504df543a0de62242d324a8
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 3b906a171a1934b49bf0ea76dac3e3d3
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+      - {x: -35, y: -64}
+      - {x: -35, y: -53}
+      - {x: -60, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: cebea30f992eaf342a5eb962da4fa030
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 8924a1861d8a87842b3ca63c3f382515
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: c436cb0cc2150e849986041ddb4fd7dc
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 422cdb59e87a1344689e07f6eb9e55bd
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 3de10ca9176f80b40baf26daf7aedb22
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 3db2cca6213f9d14aadd57a866630e48
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 80250eb1ffebe6448ad0abb0388deeca
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 62ba888c051138944b680ea5592f452b
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 6cb125c9d0eaa5f4aa881f9dc981bb0e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 9b7947fc466f94448ab23ad4bfe19ee4
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 8c440b3628e71454e8b58a79e764125c
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 1920
+      width: 128
+      height: 128
+    spriteID: 744c1afd2f0643d4d837270ac214ab75
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: c6dea6115f4a7f947959e83f8b343a5f
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: 35, y: 64}
+      - {x: 35, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: 5f7ff72dc6b45c34082fa7ecc3603bcc
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: 5ec34e4a2c12d534c8133bc03b0a04ee
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: c6dab3057fb7bdd478490019239877d9
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -35, y: -64}
+      - {x: -35, y: 64}
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: b4f432b2b53b8a849a05814c8b42242a
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    - shape:
+      - {x: -3, y: 52}
+      - {x: 3, y: 52}
+      - {x: 3, y: 8}
+      - {x: -3, y: 8}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: aa77e077b51999d42b7228c878eddc2f
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: c9e486fc9270a474f9985cb2c3ba03a4
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: 2288435ec8474fa44bea0ca77d699860
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: 201a688b3a2028840b023c8edbc4cd12
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: ca5f23e06628f6b4ab4a65e2eb292cd8
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: 275f58e39890a6a45aab4d8d29059086
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: 51c7daa199f10ae44938f18f6a533a56
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_28
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: 87df96d1af0fef34d8bf0c361f206e61
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: cd31f89a65009b84b810eddcfabcb52e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: 8f5df82b79aef83438881329feb5f393
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_31
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 1792
+      width: 128
+      height: 128
+    spriteID: 3a712c1612582414c871c965b59d41a7
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_32
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: edff4d17f8384b248ac4b95f2960bbe9
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: 35, y: 64}
+      - {x: 35, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_33
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: 4340c4ff05b088d4f8c0a30e4cdd28e0
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_34
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: e3f035f9cf900d843ae0e0103dfb73ff
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+      - {x: 64, y: -64}
+      - {x: 64, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_35
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: cc13d09301748a44c88112f665102b7a
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -35, y: -64}
+      - {x: -35, y: 64}
+      - {x: -64, y: 64}
+      - {x: -64, y: -64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_36
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: 0aded62a7689d184893160045581ff46
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -40, y: -64}
+      - {x: 24, y: -64}
+      - {x: 24, y: 64}
+      - {x: -36, y: 64}
+      - {x: -40, y: -18}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_37
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: 9e0b253c4f4927648ab1e5ed64bfa9c6
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -51, y: 51}
+      - {x: -53, y: 47}
+      - {x: -58, y: -2}
+      - {x: -58, y: -59}
+      - {x: -57, y: -64}
+      - {x: 59, y: -64}
+      - {x: 59, y: 51}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_38
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: e4d36943497ba7f4ab2a0894b9b3adce
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_39
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: 63397588f7c55664fa2e21f6ef5af7ed
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: 2123ca14fb8b74247a60c86293c2059d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_41
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: 9b0d0969f11a7364abd88b8a6a9ae92e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_42
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: 80d88de1c57186d449e8eb3c29841f34
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_43
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: f1d72ea11bf851b4daa0995fd0e27fda
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_44
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: 764c7336e914f4d43966e5abf48d89d7
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_45
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: dd716c06eed4af9418bfe380c08f0a94
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_46
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: 05a673965e906154380a49acd7b8a559
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_47
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 1664
+      width: 128
+      height: 128
+    spriteID: f28d12a9facfae84492fe768bfeb60a6
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_48
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 5fbb30462760cd44b86e0301d819d6cf
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 01de2a9fa58ad74419c5757dc82aae04
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 6d94d2f5ac319ba4a9fa706a31008015
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_51
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 2c3fe1e8766a3e4499c27d6cf1a07262
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_52
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 270885edb220eb74a9eff95b82575f01
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -41, y: 64}
+      - {x: -41, y: 47}
+      - {x: -39, y: 45}
+      - {x: 21, y: 45}
+      - {x: 23, y: 47}
+      - {x: 23, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_53
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: e64c3e54f070a914b8c0688a7e89d123
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -58, y: 64}
+      - {x: -58, y: 57}
+      - {x: -53, y: 55}
+      - {x: 54, y: 55}
+      - {x: 59, y: 57}
+      - {x: 59, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_54
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 31a3b9e2b68df4c40ab178888ec4df58
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_55
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: b588cc21af1198940a71d167f4efbf7e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_56
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 467a28fe934b94346a0595bd88d743e9
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_57
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 53a3f18b8f9c2c34aae556182a3a8ebe
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_58
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 4ecbbb27ef0dc7e47917e8106e44b897
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_59
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 34871a6a86806d44aa3e2f10df1a438e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 1e769233cd8643e45a1d47d3a7428a02
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_61
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: bb0704e5413c3304c818865756adb029
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_62
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 05fb3173f5aec894ebaef6c57fbe683a
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_63
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 1536
+      width: 128
+      height: 128
+    spriteID: 866dc44aec99c474dbb6716567abca5c
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_64
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: fd06470ca7f762840b406191caba0c81
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_65
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: 1d7d47ea5d4c1154d9c025bbe4792669
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_66
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: 78839de8a76fde847a23e5efcde7ec52
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_67
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: 32a848463d76d744caec95870e9417d3
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_68
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: 052f56c08cf0de64081651480077d2f1
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_69
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: fff49e6472419404b9923b9fbb3c80fc
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: efc49b854d0846a4da9f5f8d3158be61
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_71
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: 677431640f77f594e8ef195b0d299fc8
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_72
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: 927d8bf74890a9e4396535ddd3533c4b
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_73
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: 3a38064ddbd720340ab2e36edd71c3e2
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_74
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: 9c94e2f68baf9014186b4c436d7c5079
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_75
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: e2170b79fe584f44e9898e25ed36339e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_76
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: d9bc0653b380d9140816b7decc7542ca
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_77
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: 455f40e897040b64d91382ac0ec2e9de
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_78
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: ecde44ced3d674c4590b96f346401b61
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_79
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 1408
+      width: 128
+      height: 128
+    spriteID: d0ff7351f5eeaf44f969be0909ed6620
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 65f5fc65020210041946d3cacc08c158
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -61, y: 5}
+      - {x: -61, y: -64}
+      - {x: -5, y: -64}
+      - {x: -5, y: 5}
+      - {x: -7, y: 7}
+      - {x: -59, y: 7}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_81
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 15810a051c50d8e408283af1b5532cf8
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_82
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 04425cbb905ded84099bed5de3fabb7d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_83
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 2ded483c38c00aa47864e11026ba34fe
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_84
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 3aca3f27956851441b0dbcc3c351b986
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_85
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 38dfa43b5ef7eaf44931cf80186cd361
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_86
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: b5fd63b60c4d62c4ab91d092b44ee903
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_87
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 3721f0b540efa9247aded173b62b12a1
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_88
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 42c0c40c1499ba04eb04f30c6d96d3cf
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_89
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 07be00610b435fd4699ebc4305347df3
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_90
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: eefc9438d343e0d44baebc4a8bf44a59
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_91
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: c3adac75f39eced41953682aa02e8f8d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_92
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 24fca63f7824e0049a8133feb5e0bcfe
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_93
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: cad3fd3f59b596944a553d1bfbe74cdc
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_94
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: e3c83a97a8234c245a7bb44e38181e6e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_95
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 1280
+      width: 128
+      height: 128
+    spriteID: 1ea2493a89770be45b9ebb35e0daf0de
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_96
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 873e85470cafb904ebf3c22a9da42506
+    internalID: 0
+    spriteOutline:
+    - shape:
+      - {x: -61, y: 64}
+      - {x: -64, y: 53}
+      - {x: -64, y: -30}
+      - {x: -2, y: -30}
+      - {x: -2, y: 58}
+      - {x: -5, y: 64}
+    tessellationDetail: 0
+  - name: Level4_tilesheet_97
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 1342b47307bafa94fa0d37d76acb797f
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_98
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 5af0bb9132498514bbafb5aa094915b1
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_99
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: e7ad26076791db943990c31a386d6967
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_100
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 1187538bd844bdf41bbc144a2d620f18
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_101
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 927d8a7d7a26d6346962cf98f729c585
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_102
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 8f8bbecee589246478203a7637f97cdd
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_103
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 385313170ac85104e97ae4f6c01d69df
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_104
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 4c01c36d344d6e6409104c6a45a8be70
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_105
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 37b48fe580033924e9070ad8e6d03e8d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_106
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: cc7a2d791c25fef42ae1718902deca99
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_107
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 8d22361d161c3d547ac8c9369ea41501
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_108
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 29f094d542510ce4d984ea63d04b1e5d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_109
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: c916c16a6905b1d4cb4d746819a02d3a
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_110
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: 441ec481023191041b11361877316a72
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_111
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 1152
+      width: 128
+      height: 128
+    spriteID: b3efa8a6ee3c3864fb93cbd6fca38f12
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_112
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: bcd0d8113ec2ac944b3a64271f92d6ca
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_113
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: 7f929ba623ec1c943aecb7c832860fb4
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_114
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: 8872635e556ccd948b2a9ecc69924326
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_115
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: 5b1ccdeb8b6285245b382731f4ff7a2b
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_116
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: e59ee219287ed2a4a800f27f33ad96b2
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_117
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: 739a0e72c4936ca40921b77a6fe62b41
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_118
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: 2b8690d1fbfcab6428cb5bf919860276
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_119
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: 873f069a71b09fb4bab9050bb026390d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_120
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: aea51e4031a1a73439addca4dffbdd14
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_121
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: e850f9d50c7f46d459d7bcef22ca7fdf
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_122
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: 0ef472f45faddae4b93f78f9a9172c89
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_123
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: 47d73fbf93d8c2342898c68326750cce
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_124
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: aacd4ced7bb13fa47b0c738e8d100e65
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_125
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: f5d93fdb89c896a49934f82626877cd6
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_126
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: 12788f85cea58d049afaf630159f6572
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_127
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 1024
+      width: 128
+      height: 128
+    spriteID: 891e3ec1b40a54942b8ae4c5ff88cb44
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_128
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 896
+      width: 128
+      height: 128
+    spriteID: 3066b3c9da125ad48b96861d39fe5267
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_129
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 896
+      width: 128
+      height: 128
+    spriteID: 2d40ecda3d425754cb1d0bb3bd9da530
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_130
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 896
+      width: 128
+      height: 128
+    spriteID: ad36262ea4abe3448a12d57dde3b92b4
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_131
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 896
+      width: 128
+      height: 128
+    spriteID: 6757e08b3c79866458db9b9f2b3cd503
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_132
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 896
+      width: 128
+      height: 128
+    spriteID: ed60c52ebefd97b4d9acb5032ea2d712
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_133
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 896
+      width: 128
+      height: 128
+    spriteID: 2a913e0d8f64ee94392134c0882f8a8d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_134
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 896
+      width: 128
+      height: 128
+    spriteID: f4d9d61a3c16a0f4ca0b50ce42f85c65
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_135
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 896
+      width: 128
+      height: 128
+    spriteID: a335f82e6a94d734187936024ea3c7ee
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_136
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 896
+      width: 128
+      height: 128
+    spriteID: ed74a4e8b623a14458180c74c596995f
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_137
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 896
+      width: 128
+      height: 128
+    spriteID: 9d6d7672dfe7ae24db322501f6a16238
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_138
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 896
+      width: 128
+      height: 128
+    spriteID: 61065f41d4c4a5e469347ef7aa44aded
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_139
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 896
+      width: 128
+      height: 128
+    spriteID: 65928ba78d525fe449afbf499b2b5dda
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_140
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 896
+      width: 128
+      height: 128
+    spriteID: da347fdd33dcb8749bfb34ed8e553822
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_141
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 896
+      width: 128
+      height: 128
+    spriteID: 5b8b0af1fb275e949be1c9178d31b02f
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_142
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 896
+      width: 128
+      height: 128
+    spriteID: 8a8a269b0fedf9441969bcc9c84aa633
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_143
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 896
+      width: 128
+      height: 128
+    spriteID: fa714658909dfab46be77b674666c7a0
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_144
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 5767b3238bd30b241a44aa3c651e2672
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_145
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 768
+      width: 128
+      height: 128
+    spriteID: b9ff460d9800b8e49b2c93fd73fc9cfa
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_146
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 379aaa0d7f55a994491f7ac103f76036
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_147
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 4652e05078b1bba4cb20a43056153db6
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_148
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 768
+      width: 128
+      height: 128
+    spriteID: dff8044bc6286754aba6f7201a114680
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_149
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 464d7485ce39164428078b7361bf2804
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_150
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 568356517cdd9cd41ba820ec05ad3c97
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_151
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 768
+      width: 128
+      height: 128
+    spriteID: e5acd98319b4520469e25b55686fd921
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_152
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 935a40298a5053649a990ce487c7f56c
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_153
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 9d6aa2afc6bbe1a41a8e35543a085c8c
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_154
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 08071eb40a3ece643adbcfb6c6a0bca0
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_155
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 768
+      width: 128
+      height: 128
+    spriteID: bcd833bf0e3d164409a8a6ecaa93a6fc
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_156
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 768
+      width: 128
+      height: 128
+    spriteID: a23a9b704046d8b40b5d6bd9af88a7d0
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_157
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 79808418dc4bbbc4cb048041c0d2301b
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_158
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 919463541808bc0409051e6db3305af4
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_159
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 768
+      width: 128
+      height: 128
+    spriteID: 594a02d9dbb78a144b60a3e21cfd0888
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_160
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 5f870916a8f04f94d8e1d4dc84475a95
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_161
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 6042bd5c3a93f8a4baadbcd7f6ba68c0
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_162
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 640
+      width: 128
+      height: 128
+    spriteID: b26ac4f0589415043a9396474e5536e5
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_163
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 656fc45673018a140aee9c6e2ec76d27
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_164
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 09984436a1773b64a8cc7c1e3d661ff1
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_165
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 314750191c99a824192dde626a00ee10
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_166
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 141da4b7ca6d48f4da3883a2c6eaf805
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_167
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 640
+      width: 128
+      height: 128
+    spriteID: f8142e443e2804a44ba3636e0aa2b423
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_168
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 3a9462ce26b0ab24da4db08d86267449
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_169
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 6b80892f57a3a6641b1cd77eafd60feb
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_170
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 5846cb9db146b7d4fa073ab634a1e99e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_171
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 53de5ca8c902c324aa11bd494ce431eb
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_172
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 1f1f90cfabe61fe4b9c8a71485f13fec
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_173
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 640
+      width: 128
+      height: 128
+    spriteID: fb10a87baa1af0349b3af7280fae2f37
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_174
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 768fea3d61c5002479212097a692d02f
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_175
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 640
+      width: 128
+      height: 128
+    spriteID: 85b44132dcc928f448a3d0cfff5a15d8
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_176
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 512
+      width: 128
+      height: 128
+    spriteID: 5a2152e5e8de83e49b4be3c4a7793c6d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_177
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 512
+      width: 128
+      height: 128
+    spriteID: 3cadbd2babb172b4f9b8a2fa180524a4
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_178
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 512
+      width: 128
+      height: 128
+    spriteID: a1ad8bd7970282442a0fd559e8910c3a
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_179
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 512
+      width: 128
+      height: 128
+    spriteID: 1654479587e623945bbe5860ca2d34ba
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_180
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 512
+      width: 128
+      height: 128
+    spriteID: 11b84486ca07a9241abae4732c948dc4
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_181
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 512
+      width: 128
+      height: 128
+    spriteID: d85e2ae7398d71b419ba2c638aa7354c
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_182
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 512
+      width: 128
+      height: 128
+    spriteID: ba887295f41b82c4794e55c78d7df97f
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_183
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 512
+      width: 128
+      height: 128
+    spriteID: 98f94bc62b2f4e543ba6037ee21ba923
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_184
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 512
+      width: 128
+      height: 128
+    spriteID: bb76632e34390784690348c6ac18f9ba
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_185
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 512
+      width: 128
+      height: 128
+    spriteID: f0910a8608dafcd4eac9312cb33bb832
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_186
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 512
+      width: 128
+      height: 128
+    spriteID: 25e61504ea2aea44981202a1b9bad917
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_187
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 512
+      width: 128
+      height: 128
+    spriteID: 78ac01a9afb861741b641d6d742989a6
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_188
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 512
+      width: 128
+      height: 128
+    spriteID: a4123d1bf2a0530409e497649a10c9da
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_189
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 512
+      width: 128
+      height: 128
+    spriteID: ab3da2efe38873241a963e4b0366bd87
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_190
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 512
+      width: 128
+      height: 128
+    spriteID: f8adf27725ee62a419eeec49d0f5c973
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_191
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 512
+      width: 128
+      height: 128
+    spriteID: fa6d77a09fb09d642aa4073d38f2423b
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_192
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 384
+      width: 128
+      height: 128
+    spriteID: ab916c5a0d4f4e34f989df3868fd470d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_193
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 384
+      width: 128
+      height: 128
+    spriteID: d2fba37d7b972bf4190c77978be76c2d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_194
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 7dc07591c8d30614791a54e2219b475f
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_195
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 7a114c74a9d8f3143821668be855a7dd
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_196
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 384
+      width: 128
+      height: 128
+    spriteID: aa7b4cbe97bb8664484960ba87dc1496
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_197
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 384
+      width: 128
+      height: 128
+    spriteID: eef7f63318fbd1243a257f0f5e205a28
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_198
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 90c29e51d9fced44bb25b435ccb5b2fa
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_199
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 373ec94c07893ba439b50b1a1430ecb3
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_200
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 8993e37d93db0354d991a5d0f544933b
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_201
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 384
+      width: 128
+      height: 128
+    spriteID: be7d77aaab6ad6244a7a14531c9fe2ee
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_202
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 54fb1a286536ba341acc6bf59fefa877
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_203
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 7146ead5f29ddfb419e7c86d7a92887a
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_204
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 9b531417e0ae1574da8097194f6b52e5
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_205
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 8bc36518512ad8a4b88866a6d9ac00f0
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_206
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 4161ae50ab5dbd44fb06eb4ad61a955c
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_207
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 384
+      width: 128
+      height: 128
+    spriteID: 707b09378737f04419afd40d839280d7
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_208
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 256
+      width: 128
+      height: 128
+    spriteID: 038fb18c6049b9840bd9e615f9611016
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_209
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 256
+      width: 128
+      height: 128
+    spriteID: 0958bd88dfd05c943a04dbf7c0c100a5
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_210
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 256
+      width: 128
+      height: 128
+    spriteID: b08a8feb6dd479a4e9956969fe928477
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_211
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 256
+      width: 128
+      height: 128
+    spriteID: d2fe163c807cdd64e8da1cffa9979953
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_212
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 256
+      width: 128
+      height: 128
+    spriteID: c13f8d67067e730459b8a1a09fc4e85e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_213
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 256
+      width: 128
+      height: 128
+    spriteID: ced0eb4a6b219154e92d13ef16981901
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_214
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 256
+      width: 128
+      height: 128
+    spriteID: 1cc051d31aff11f44834990866a1b078
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_215
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 256
+      width: 128
+      height: 128
+    spriteID: 0f3b36eadd7db7b4cbf8c0be16b0babe
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_216
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 256
+      width: 128
+      height: 128
+    spriteID: 717e7c1e85a11874dbc9c1f2810cc42d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_217
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 256
+      width: 128
+      height: 128
+    spriteID: 5316e5125e46cfd45bdadbbf7def2623
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_218
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 256
+      width: 128
+      height: 128
+    spriteID: 9534c8bb51d644a4bb4964c18e8e10df
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_219
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 256
+      width: 128
+      height: 128
+    spriteID: ee9220f4600b16d4ca9363d6c012b3d3
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_220
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 256
+      width: 128
+      height: 128
+    spriteID: 387c175338d8aac48aa511284661f701
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_221
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 256
+      width: 128
+      height: 128
+    spriteID: b3a25b273b18618409926d6aa6468216
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_222
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 256
+      width: 128
+      height: 128
+    spriteID: 59f84aa73f91bfd489dbf420a094dcf4
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_223
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 256
+      width: 128
+      height: 128
+    spriteID: ad285501ca997c04caf2477342722c2f
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_224
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 128
+      width: 128
+      height: 128
+    spriteID: a40aac32853c45f4d842e1d60dbb9195
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_225
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 153bf4557bf3a664daa4e26d2ca13485
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_226
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 128
+      width: 128
+      height: 128
+    spriteID: f762ad326d80b1343ad9c4920f14949e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_227
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 34d60d14951caa844b21f33a0fe30885
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_228
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 83f68c51a2ee725429dd2b60248ad9dd
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_229
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 128
+      width: 128
+      height: 128
+    spriteID: c58dc4643afec104082ff8c70ad95d65
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_230
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 128
+      width: 128
+      height: 128
+    spriteID: d0bb115f550b80b4c9b065133c885055
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_231
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 128
+      width: 128
+      height: 128
+    spriteID: f1b4d25a1c40c764e9ca62b6fe5d887e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_232
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 7e4c3e2891a6a844cbacceae28510371
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_233
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 610ba7c0575d1354d9eed8c80e081069
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_234
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 01968023d8d299c4fb727c49d8b30cd1
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_235
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 69714c62c59b94d4db1f9a9e3c17f5c1
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_236
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 8da9574f15f329e478c271bf526cca92
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_237
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 165e53dfef72a9642b635fbc7e60db5d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_238
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 96ca0458c0bfe9940847cb82fb5a5f55
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_239
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 128
+      width: 128
+      height: 128
+    spriteID: 97cbadc802ad9494f865c2b49c8a0f29
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_240
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 128
+      height: 128
+    spriteID: cb3c3b32f7efbc346b3f0615bae64c0e
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_241
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 0
+      width: 128
+      height: 128
+    spriteID: 6d03a0bc9ece3dc47aef197d7fd44908
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_242
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 0
+      width: 128
+      height: 128
+    spriteID: 1e2770d49436db24b98251b924e67035
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_243
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 384
+      y: 0
+      width: 128
+      height: 128
+    spriteID: ab8e76f27fc26fb4dbfd7dda155efb1a
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_244
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 512
+      y: 0
+      width: 128
+      height: 128
+    spriteID: 528a3b10a60081f4a885979dd2ac534c
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_245
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 640
+      y: 0
+      width: 128
+      height: 128
+    spriteID: bed973b140c09aa42a4866f442c4285b
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_246
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 768
+      y: 0
+      width: 128
+      height: 128
+    spriteID: 8361f6bd9d3f16049bceca4c49478250
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_247
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 0
+      width: 128
+      height: 128
+    spriteID: 1744d8fe0c7517a4f8af425ea6a5baed
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_248
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1024
+      y: 0
+      width: 128
+      height: 128
+    spriteID: 9c28ac9a6e003db459b872931cb01420
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_249
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1152
+      y: 0
+      width: 128
+      height: 128
+    spriteID: c55a9bca56a54664abd60b7eeda07c4d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_250
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1280
+      y: 0
+      width: 128
+      height: 128
+    spriteID: 6d8c3b639e22795438094aff11503d08
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_251
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1408
+      y: 0
+      width: 128
+      height: 128
+    spriteID: dedb307c4b00e564bae71d69181410bc
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_252
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1536
+      y: 0
+      width: 128
+      height: 128
+    spriteID: c9f16500fbc74e44da7b13797067606d
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_253
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1664
+      y: 0
+      width: 128
+      height: 128
+    spriteID: 6f28797eb6db30b47865851447626ce6
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_254
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1792
+      y: 0
+      width: 128
+      height: 128
+    spriteID: 907ac0c5242681f48b23f6c322993b02
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: Level4_tilesheet_255
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1920
+      y: 0
+      width: 128
+      height: 128
+    spriteID: 7c8f708c83eed8b44a03cbeb0c7dd815
+    internalID: 0
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []

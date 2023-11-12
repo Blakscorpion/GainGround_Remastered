@@ -14,20 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredHeroesForDialogue: 0400000005000000
   dialogues:
-  - HeroName: 4
+  - HeroName: 1
+    HeroPortrait: {fileID: 0}
+    dialogueLine: QUOI !?!?
+  - HeroName: 0
     HeroPortrait: {fileID: 0}
     dialogueLine: 'Oh mon dieu... Est-ce qu''il est... '
-  - HeroName: 5
+  - HeroName: 1
     HeroPortrait: {fileID: 0}
     dialogueLine: "Non, pas totallement ! Il faut \xE9vacuer son corps vers la sortie
       plus au nord..."
-  - HeroName: 4
+  - HeroName: 0
     HeroPortrait: {fileID: 0}
     dialogueLine: "Ou sinon on r\xE8gle son compte \xE0 cette brute ?"
-  - HeroName: 5
+  - HeroName: 1
     HeroPortrait: {fileID: 0}
-    dialogueLine: "Surtout pas ! Le syst\xE8me affiche qu'il n'y a qu'un ennemi sur
-      ce niveau... Si on le neutralise, le niveau se termine, et on passe au niveau
-      suivant... Sans Cyber ! Il resterai coinc\xE9 dans la simulation..."
+    dialogueLine: "Surtout pas ! Le syst\xE8me affiche un seul ennemi dans le niveau.
+      Si on le neutralise on risque de passer au niveau suivant et perdre Cyber \xE0
+      tout jamais !"
   triggerDialogueOnDeath: 1
-  deadHero: 6
+  deadHero: 2
+  isStructurallyOk: 1
+  alreadyPlayed: 0

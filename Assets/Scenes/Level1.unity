@@ -49450,6 +49450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BabyFromLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 5331269370391882621, guid: cdca0dc0604e8b84098aa718a257f8ef, type: 3}
+      propertyPath: babyHeroName
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdca0dc0604e8b84098aa718a257f8ef, type: 3}
 --- !u!1001 &1851165496

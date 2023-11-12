@@ -42,10 +42,15 @@ public class DialogueManager : MonoBehaviour
         ListOfOnDeathDialogues = Resources.LoadAll<DialogueScriptableObject>("Dialogues/" + scene.name + "/DeathDialogues");
         ListOfOnEvacuationDialogues = Resources.LoadAll<DialogueScriptableObject>("Dialogues/" + scene.name + "/EvacuationDialogues");
         ListOfEndingLevelDialogues = Resources.LoadAll<DialogueScriptableObject>("Dialogues/" + scene.name + "/EndingLevelDialogues");
+        ListOfInstantDialogues = Resources.LoadAll<DialogueScriptableObject>("Dialogues/" + scene.name + "/StaticDialogues");
         DialogueChecker.checkListOfDialoguesStructure(ListOfStartingLevelDialogues);
         DialogueChecker.checkListOfDialoguesStructure(ListOfOnDeathDialogues);
         DialogueChecker.checkListOfDialoguesStructure(ListOfOnEvacuationDialogues);
         DialogueChecker.checkListOfDialoguesStructure(ListOfEndingLevelDialogues);
+    }
+
+    void OnDisable(){
+        ResetDialogues();
     }
 
     void Update(){
@@ -112,7 +117,6 @@ public class DialogueManager : MonoBehaviour
             for (int i = 0; i < ListOfStartingLevelDialogues.Length; i++){
                 if (DialogueChecker.isHeroesMatchingForStartingDialogues(ListOfStartingLevelDialogues[i])){
                     PlayDialogue(ListOfStartingLevelDialogues[i]);
-                    return;
                 }}
         }
         GameManager.Instance.UpdateGameState(stateToSendAfter);
@@ -141,13 +145,37 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void PlayDialogueOnEscape(){
-
+        if (ListOfOnEvacuationDialogues!= null && ListOfOnEvacuationDialogues.Length!= 0){
+            for (int i = 0; i < ListOfOnEvacuationDialogues.Length; i++){
+                if (DialogueChecker.isHeroesMatchingForEvacuatingDialogues(ListOfOnEvacuationDialogues[i])){
+                    Debug.Log("Playing Dialogue NUMBER : " + i+1);
+                    PlayDialogue(ListOfOnEvacuationDialogues[i]);
+                }}
+        }
     }
     public void PlayDialogueOnEndingLevel(){
-
+        if (ListOfEndingLevelDialogues!= null && ListOfEndingLevelDialogues.Length!= 0){
+            for (int i = 0; i < ListOfEndingLevelDialogues.Length; i++){
+                if (DialogueChecker.isHeroesMatchingForEndingDialogues()){
+                    PlayDialogue(ListOfEndingLevelDialogues[i]);
+                }}
+        }
     }
 
     IEnumerator waitForSeconds(float timeToWait){
     yield return new WaitForSeconds(timeToWait);
 }
+
+    public void ResetDialogues(){
+        foreach (DialogueScriptableObject dialogue in ListOfStartingLevelDialogues){
+            dialogue.alreadyPlayed = false;}
+        foreach (DialogueScriptableObject dialogue in ListOfOnDeathDialogues){
+            dialogue.alreadyPlayed = false;}
+        foreach (DialogueScriptableObject dialogue in ListOfOnEvacuationDialogues){
+            dialogue.alreadyPlayed = false;}
+        foreach (DialogueScriptableObject dialogue in ListOfEndingLevelDialogues){
+            dialogue.alreadyPlayed = false;}
+        foreach (DialogueScriptableObject dialogue in ListOfInstantDialogues){
+            dialogue.alreadyPlayed = false;}
+    }
 }

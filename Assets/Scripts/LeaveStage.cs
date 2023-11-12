@@ -8,10 +8,12 @@ public class LeaveStage : MonoBehaviour
         if(collider.CompareTag("Player"))
         {
             HeroesManager.Instance.HeroEscaped();
-            
-            // Change state to Exist Success
+            HeroesManager.Instance.BabyEscaped(collider.gameObject);
+
+            //DialogueManager.Instance.PlayDialogueOnEscape();
+
             GameManager.Instance.UpdateGameState(GameState.ExitSuccess);
-            
+
             // Remove from the scene the escaped Hero
             Destroy(collider.gameObject); 
         }

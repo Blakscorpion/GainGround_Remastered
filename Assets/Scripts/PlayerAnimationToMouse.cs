@@ -54,10 +54,10 @@ public class PlayerAnimationToMouse : MonoBehaviour
 
         //Reversing animation if player is going opposite way of its looking direction
         if(_renderer.flipX == movement.x>=0){
-            animator.SetFloat("Reverse", -1f);
+            animator.SetFloat("Reverse", -1.0f);
         }
         else{
-            animator.SetFloat("Reverse", 1f);
+            animator.SetFloat("Reverse", 1.0f);
         }
         
         

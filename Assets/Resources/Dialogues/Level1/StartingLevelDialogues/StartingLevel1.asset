@@ -10,30 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1e7c0a03fa310a42a8b63138f4f2206, type: 3}
-  m_Name: DeathOfAthra
+  m_Name: StartingLevel1
   m_EditorClassIdentifier: 
-  requiredHeroesForDialogue: 0200000001000000
+  requiredHeroesForDialogue: 0100000000000000
   dialogues:
   - HeroName: 1
     HeroPortrait: {fileID: 0}
-    dialogueLine: Quoi ?!?!
-  - HeroName: 2
+    dialogueLine: "Un otage ! Il ne faut surtout pas terminer le niveau sans l'\xE9vacuer,
+      ou il sera perdu \xE0 jamais !"
+  - HeroName: 0
     HeroPortrait: {fileID: 0}
-    dialogueLine: "J'en \xE9tais sur... Je vous l'avais dit !! Il faut buter ce chacal
-      !"
+    dialogueLine: "Il a l'air bal\xE8se en plus... Il pourra certainement nous aider."
   - HeroName: 1
     HeroPortrait: {fileID: 0}
-    dialogueLine: "Non ! Il faut \xE9vacuer le corps de Athra vers la sortie plus
-      au nord..."
-  - HeroName: 2
+    dialogueLine: "Tu peux dire \xE7a juste en le voyant de loin ?"
+  - HeroName: 0
     HeroPortrait: {fileID: 0}
-    dialogueLine: Ou buter ce batard...
+    dialogueLine: "Je fais du jugement au faci\xE8s, c'est la base ma bonne dame."
   - HeroName: 1
     HeroPortrait: {fileID: 0}
-    dialogueLine: "Surtout pas ! Le syst\xE8me affiche un seul ennemi dans le niveau.
-      Si on le neutralise on risque de passer au niveau suivant et perdre Athra \xE0
-      tout jamais !"
-  triggerDialogueOnDeath: 1
-  deadHero: 0
+    dialogueLine: ...
+  triggerDialogueOnDeath: 0
+  deadHero: 25
   isStructurallyOk: 1
   alreadyPlayed: 0

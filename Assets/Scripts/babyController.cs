@@ -45,12 +45,8 @@ public class babyController : MonoBehaviour
     private void RemoveBabyFromStageWhenExit(GameState state) {
         if(state == GameState.ExitSuccess && isBabyCollected)
         {   
-            isBabyCollected=false;
-            Debug.Log("Baby " + babyInfo.babyHeroName + " has also passed with the hero");
-            {   
-                // TODO : Destroy the baby gameobject
-                GameObject.Destroy(this.gameObject);
-            }
+            isBabyCollected=false; 
+            GameObject.Destroy(this.gameObject);
         }
     }
     

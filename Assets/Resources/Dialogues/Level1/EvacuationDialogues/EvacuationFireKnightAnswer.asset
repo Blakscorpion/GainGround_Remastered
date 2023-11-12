@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1e7c0a03fa310a42a8b63138f4f2206, type: 3}
-  m_Name: SayHi
+  m_Name: EvacuationFireKnightAnswer
   m_EditorClassIdentifier: 
-  requiredHeroesForDialogue: 18000000
+  requiredHeroesForDialogue: 
   dialogues:
-  - HeroName: 20
+  - HeroName: 0
     HeroPortrait: {fileID: 0}
-    dialogueLine: "Bonjour !! Qui \xEAtes-vous ?"
+    dialogueLine: "Je retire ce que j'ai dit... Il ne doit pas \xEAtre tr\xE8s fort
+      pour s'\xEAtre fait neutraliser au deuxi\xE8me niveau de la simulation..."
+  - HeroName: 3
+    HeroPortrait: {fileID: 0}
+    dialogueLine: "H\xE9 !! Je ne vous permet pas jeune homme !"
   triggerDialogueOnDeath: 0
-  deadHero: 26
+  deadHero: 25
   isStructurallyOk: 1
   alreadyPlayed: 0

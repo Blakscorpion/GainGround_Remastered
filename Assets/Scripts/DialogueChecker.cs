@@ -71,7 +71,31 @@ public class DialogueChecker{
         return true;
     }
 
-    public static bool isHeroesMatchingForEvacuatingDialogues(){
+    public static bool isHeroesMatchingForEvacuatingDialogues(DialogueScriptableObject EvacuatingLevelDialogues){
+        if (EvacuatingLevelDialogues.alreadyPlayed==true){
+            Debug.LogWarning(EvacuatingLevelDialogues.name + " already played ! It will not be displayed");
+            return false;
+        }
+        //We create a temporary list cointain 
+        List<HeroesManager.Hero> heroesEvacuatedAndAlive = new List<HeroesManager.Hero>();
+        foreach (HeroesManager.Hero heroEscaped in HeroesManager.Instance.ListOfEscapedHeros){
+            heroesEvacuatedAndAlive.Add(heroEscaped);
+        }
+        foreach (HeroesManager.Hero heroAlive in HeroesManager.Instance.ListOfHeroesAlive){
+            heroesEvacuatedAndAlive.Add(heroAlive);
+        }
+
+        if(isHeroStateModifierOK(EvacuatingLevelDialogues)){
+            for(int i = 0 ; i < EvacuatingLevelDialogues.dialogues.Length ; i++){
+                if(!heroesEvacuatedAndAlive.Contains(EvacuatingLevelDialogues.dialogues[i].HeroName)){
+                    Debug.LogWarning(EvacuatingLevelDialogues.name + " can't be displayed, because some heroes in the dialogues are not alive");
+                    return false;
+                }
+            }
+        }
+        else{
+            return false;
+        }
         return true;
     }
 
@@ -91,9 +115,9 @@ public class DialogueChecker{
         HeroesManager.Hero any3Mapping = HeroesManager.Hero.NONE;
         HeroesManager.Hero any4Mapping = HeroesManager.Hero.NONE;
 
-        List<HeroesManager.Hero> HeroesAlive = HeroesManager.Instance.ListOfHeroesAlive;
-        List<HeroesManager.Hero> tmpHeroesAlive = new List<HeroesManager.Hero>(HeroesAlive);
-        
+        List<HeroesManager.Hero> tmpHeroesAlive = new List<HeroesManager.Hero>(HeroesManager.Instance.ListOfHeroesAlive);
+        tmpHeroesAlive.AddRange(HeroesManager.Instance.ListOfEscapedHeros);
+
         for (int i = 0; i < dialogue.dialogues.Length; i++)
         {
             if(dialogue.dialogues[i].HeroName == HeroesManager.Hero.CURRENT){

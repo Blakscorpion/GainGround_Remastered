@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeroAnimator: {fileID: 0}
   HeroAnimation: {fileID: 0}
-  HeroName: 4
+  HeroName: 0
   HeroDescription: 
   HeroSprite: {fileID: 0}
   health: 0

@@ -12,7 +12,6 @@ public class DialogueScriptableObject : ScriptableObject
     public HeroesManager.Hero deadHero = HeroesManager.Hero.NONE;
     [HideInInspector]
     public bool isStructurallyOk = true;
-    [HideInInspector]
     public bool alreadyPlayed = false;
 }
 

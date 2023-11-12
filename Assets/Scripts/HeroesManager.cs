@@ -7,10 +7,6 @@ public class HeroesManager : MonoBehaviour
 {
     public enum Hero
     {
-    ANY1,
-    ANY2,
-    ANY3,
-    ANY4,
     Athra,
     Betty,
     Cyber,
@@ -32,6 +28,10 @@ public class HeroesManager : MonoBehaviour
     WaterKnight,
     Zaemon,
     CURRENT,
+    ANY1,
+    ANY2,
+    ANY3,
+    ANY4,
     NONE    
     }
 
@@ -98,9 +98,21 @@ public class HeroesManager : MonoBehaviour
             int index = ListOfHeroesAlive.IndexOf(CurrentHero);
             ListOfHeroesAlive.Remove(CurrentHero);
             ListOfEscapedHeros.Add(CurrentHero);
-
-            availableScriptableObjectsHeroes.RemoveAt(index);        
+            availableScriptableObjectsHeroes.RemoveAt(index);      
     }
+
+    //Add baby to escaped heroes, if there is one and remove it from the dead list
+    public void BabyEscaped(GameObject heroPassed){
+            PlayerStats _infoPlayer = heroPassed.GetComponent<PlayerStats>();
+            if (_infoPlayer.hasABaby==true){        
+                ListOfEscapedHeros.Add(_infoPlayer.babyFollowing);
+                Debug.Log("Baby " + _infoPlayer.babyFollowing.ToString() +" has passed the exit");
+                // Remove the baby from the deadList if there is one (because when you die, you transform as a totem but you enter the deadList)
+                ListOfDeadHeros.Remove(_infoPlayer.babyFollowing);
+            }
+    }
+    
+    
 
     // Time out - Kill all remaining heroes alive
     public void TimerEnded(){

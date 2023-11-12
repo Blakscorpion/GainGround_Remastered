@@ -14,17 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredHeroesForDialogue: 040000000500000006000000
   dialogues:
-  - HeroName: 4
+  - HeroName: 0
     HeroPortrait: {fileID: 0}
     dialogueLine: Il y a quelqu'un ici... Probablement un PNJ ?
-  - HeroName: 5
+  - HeroName: 1
     HeroPortrait: {fileID: 0}
     dialogueLine: "Peut-\xEAtre qu'il va nous donner une qu\xEAte ?"
-  - HeroName: 6
+  - HeroName: 2
     HeroPortrait: {fileID: 0}
     dialogueLine: "Vous \xEAtes tellement na\xEFfs... On est dans une simulation
       de combat, il est l\xE0 pour nous p\xE9ter la gueule !"
-  - HeroName: 4
+  - HeroName: 0
     HeroPortrait: {fileID: 0}
     dialogueLine: "Ce serait dommage de rater notre premi\xE8re mission..."
-  deleteAfterPlayed: 0
+  triggerDialogueOnDeath: 0
+  deadHero: 25
+  isStructurallyOk: 1
+  alreadyPlayed: 0

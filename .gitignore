@@ -70,3 +70,30 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Assets/ldtk/Ldtk test.meta
+Assets/Assets/ldtk/TopDown_by_deepnight.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_0.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_1.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_2.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_0/_bg.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_0/_composite.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_0/Collisions.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_0/Collisions-int.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_0/Custom_floor.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_0/Default_floor.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_0/Wall_tops.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_1/_bg.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_1/_composite.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_1/Collisions.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_1/Collisions-int.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_1/Custom_floor.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_1/Default_floor.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_1/Wall_tops.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_2/_bg.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_2/_composite.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_2/Collisions.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_2/Collisions-int.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_2/Custom_floor.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_2/Default_floor.png.meta
+Assets/Assets/ldtk/Ldtk test/simplified/World_Level_2/Wall_tops.png.meta

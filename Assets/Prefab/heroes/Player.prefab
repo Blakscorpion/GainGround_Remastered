@@ -285,7 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8491435536899377377}
   - component: {fileID: 8491435536899376921}
-  - component: {fileID: 8491435536899376923}
+  - component: {fileID: 4335303091954579702}
   - component: {fileID: 8491435536899377380}
   - component: {fileID: 8491435536899377381}
   - component: {fileID: 8491435536899377382}
@@ -370,8 +370,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8491435536899376923
-BoxCollider2D:
+--- !u!70 &4335303091954579702
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -383,19 +383,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.040552646, y: -0.001740247}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.51, y: 0.82}
-    newSize: {x: 2.55, y: 2.55}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.29654878, y: 0.81691617}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.044904917, y: -0.048867114}
+  m_Size: {x: 0.3673609, y: 0.58490956}
+  m_Direction: 0
 --- !u!50 &8491435536899377380
 Rigidbody2D:
   serializedVersion: 4
@@ -487,7 +477,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8491435536899377378}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1327794279087157270, guid: 4de154293053ba6449c2ec5699ba5910, type: 2}
   m_audioClip: {fileID: 8300000, guid: 2b6e306f144fd2047ad36490140f8b85, type: 3}

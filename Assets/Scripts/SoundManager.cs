@@ -18,7 +18,9 @@ public class SoundManager : MonoBehaviour
     }
 
     void Start(){
+        if (DefaultMusicForThisLevel != null){
         PlayMusic(DefaultMusicForThisLevel);
+        }
     }
     
     public void PlayMusic(AudioClip audio)

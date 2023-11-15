@@ -112,6 +112,6 @@ class UI_HeroSelection : MonoBehaviour
 
     private void UpdateTextHeroSelection()
     {
-        HeroSelectionUI.text = "Select Hero: " + availableHeroList[currentHeroIndexselected%lengthHeroList];
+        HeroSelectionUI.text = "" + availableHeroList[currentHeroIndexselected%lengthHeroList];
     }
 }

@@ -31,6 +31,6 @@ public class PlayerDeath : MonoBehaviour
     //Which causes to not play the sound as it's destroyed.
     private void playSoundDead()
     {
-        SoundManager.Instance.PlaySound(audioClip);
+        SoundManager.Instance.PlaySoundFX(audioClip);
     }
 }

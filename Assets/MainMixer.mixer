@@ -6,7 +6,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ammunition
+  m_Name: SoundEffect
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 347cd30eab3f5884c83fdc4b4a93e0f5
   m_Children: []
@@ -133,7 +133,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LevelMusic
+  m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 87ccd59766a79d641b6969d65dbf5346
   m_Children: []

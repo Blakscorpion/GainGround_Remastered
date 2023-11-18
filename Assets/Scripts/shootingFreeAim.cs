@@ -20,6 +20,10 @@ public class shootingFreeAim : MonoBehaviour
     private bool isAbleToShoot=true;
     private bool isAbleToShootSpecial=true;
     private PlayerAnimationToMouse playerMovement;
+    private Vector3 dir;
+    private float angle;
+    public GameObject rb_Weapon;
+    public SpriteRenderer WeaponRenderer;
 
 
     private void Start() {
@@ -28,6 +32,7 @@ public class shootingFreeAim : MonoBehaviour
         playerMovement = this.GetComponent<PlayerAnimationToMouse>();
         recoilForcePrimary = primaryAmmo.GetComponent<bullet>().recoilStrenght;
         recoilForceSecundary = secondaryAmmo.GetComponent<bullet>().recoilStrenght;
+        WeaponRenderer = rb_Weapon.GetComponent<SpriteRenderer>();
     }
 
     private void Update() 
@@ -47,6 +52,20 @@ public class shootingFreeAim : MonoBehaviour
             StartCoroutine(WaitAndShootSpecialAgain(shootingIntervalSpecial));
             StartCoroutine(SlowingPlayerCoroutine());
         }
+
+        dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        angle = (Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg) - 90;
+        Debug.Log(angle);
+        if (rb_Weapon != null){
+            if (angle > 0 || angle < -181)
+            {
+                WeaponRenderer.flipY = true;
+            }
+            else{
+                WeaponRenderer.flipY = false;
+            }
+            rb_Weapon.transform.rotation = Quaternion.AngleAxis(angle+100, Vector3.forward);
+        }
     }
 
     void FixedUpdate()
@@ -62,8 +81,6 @@ public class shootingFreeAim : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                 
         // Rotate the amo sprite, to be in the direction of the shooting 
-        Vector3 dir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
-        float angle = (Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg) - 90;
         rb.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         
         //Shoot in the direction of the aim

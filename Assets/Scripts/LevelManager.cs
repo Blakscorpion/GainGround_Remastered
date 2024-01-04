@@ -25,11 +25,18 @@ public class LevelManager : MonoBehaviour
     }
 
     public void RemoveEnnemy() {
+        
+        if (UIEnnemyRemaining != null)
+        {UIEnnemyRemaining.text=currentEnnemyNumber.ToString();}
+        else {
+            Debug.Log("UIEnnemyRemaining is empty");
+        }
         currentEnnemyNumber--;
-        UIEnnemyRemaining.text=currentEnnemyNumber.ToString();
+        
         if (currentEnnemyNumber<=0)
         {
             GameManager.Instance.UpdateGameState(GameState.StageEnd);
         }
+        
     }
 }

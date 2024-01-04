@@ -65,6 +65,7 @@ public class babyController : MonoBehaviour
         {
             if (player){
                 string currMov = player.GetComponent<PlayerAnimationToMouse>().GetCurrentMovement();
+                Debug.Log(currMov);
                 BabyPlacement(currMov); 
             
                 // Animating the Baby when player is moving
@@ -119,50 +120,52 @@ public class babyController : MonoBehaviour
     {
         switch (currMov)
         {
-            case "Top": // put baby down
-                this.transform.position = player.transform.GetChild(1).GetChild(1).transform.position;
+            case "Idle": 
                 break;
-            case "TopLeft":
-                this.transform.position = player.transform.GetChild(1).GetChild(6).transform.position;
+            case "Top": // put baby down
+                this.transform.position = player.transform.GetChild(0).GetChild(1).transform.position;
+                break;
+            /* case "TopLeft":
+                this.transform.position = player.transform.GetChild(0).GetChild(6).transform.position;
                 break;
             case "TopRight":
                 if (RendererComponent.flipX)
                 {
-                    this.transform.position = player.transform.GetChild(1).GetChild(6).transform.position;
+                    this.transform.position = player.transform.GetChild(0).GetChild(6).transform.position;
                 }
                 else
                 {
-                    this.transform.position = player.transform.GetChild(1).GetChild(7).transform.position;
+                    this.transform.position = player.transform.GetChild(0).GetChild(7).transform.position;
                 }
-                break;
+                break; */
             case "Down":
-                this.transform.position = player.transform.GetChild(1).GetChild(0).transform.position;
+                this.transform.position = player.transform.GetChild(0).GetChild(0).transform.position;
                 break;
-            case "DownRight":
+            /* case "DownRight":
                 if (RendererComponent.flipX)
                 {
-                    this.transform.position = player.transform.GetChild(1).GetChild(4).transform.position;
+                    this.transform.position = player.transform.GetChild(0).GetChild(4).transform.position;
                 }
                 else
                 {
-                    this.transform.position = player.transform.GetChild(1).GetChild(5).transform.position;
+                    this.transform.position = player.transform.GetChild(0).GetChild(5).transform.position;
                 }
                 break;
             case "DownLeft":
-                this.transform.position = player.transform.GetChild(1).GetChild(4).transform.position;
-                break;
+                this.transform.position = player.transform.GetChild(0).GetChild(4).transform.position;
+                break; */
             case "Right":
                 if (RendererComponent.flipX)
                 {
-                    this.transform.position = player.transform.GetChild(1).GetChild(3).transform.position;
+                    this.transform.position = player.transform.GetChild(0).GetChild(3).transform.position;
                 }
                 else
                 {
-                    this.transform.position = player.transform.GetChild(1).GetChild(2).transform.position;
+                    this.transform.position = player.transform.GetChild(0).GetChild(2).transform.position;
                 }
                 break;
             case "Left":
-                this.transform.position = player.transform.GetChild(1).GetChild(3).transform.position;
+                this.transform.position = player.transform.GetChild(0).GetChild(3).transform.position;
                 break;
             default: //  séquence d’instructions par défaut
                 break;

@@ -60,11 +60,9 @@ public class PlayerAnimationToMouse : MonoBehaviour
             animator.SetFloat("Reverse", 1.0f);
         }
         
-        
         if (movement.x !=0 || movement.y !=0)
         {
-            animatorClipinfo = this.m_Animator.GetCurrentAnimatorClipInfo(0);
-            Debug.Log(animatorClipinfo[0].clip.name);
+            //animatorClipinfo = this.m_Animator.GetCurrentAnimatorClipInfo(0);
             SetLastDirection();
         }        
     }
@@ -80,52 +78,38 @@ public class PlayerAnimationToMouse : MonoBehaviour
 
     private void SetLastDirection()
     {
-        current_animation = animatorClipinfo[0].clip.name;
-
-        if (current_animation =="Top")
+        if (movement.y > 0)
         {
-            animator.SetInteger("LastDirection", 1);
+            current_animation = "Top";
+            /* if (movement.x < 0.2f && movement.x > -0.2f){
+                current_animation = "Top";}
+            
+            else if (movement.x > 0.2f){
+                current_animation = "TopRight";}
+            
+            else{
+                current_animation = "TopLeft";} */
         }
         
-        else if (current_animation == "Down")
+        else if (movement.y < 0)
         {
-            animator.SetInteger("LastDirection", 5);
-        }
-        
-        else if (current_animation == "Right")
-        {
-            if (_renderer.flipX)
-            {
-                animator.SetInteger("LastDirection", 7);
-            }
-            else
-            {
-                animator.SetInteger("LastDirection", 3);
-            }
+            current_animation = "Down";
+            /* if (movement.x < 0.2f && movement.x > -0.2f){
+                current_animation = "Down";}
+            
+            else if (movement.x > 0.2f){
+                current_animation = "DownRight";}
+            
+            else{
+                current_animation = "DownLeft";} */
         }
 
-        else if (current_animation == "TopRight")
-        {
-            if (_renderer.flipX)
-            {
-                animator.SetInteger("LastDirection", 8);
-            }
-            else
-            {
-                animator.SetInteger("LastDirection", 2);
-            }
-        }
-
-        else if (current_animation == "DownRight")
-        {
-            if (_renderer.flipX)
-            {
-                animator.SetInteger("LastDirection", 6);
-            }
-            else
-            {
-                animator.SetInteger("LastDirection", 4);
-            }
+        else{
+            if (movement.x > 0){
+                current_animation = "Right";}
+            
+            else {
+                current_animation = "Left";}
         }
     }
 

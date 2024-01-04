@@ -11,7 +11,6 @@ public class shootingFreeAim : MonoBehaviour
     private bool recSec=false;
     public GameObject secondaryAmmo;
     private int recoilForceSecundary;
-    private int lastDirection;
     SpriteRenderer sprite;
     Rigidbody2D rigidbdy;
     public float bulletForce = 20f;
@@ -55,7 +54,7 @@ public class shootingFreeAim : MonoBehaviour
 
         dir = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         angle = (Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg) - 90;
-        Debug.Log(angle);
+        //Debug.Log(angle);
         if (rb_Weapon != null){
             if (angle > 0 || angle < -181)
             {

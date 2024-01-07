@@ -7792,7 +7792,7 @@ MonoBehaviour:
   currentEnnemyNumber: 0
   NumberOfBabiesAllowed: 1
   UIEnnemyRemaining: {fileID: 1896385498}
-  UITimeRemaining: {fileID: 1308199383}
+  UITimeRemaining: {fileID: 1220069221}
 --- !u!1 &299180267
 GameObject:
   m_ObjectHideFlags: 0
@@ -47900,6 +47900,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.479417, y: 1.3438969}
   m_EdgeRadius: 0
+--- !u!114 &1220069221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3291631858312564017, guid: 3ef2dea13642e444d921ecb08739236e, type: 3}
+  m_PrefabInstance: {fileID: 4978158752310611529}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1297060912
 GameObject:
   m_ObjectHideFlags: 0
@@ -47966,17 +47977,6 @@ Transform:
   m_Father: {fileID: 1588623986}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1308199383 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4978158753586104222, guid: 3ef2dea13642e444d921ecb08739236e, type: 3}
-  m_PrefabInstance: {fileID: 4978158752310611529}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1351175641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480145755075118516, guid: 4549e38d31fb28340b12dd47f043538f, type: 3}
@@ -48452,10 +48452,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentHero: 0
-  ListOfHeroesAlive: 
-  availableScriptableObjectsHeroes: []
-  ListOfDeadHeros: 
+  ListOfAvailableHeroes: 
   ListOfEscapedHeros: 
+  ListOfDeadHeros: 
+  availableScriptableObjectsHeroes: []
 --- !u!1 &1941147088
 GameObject:
   m_ObjectHideFlags: 0
@@ -48801,6 +48801,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4978158752781652805, guid: 3ef2dea13642e444d921ecb08739236e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978158753826928913, guid: 3ef2dea13642e444d921ecb08739236e, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4978158754214666770, guid: 3ef2dea13642e444d921ecb08739236e, type: 3}

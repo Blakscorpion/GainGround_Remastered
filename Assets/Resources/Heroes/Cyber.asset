@@ -12,20 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237caec40c3856b4083e4ae0799b5399, type: 3}
   m_Name: Cyber
   m_EditorClassIdentifier: 
-  HeroAnimator: {fileID: 0}
-  HeroAnimation: {fileID: 0}
   HeroName: 2
-  HeroDescription: 
-  HeroSprite: {fileID: 0}
+  HeroDescription: Description de Cyber
   health: 0
   speed: 0
-  PrimaryAmmo: {fileID: 0}
+  HeroSprite: {fileID: 0}
+  PrimaryAmmoPrefab: {fileID: 0}
   PrimaryAmmoDamage: 0
   PrimaryAmmoTimeInterval: 0
-  SecondaryAmmo: {fileID: 0}
+  UIWeaponIcon1: {fileID: 0}
+  primaryWeaponDescription: 
+  SecondaryAmmoPrefab: {fileID: 0}
   SecondaryAmmoDamage: 0
   SecondaryAmmoTimeInterval: 0
-  ui_PortraitHero: {fileID: 21300000, guid: 8116666cb85b35b409c6470dcbd60de9, type: 3}
-  ui_AvatarPortraitForDialogue: {fileID: 0}
-  ui_ImageHeroForSelectionScreen: {fileID: 0}
-  ui_AvatarImageForNextSelection: {fileID: 21300000, guid: e9ff1b4f5b2de8c48a664609cf655860, type: 3}
+  UIWeaponIcon2: {fileID: 0}
+  secondaryWeaponDescription: 
+  UIPortraitForDialogue_Default: {fileID: 21300000, guid: 85282583f1882e54dac5f0be5b71b8b9, type: 3}
+  UIPortraitForDialogue_Angry: {fileID: 0}
+  UIPortraitForDialogue_Astonished: {fileID: 0}
+  UIPortraitForDialogue_Fear: {fileID: 0}
+  UIPortraitForDialogue_Laugh: {fileID: 0}
+  UIPortraitForSelectionScreen: {fileID: 21300000, guid: 92a1bcfa4514ba948807d74da11d3a6f, type: 3}
+  UIPortraitForNextSelection: {fileID: 21300000, guid: e9ff1b4f5b2de8c48a664609cf655860, type: 3}
+  HeroAnimator: {fileID: 0}
+  HeroAnimation: {fileID: 0}

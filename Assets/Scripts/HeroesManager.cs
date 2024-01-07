@@ -38,21 +38,25 @@ public class HeroesManager : MonoBehaviour
     public static HeroesManager Instance;
     public Hero CurrentHero;
 
-    public List<Hero> ListOfHeroesAlive = new List<Hero>();
+    public List<Hero> ListOfAvailableHeroes = new List<Hero>();
+    public List<Hero> ListOfEscapedHeros = new List<Hero>();
+    public List<Hero> ListOfDeadHeros = new List<Hero>();
     [SerializeField]
     public List<HeroScriptableObject> availableScriptableObjectsHeroes = new List<HeroScriptableObject>();
-    public List<Hero> ListOfDeadHeros = new List<Hero>();
-    public List<Hero> ListOfEscapedHeros = new List<Hero>();
 
     private void Awake() {
         Instance = this;
+        ListOfAvailableHeroes.Clear();
+        ListOfEscapedHeros.Clear();
+        ListOfDeadHeros.Clear();
+
         // Check if there are already heroes in the PassedHeroes list.
         if (PlayerPrefs.HasKey("SuccessfullHeroNumber0"))
         {
             // load the survivors and remove the PlayerPref data
             for(int i = 0; PlayerPrefs.GetString("SuccessfullHeroNumber"+i).Length > 0; i++) {
                 // J'ajoute les héros sauvegardé dans ma liste de héros vivants. Pareil pour la liste des HeroeScriptableObjects
-                ListOfHeroesAlive.Add((Hero)Enum.Parse(typeof(Hero),PlayerPrefs.GetString("SuccessfullHeroNumber"+i)));
+                ListOfAvailableHeroes.Add((Hero)Enum.Parse(typeof(Hero),PlayerPrefs.GetString("SuccessfullHeroNumber"+i)));
                 
                 PlayerPrefs.DeleteKey("SuccessfullHeroNumber"+i);
             }     
@@ -60,12 +64,12 @@ public class HeroesManager : MonoBehaviour
         }
         else {
             // Otherwise we consider that it's level one and we load the 3 default heroes
-            ListOfHeroesAlive.Add(Hero.Athra);
-            ListOfHeroesAlive.Add(Hero.Betty);
-            ListOfHeroesAlive.Add(Hero.Cyber);
+            ListOfAvailableHeroes.Add(Hero.Athra);
+            ListOfAvailableHeroes.Add(Hero.Betty);
+            ListOfAvailableHeroes.Add(Hero.Cyber);
         }
         
-        foreach (Hero heroAlive in ListOfHeroesAlive)
+        foreach (Hero heroAlive in ListOfAvailableHeroes)
         {
             availableScriptableObjectsHeroes.Add(Resources.Load<HeroScriptableObject>("Heroes/" + heroAlive.ToString()));
         }
@@ -79,26 +83,25 @@ public class HeroesManager : MonoBehaviour
                 PlayerPrefs.SetString("SuccessfullHeroNumber"+i, hero.ToString());
                 i++;
             }
-        foreach (Hero hero in ListOfHeroesAlive)
+        foreach (Hero hero in ListOfAvailableHeroes)
             {
                 PlayerPrefs.SetString("SuccessfullHeroNumber"+i, hero.ToString());
                 i++;
             }
     }
 
-    public void HeroDead() {
-            int index = ListOfHeroesAlive.IndexOf(CurrentHero);
-            ListOfHeroesAlive.Remove(CurrentHero);
-            ListOfDeadHeros.Add(CurrentHero);
-            
-            availableScriptableObjectsHeroes.RemoveAt(index);
+    public void HeroSelected() {
+        int index = ListOfAvailableHeroes.IndexOf(CurrentHero);
+        ListOfAvailableHeroes.Remove(CurrentHero);            
+        availableScriptableObjectsHeroes.RemoveAt(index);
     }
 
     public void HeroEscaped() {
-            int index = ListOfHeroesAlive.IndexOf(CurrentHero);
-            ListOfHeroesAlive.Remove(CurrentHero);
-            ListOfEscapedHeros.Add(CurrentHero);
-            availableScriptableObjectsHeroes.RemoveAt(index);      
+        ListOfEscapedHeros.Add(CurrentHero);      
+    }
+
+    public void HeroDead() {
+        ListOfDeadHeros.Add(CurrentHero);
     }
 
     //Add baby to escaped heroes, if there is one and remove it from the dead list
@@ -117,10 +120,10 @@ public class HeroesManager : MonoBehaviour
     // Time out - Kill all remaining heroes alive
     public void TimerEnded(){
         // Remove all living heroes that didn't have time to escape, for next level
-        foreach (Hero hero in ListOfHeroesAlive){
+        foreach (Hero hero in ListOfAvailableHeroes){
             ListOfDeadHeros.Add(hero);
         }   
 
-        ListOfHeroesAlive.Clear();    
+        ListOfAvailableHeroes.Clear();    
     }
 }

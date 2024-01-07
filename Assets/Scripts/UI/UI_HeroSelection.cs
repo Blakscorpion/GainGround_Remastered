@@ -11,9 +11,24 @@ class UI_HeroSelection : MonoBehaviour
     private int lengthHeroList=0;
     private List<HeroesManager.Hero> availableHeroList = new List<HeroesManager.Hero>();
     private List<HeroScriptableObject> availableScriptableObjectsHeroes = new List<HeroScriptableObject>();
-    [SerializeField] private TextMeshProUGUI HeroSelectionUI;
     [SerializeField] private GameObject PlayerToInstantiate;
     [SerializeField] private Transform InitialPlayerLocation;
+    [SerializeField] private TextMeshProUGUI HeroSelectionUI;
+    [SerializeField] private Sprite heroSelectionPortrait;
+    [SerializeField] private Sprite weapon1Icon;
+    [SerializeField] private TextMeshProUGUI weapon1Description;
+    [SerializeField] private Sprite weapon2Icon;
+    [SerializeField] private TextMeshProUGUI weapon2Description;
+    [SerializeField] private Sprite selectedHeroFrame;
+    [SerializeField] private Sprite selectedHeroFramePrevious;
+    [SerializeField] private Sprite selectedHeroFrameNext;
+    
+    [Header("UI To enable/Disable")]
+    [SerializeField] private GameObject Timer;
+    [SerializeField] private GameObject Background;
+    [SerializeField] private GameObject HeroSelectedPanel;
+    [SerializeField] private GameObject LevelInfo;
+
     private bool isUIActive = false;
 
 
@@ -72,22 +87,32 @@ class UI_HeroSelection : MonoBehaviour
                 GameObject HeroGenerated = Instantiate(PlayerToInstantiate, InitialPlayerLocation.position, InitialPlayerLocation.rotation);
                 HeroGenerated.SendMessage("InitHero", HeroesManager.Instance.CurrentHero);
                 GameManager.Instance.UpdateGameState(GameState.PlayMode);
+                HeroesManager.Instance.HeroSelected();
+                
+                Timer.SetActive(false);
+                Background.SetActive(false);
+                HeroSelectedPanel.SetActive(false);
+                LevelInfo.SetActive(false);
             }
         }
     }
 
     private void DisplayUIHeroSelection(GameState state){
         if(state == GameState.PlayerSelection){   
-              //Retrieve the number of heros alive
-            availableHeroList = HeroesManager.Instance.ListOfHeroesAlive;
+            //Retrieve the number of heros alive
+            availableHeroList = HeroesManager.Instance.ListOfAvailableHeroes;
+            availableScriptableObjectsHeroes = HeroesManager.Instance.availableScriptableObjectsHeroes;
             lengthHeroList = availableHeroList.Count;
             currentHeroIndexselected=0;
 
             // We check if the list is not empty just in case, but this process should already have been made by the gameManager
             if (lengthHeroList>0){
-                transform.GetChild(0).gameObject.SetActive(true);
-                UpdateTextHeroSelection();
+                UpdateHeroSelection();
                 isUIActive=true;
+                Timer.SetActive(true);
+                Background.SetActive(true);
+                HeroSelectedPanel.SetActive(true);
+                LevelInfo.SetActive(true);
             }
             else{
                 Debug.LogError("There are no available Hero. The gameManager shouldn't have triggerred the PlayerSelection state !");
@@ -101,17 +126,31 @@ class UI_HeroSelection : MonoBehaviour
         if (currentHeroIndexselected<0){
             currentHeroIndexselected = lengthHeroList-1;
         }     
-        UpdateTextHeroSelection();
+        UpdateHeroSelection();
     }
 
     public void displayNextHero()
     {
         currentHeroIndexselected+=1;
-        UpdateTextHeroSelection();
+        UpdateHeroSelection();
     }
 
-    private void UpdateTextHeroSelection()
+    private void UpdateHeroSelection()
     {
-        HeroSelectionUI.text = "" + availableHeroList[currentHeroIndexselected%lengthHeroList];
+        
+        int tmpPreviousIndex=currentHeroIndexselected-1;
+        if (tmpPreviousIndex<0){
+            tmpPreviousIndex = lengthHeroList+tmpPreviousIndex;
+        } 
+        int selectedIndex = currentHeroIndexselected%lengthHeroList;                
+        HeroSelectionUI.text = "" + availableScriptableObjectsHeroes[selectedIndex].HeroName;
+        heroSelectionPortrait = availableScriptableObjectsHeroes[selectedIndex].UIPortraitForSelectionScreen;
+        weapon1Icon = availableScriptableObjectsHeroes[selectedIndex].UIWeaponIcon1;
+        weapon1Description.text = "" + availableScriptableObjectsHeroes[selectedIndex].primaryWeaponDescription;
+        weapon2Icon = availableScriptableObjectsHeroes[selectedIndex].UIWeaponIcon1;
+        weapon2Description.text = "" + availableScriptableObjectsHeroes[selectedIndex].secondaryWeaponDescription;
+        selectedHeroFrame = availableScriptableObjectsHeroes[selectedIndex].UIPortraitForNextSelection;
+        selectedHeroFramePrevious = availableScriptableObjectsHeroes[tmpPreviousIndex%lengthHeroList].UIPortraitForNextSelection;
+        selectedHeroFrameNext = availableScriptableObjectsHeroes[(currentHeroIndexselected+1)%lengthHeroList].UIPortraitForNextSelection;
     }
 }

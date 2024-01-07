@@ -20,7 +20,7 @@ public class UI_LevelSummary : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
             EndLevelSummary.text = HeroesManager.Instance.ListOfDeadHeros.Count +" hero Dead\n"
                 + HeroesManager.Instance.ListOfEscapedHeros.Count +" hero Escaped\n"
-                + HeroesManager.Instance.ListOfHeroesAlive.Count + " hero still alive\n";
+                + HeroesManager.Instance.ListOfAvailableHeroes.Count + " hero still alive\n";
         }
     }
 

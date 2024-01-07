@@ -34,7 +34,7 @@ public class DialogueChecker{
             Debug.LogWarning(StartingLevelDialogues.name + " already played ! It will not be displayed");
             return false;
         }
-        List<HeroesManager.Hero> heroesAlive = HeroesManager.Instance.ListOfHeroesAlive;
+        List<HeroesManager.Hero> heroesAlive = HeroesManager.Instance.ListOfAvailableHeroes;
         if(isHeroStateModifierOK(StartingLevelDialogues)){
             for(int i = 0 ; i < StartingLevelDialogues.dialogues.Length ; i++){
                 if(!heroesAlive.Contains(StartingLevelDialogues.dialogues[i].HeroName)){
@@ -81,7 +81,7 @@ public class DialogueChecker{
         foreach (HeroesManager.Hero heroEscaped in HeroesManager.Instance.ListOfEscapedHeros){
             heroesEvacuatedAndAlive.Add(heroEscaped);
         }
-        foreach (HeroesManager.Hero heroAlive in HeroesManager.Instance.ListOfHeroesAlive){
+        foreach (HeroesManager.Hero heroAlive in HeroesManager.Instance.ListOfAvailableHeroes){
             heroesEvacuatedAndAlive.Add(heroAlive);
         }
 
@@ -115,7 +115,7 @@ public class DialogueChecker{
         HeroesManager.Hero any3Mapping = HeroesManager.Hero.NONE;
         HeroesManager.Hero any4Mapping = HeroesManager.Hero.NONE;
 
-        List<HeroesManager.Hero> tmpHeroesAlive = new List<HeroesManager.Hero>(HeroesManager.Instance.ListOfHeroesAlive);
+        List<HeroesManager.Hero> tmpHeroesAlive = new List<HeroesManager.Hero>(HeroesManager.Instance.ListOfAvailableHeroes);
         tmpHeroesAlive.AddRange(HeroesManager.Instance.ListOfEscapedHeros);
 
         for (int i = 0; i < dialogue.dialogues.Length; i++)

@@ -82,7 +82,7 @@ public class DialogueManager : MonoBehaviour
             HeroPortraitDialogue.GetComponent<Image>().sprite=DialoguesScriptableObject.dialogues[index].HeroPortrait;
         }
         else{
-            HeroPortraitDialogue.GetComponent<Image>().sprite = Resources.Load<HeroScriptableObject>("Heroes/" + HeroNameDialogue.text).ui_PortraitHero;
+            HeroPortraitDialogue.GetComponent<Image>().sprite = Resources.Load<HeroScriptableObject>("Heroes/" + HeroNameDialogue.text).UIPortraitForDialogue_Default;
         }
         foreach (char c in DialoguesScriptableObject.dialogues[index].dialogueLine.ToCharArray()){
             textComponent.text += c;
@@ -98,8 +98,6 @@ public class DialogueManager : MonoBehaviour
         }
         else{
             CloseDialogue();
-            GameManager.Instance.UpdateGameState(stateToSendAfter);
-            stateToSendAfter = GameState.PlayMode;
         }
     }
 
@@ -109,6 +107,8 @@ public class DialogueManager : MonoBehaviour
         textComponent.text = string.Empty;
         DialogueEnabled=false;
         Time.timeScale = 1;
+        GameManager.Instance.UpdateGameState(stateToSendAfter);
+        stateToSendAfter = GameState.PlayMode;
     }
 
     public void PlayDialogueOnStartingLevel(){
@@ -119,8 +119,7 @@ public class DialogueManager : MonoBehaviour
                     PlayDialogue(ListOfStartingLevelDialogues[i]);
                 }}
         }
-        GameManager.Instance.UpdateGameState(stateToSendAfter);
-        stateToSendAfter = GameState.PlayMode;
+        else {GameManager.Instance.UpdateGameState(stateToSendAfter);}
     }
 
     public void PlayInstantDialogue(DialogueScriptableObject dialogue){

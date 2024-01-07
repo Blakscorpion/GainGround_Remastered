@@ -12,20 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 237caec40c3856b4083e4ae0799b5399, type: 3}
   m_Name: Athra
   m_EditorClassIdentifier: 
-  HeroAnimator: {fileID: 0}
-  HeroAnimation: {fileID: 0}
   HeroName: 0
-  HeroDescription: 
-  HeroSprite: {fileID: 0}
+  HeroDescription: Description d'Athra
   health: 0
   speed: 0
-  PrimaryAmmo: {fileID: 0}
+  HeroSprite: {fileID: 0}
+  PrimaryAmmoPrefab: {fileID: 0}
   PrimaryAmmoDamage: 0
   PrimaryAmmoTimeInterval: 0
-  SecondaryAmmo: {fileID: 0}
+  UIWeaponIcon1: {fileID: 0}
+  primaryWeaponDescription: 
+  SecondaryAmmoPrefab: {fileID: 0}
   SecondaryAmmoDamage: 0
   SecondaryAmmoTimeInterval: 0
-  ui_PortraitHero: {fileID: 21300000, guid: aba33a97d5e6c5b46b03bcc53f9e7ac1, type: 3}
-  ui_AvatarPortraitForDialogue: {fileID: 0}
-  ui_ImageHeroForSelectionScreen: {fileID: 0}
-  ui_AvatarImageForNextSelection: {fileID: 21300000, guid: 5af51aa9a1c9a3f4b8534787cc7f27b0, type: 3}
+  UIWeaponIcon2: {fileID: 0}
+  secondaryWeaponDescription: 
+  UIPortraitForDialogue_Default: {fileID: 21300000, guid: aba33a97d5e6c5b46b03bcc53f9e7ac1, type: 3}
+  UIPortraitForDialogue_Angry: {fileID: 0}
+  UIPortraitForDialogue_Astonished: {fileID: 0}
+  UIPortraitForDialogue_Fear: {fileID: 0}
+  UIPortraitForDialogue_Laugh: {fileID: 0}
+  UIPortraitForSelectionScreen: {fileID: 21300000, guid: 5af51aa9a1c9a3f4b8534787cc7f27b0, type: 3}
+  UIPortraitForNextSelection: {fileID: 21300000, guid: 5af51aa9a1c9a3f4b8534787cc7f27b0, type: 3}
+  HeroAnimator: {fileID: 0}
+  HeroAnimation: {fileID: 0}

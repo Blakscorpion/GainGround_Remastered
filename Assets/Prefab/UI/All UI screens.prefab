@@ -2303,7 +2303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4978158752605728672
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3699,7 +3699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4978158753826928912
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4872,9 +4872,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36623c68475a9a24c91051e0812c7737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeroSelectionUI: {fileID: 4978158753344233488}
   PlayerToInstantiate: {fileID: 8491435536899377378, guid: d9fb15f8c4c80df4f930af80343a229d, type: 3}
   InitialPlayerLocation: {fileID: 0}
+  HeroSelectionUI: {fileID: 4978158753344233488}
+  heroSelectionPortrait: {fileID: 0}
+  weapon1Icon: {fileID: 0}
+  weapon1Description: {fileID: 3280778737663477892}
+  weapon2Icon: {fileID: 0}
+  weapon2Description: {fileID: 5716919902373825806}
+  selectedHeroFrame: {fileID: 0}
+  selectedHeroFramePrevious: {fileID: 0}
+  selectedHeroFrameNext: {fileID: 0}
+  Timer: {fileID: 6602229746250020653}
+  Background: {fileID: 4978158752605728673}
+  HeroSelectedPanel: {fileID: 8418132012226056192}
+  LevelInfo: {fileID: 7414909513704097373}
 --- !u!1 &4978158754385861487
 GameObject:
   m_ObjectHideFlags: 0
@@ -5839,7 +5851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1898593384640729676
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6049,7 +6061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6339837778463709188
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6305,19 +6317,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 142515641157154595}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4978158754371819222}
-        m_TargetAssemblyTypeName: UI_HeroSelection, Assembly-CSharp
-        m_MethodName: displayPreviousHero
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7727615825306370166
 GameObject:
   m_ObjectHideFlags: 0
@@ -6469,7 +6469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5734371567593581957
 RectTransform:
   m_ObjectHideFlags: 0

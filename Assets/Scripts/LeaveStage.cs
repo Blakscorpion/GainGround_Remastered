@@ -10,7 +10,7 @@ public class LeaveStage : MonoBehaviour
             HeroesManager.Instance.HeroEscaped();
             HeroesManager.Instance.BabyEscaped(collider.gameObject);
 
-            //DialogueManager.Instance.PlayDialogueOnEscape();
+            DialogueManager.Instance.PlayDialogueOnEscape();
 
             GameManager.Instance.UpdateGameState(GameState.ExitSuccess);
 

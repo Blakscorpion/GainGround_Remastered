@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     private void CheckRemainingHeroes() {
         Debug.Log("======= GAMESTATE : 'DEAD or EXIT' =======");
         Debug.Log("We check if there are remaining heroes in the list");
-        if (HeroesManager.Instance.ListOfHeroesAlive == null || HeroesManager.Instance.ListOfHeroesAlive.Count == 0){
+        if (HeroesManager.Instance.ListOfAvailableHeroes == null || HeroesManager.Instance.ListOfAvailableHeroes.Count == 0){
             UpdateGameState(GameState.StageEnd);
             Debug.Log("No more heroes --> StageEnd");
         }
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("No more ennemies --> NextLevel (by cleaning)");
         }
         //No more heroes available
-        else if (HeroesManager.Instance.ListOfHeroesAlive.Count == 0){
+        else if (HeroesManager.Instance.ListOfAvailableHeroes.Count == 0){
             Debug.Log("No more Heroes available");
             if (HeroesManager.Instance.ListOfEscapedHeros.Count > 0){
                 Debug.Log("But some of them escaped --> NextLevel (by escaping)" );
